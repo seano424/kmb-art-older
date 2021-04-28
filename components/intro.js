@@ -1,7 +1,7 @@
 import { CMS_NAME, CMS_URL } from "../lib/constants";
 import Navbar from "../components/navbar";
 import Image from "next/image";
-import { urlFor } from "../lib/sanity";
+import Carousel from "./carousel";
 
 export default function Intro({ images }) {
   let allImages = [];
@@ -29,40 +29,13 @@ export default function Intro({ images }) {
       })
     )
   );
-  console.log(allImages);
-
-  // src={imageBuilder(imageObject).width(1240).height(540).url()}
-
   const currentImages = allImages.filter((i) => i.image !== undefined);
-
-  console.log(currentImages);
-
-  const imageElement = currentImages.map((i) => (
-    <Image
-      height={200}
-      width={200}
-      src={urlFor(i.image).url()}
-      alt={i.caption}
-      key={i.caption}
-    />
-  ));
-
-  // src={imageBuilder(imageObject).width(1240).height(540).url()}
 
   return (
     <>
       <Navbar />
-      {imageElement}
-      <section
-        style={{ height: "65vh" }}
-        className="relative flex-col md:flex-row flex items-center md:justify-between mb-16 md:mb-12"
-      >
-        <Image
-          src="/images/seahorses.jpg"
-          alt="testing"
-          layout="fill"
-          objectFit="cover"
-        />
+      <section className="relative flex-col md:flex-row flex items-center md:justify-between h-full">
+        <Carousel images={currentImages} />
       </section>
     </>
   );

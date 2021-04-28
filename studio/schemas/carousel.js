@@ -4,6 +4,11 @@ export default {
   type: "document",
   fields: [
     {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
       name: "mainImage",
       title: "Main image",
       type: "image",
@@ -98,4 +103,10 @@ export default {
       ],
     },
   ],
+  preview: {
+    select: {
+      title: "title",
+      media: "mainImage",
+    },
+  },
 };

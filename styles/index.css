@@ -2,9 +2,29 @@
 @tailwind base;
 @tailwind components;
 article a {
-    color: rgb(49, 49, 182);
-    text-decoration: underline;
+  color: rgb(49, 49, 182);
+  text-decoration: underline;
 }
 /* purgecss end ignore */
 @tailwind utilities;
 
+.carousel-root {
+  height: 70vh;
+}
+
+.carousel-image {
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+}
+.carousel-slider {
+  height: 100%;
+}
+
+.slider.animated {
+  height: 100%;
+}
+
+.slider-wrapper {
+  height: 100%;
+}
