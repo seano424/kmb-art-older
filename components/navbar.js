@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const maxContent = {
   width: "max-content",
@@ -7,32 +8,46 @@ const maxContent = {
 
 export default function Navbar() {
   return (
-    <section className="flex py-16 px-8">
-      <h1 className="w-full ml-5">NAVBAR GOES HERE</h1>
-      <div className="w-full flex justify-end">
+    <section className="flex px-8 items-center">
+      <h1 className="w-full text-center pl-16 h-48">
+        <Image
+          src="/images/full-signature.png"
+          alt="Karrie Marie Baxley Website Logo"
+          width={800}
+          height={250}
+          quality={100}
+        />
+      </h1>
+
+      <div className="w-full flex justify-end text-xs">
         <Link href="/">
-          <a style={maxContent} className="w-max mx-6">
-            (about)
+          <a style={maxContent} className="w-max mx-6 hover:text-primary">
+            ABOUT
           </a>
         </Link>
         <Link href="/">
-          <a style={maxContent} className="w-max mx-6">
-            (paintings)
+          <a style={maxContent} className="w-max mx-6 hover:text-primary">
+            PAINTINGS
           </a>
         </Link>
         <Link href="/">
-          <a style={maxContent} className="w-max mx-6">
-            (charcoals)
+          <a style={maxContent} className="w-max mx-6 hover:text-primary">
+            CHARCOALS
           </a>
         </Link>
         <Link href="/">
-          <a style={maxContent} className="w-max mx-6">
-            (ink works)
+          <a style={maxContent} className="w-max mx-6 hover:text-primary">
+            INK WORKS
           </a>
         </Link>
         <Link href="/">
-          <a style={maxContent} className="w-max mx-6">
-            (book)
+          <a style={maxContent} className="w-max mx-6 hover:text-primary">
+            EXHIBITIONS
+          </a>
+        </Link>
+        <Link href="/">
+          <a style={maxContent} className="w-max mx-6 hover:text-primary">
+            BOOK
           </a>
         </Link>
       </div>

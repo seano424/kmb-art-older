@@ -1,52 +1,38 @@
-import { Component } from "react";
+import { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { urlFor } from "../lib/sanity";
-import Image from "next/image";
-import { v4 as uuidv4 } from "uuid";
-export default class DemoCarousel extends Component {
-  render() {
-    const { images } = this.props;
-    const imageElement = images.slice(1).map((i) => (
-      <div className="carousel-wrapper relative h-full" key={uuidv4()}>
-        <Image
-          className="carousel-image"
-          layout="fill"
-          objectfit="cover"
-          objectPosition="center"
-          src={urlFor(i.image).url()}
-          alt={i.caption}
-          quality={100}
-        />
-      </div>
-    ));
+import CarouselItem from "./carouselItem";
 
-    return (
-      <div>
-        <Carousel
-          interval={18000}
-          transitionTime={1500}
-          // autoPlay
-          infiniteLoop
-          stopOnHover
-          useKeyboardArrows
-          swipeable
-          emulateTouch
-          showArrows={true}
-          showIndicators={false}
-          showStatus={false}
-          showThumbs={false}
-        >
-          {imageElement}
-          <div className="carousel-wrapper relative h-full">
-            <img
-              className="carousel-image"
-              src={urlFor(images[0].image).url()}
-              alt={images[0].caption}
-            />
-          </div>
-        </Carousel>
-      </div>
-    );
-  }
+import React from "react";
+
+export default function LeadCarousel({ images, handleCaptionChange }) {
+  const imageElement = images.map((i) => {
+    return <CarouselItem key={i} image={i} />;
+  });
+
+  const handleChange = (e) => {
+    handleCaptionChange(images[e].caption);
+  };
+
+  return (
+    <div>
+      <Carousel
+        onChange={handleChange}
+        interval={18000}
+        transitionTime={1500}
+        infiniteLoop
+        stopOnHover
+        useKeyboardArrows
+        swipeable
+        emulateTouch
+        showArrows={true}
+        showIndicators={false}
+        showStatus={false}
+        showThumbs={false}
+        autoFocus
+      >
+        {imageElement}
+      </Carousel>
+    </div>
+  );
 }

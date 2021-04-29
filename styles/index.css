@@ -1,4 +1,7 @@
 /* purgecss start ignore */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap");
+
 @tailwind base;
 @tailwind components;
 article a {
@@ -8,14 +11,26 @@ article a {
 /* purgecss end ignore */
 @tailwind utilities;
 
-.carousel-image {
+html,
+body {
+  font-family: "Jost", sans-serif;
+  /* font-family: "Playfair Display", serif; */
+  /* font-family: "Inter", sans-serif; */
+}
+
+.caption-header {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.2rem;
+}
+
+/* .carousel-image {
   height: 100% !important;
   object-fit: cover;
   object-position: center;
-}
+} */
 
 .carousel-root {
-  height: 65vh;
+  height: 60vh;
   width: 100vw;
 }
 .carousel-slider {
@@ -23,7 +38,10 @@ article a {
 }
 
 .carousel-wrapper {
-  background: #dedede;
+  /* background: #0339f3; */
+  /* background: lightskyblue; */
+  background: aliceblue;
+  padding: 10rem;
 }
 
 .slider.animated {
@@ -32,6 +50,8 @@ article a {
 
 .slider-wrapper {
   height: 100%;
+  /* border-top: 1rem solid aliceblue;
+  border-bottom: 1rem solid aliceblue; */
 }
 
 .control-arrow:hover {
@@ -56,8 +76,15 @@ article a {
 }
 
 .carousel .control-prev.control-arrow:before {
-  border-right: 40px solid #fff !important;
+  border-right: 40px solid black !important;
 }
 .carousel .control-next.control-arrow:before {
-  border-left: 40px solid #fff !important;
+  border-left: 40px solid black !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel .control-next.control-arrow:before,
+  .carousel .control-prev.control-arrow:before {
+    visibility: hidden;
+  }
 }
