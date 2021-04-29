@@ -6,11 +6,11 @@ import { urlFor } from "../lib/sanity";
 export default function CarouselItem({ image }) {
   return (
     <div className="carousel-wrapper relative h-full" key={uuidv4()}>
-      <Image
-        className="carousel-image sm:mx-10"
+      <img
+        className="carousel-image"
         layout="fill"
-        objectPosition="top"
-        objectFit="none"
+        objectposition="top"
+        objectfit="cover"
         src={urlFor(image.image).url()}
         alt={image.caption}
         quality={100}

@@ -40,7 +40,8 @@ body {
 
 .carousel-wrapper {
   background: aliceblue;
-  padding: 10rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 .slider.animated {
@@ -49,8 +50,6 @@ body {
 
 .slider-wrapper {
   height: 100%;
-  /* border-top: 1rem solid aliceblue;
-  border-bottom: 1rem solid aliceblue; */
 }
 
 .control-arrow:hover {
