@@ -30,12 +30,12 @@ body {
 } */
 
 .carousel-root {
-  height: 90vh;
+  height: 60vh;
   width: 100vw;
 }
 
 .carousel-slider {
-  height: 60vh;
+  height: 100%;
 }
 
 .carousel-wrapper {
