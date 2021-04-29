@@ -29,7 +29,8 @@ export default function LeadCarousel({ images, handleCaptionChange }) {
         showIndicators={false}
         showStatus={false}
         showThumbs={false}
-        autoFocus
+        verticalSwipe="natural"
+        axis="horizontal"
       >
         <CarouselItem image={images[0]} />
         {imageElement}

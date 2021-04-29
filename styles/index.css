@@ -57,27 +57,27 @@ body {
 }
 
 .carousel .control-arrow:before,
-.carousel.carousel-slider .control-arrow:before {
-  margin: 0 5px;
-  display: inline-block;
-  border-top: 40px solid transparent !important;
-  border-bottom: 40px solid transparent !important;
-  content: "";
-}
+.carousel.carousel-slider .control-arrow:before,
 .carousel .control-arrow:before,
 .carousel.carousel-slider .control-arrow:before {
   margin: 0 5px;
   display: inline-block;
-  border-top: 40px solid transparent !important;
-  border-bottom: 40px solid transparent !important;
+  border-top: 10px solid transparent !important;
+  border-bottom: 10px solid transparent !important;
   content: "";
 }
 
+.carousel .control-arrow:focus,
+.carousel .control-arrow:hover {
+  opacity: 0.4 !important;
+  filter: alpha(opacity=100) !important;
+}
+
 .carousel .control-prev.control-arrow:before {
-  border-right: 40px solid black !important;
+  border-right: 10px solid black !important;
 }
 .carousel .control-next.control-arrow:before {
-  border-left: 40px solid black !important;
+  border-left: 10px solid black !important;
 }
 
 @media only screen and (max-width: 600px) {
