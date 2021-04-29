@@ -22,7 +22,8 @@
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.7.0",
     "react-responsive-carousel": "^3.2.18",
-    "swr": "^0.2.3"
+    "swr": "^0.2.3",
+    "uuid": "^3.4.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",

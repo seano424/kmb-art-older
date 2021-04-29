@@ -3,12 +3,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import { urlFor } from "../lib/sanity";
 import Image from "next/image";
-
+import { v4 as uuidv4 } from "uuid";
 export default class DemoCarousel extends Component {
   render() {
     const { images } = this.props;
     const imageElement = images.slice(1).map((i) => (
-      <div className="carousel-wrapper relative h-full" key={i.caption}>
+      <div className="carousel-wrapper relative h-full" key={uuidv4()}>
         <Image
           className="carousel-image"
           layout="fill"
@@ -16,6 +16,7 @@ export default class DemoCarousel extends Component {
           objectPosition="center"
           src={urlFor(i.image).url()}
           alt={i.caption}
+          quality={100}
         />
       </div>
     ));

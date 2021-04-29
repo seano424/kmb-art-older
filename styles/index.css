@@ -8,17 +8,22 @@ article a {
 /* purgecss end ignore */
 @tailwind utilities;
 
-.carousel-root {
-  height: 70vh;
-}
-
 .carousel-image {
   height: 100% !important;
   object-fit: cover;
   object-position: center;
 }
+
+.carousel-root {
+  height: 65vh;
+  width: 100vw;
+}
 .carousel-slider {
   height: 100%;
+}
+
+.carousel-wrapper {
+  background: #dedede;
 }
 
 .slider.animated {
@@ -27,4 +32,32 @@ article a {
 
 .slider-wrapper {
   height: 100%;
+}
+
+.control-arrow:hover {
+  background: none !important;
+}
+
+.carousel .control-arrow:before,
+.carousel.carousel-slider .control-arrow:before {
+  margin: 0 5px;
+  display: inline-block;
+  border-top: 40px solid transparent !important;
+  border-bottom: 40px solid transparent !important;
+  content: "";
+}
+.carousel .control-arrow:before,
+.carousel.carousel-slider .control-arrow:before {
+  margin: 0 5px;
+  display: inline-block;
+  border-top: 40px solid transparent !important;
+  border-bottom: 40px solid transparent !important;
+  content: "";
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 40px solid #fff !important;
+}
+.carousel .control-next.control-arrow:before {
+  border-left: 40px solid #fff !important;
 }
