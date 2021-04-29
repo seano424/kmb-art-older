@@ -30,16 +30,15 @@ body {
 } */
 
 .carousel-root {
-  height: 60vh;
+  height: 90vh;
   width: 100vw;
 }
+
 .carousel-slider {
-  height: 100%;
+  height: 60vh;
 }
 
 .carousel-wrapper {
-  /* background: #0339f3; */
-  /* background: lightskyblue; */
   background: aliceblue;
   padding: 10rem;
 }
