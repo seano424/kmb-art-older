@@ -8,13 +8,13 @@ const maxContent = {
 
 export default function Navbar() {
   return (
-    <section className="flex px-8 items-center">
-      <h1 className="w-full text-center pl-16 h-48">
+    <section className="flex px-12 items-center">
+      <h1 className="w-full text-center pl-16 h-40">
         <Image
           src="/images/full-signature.png"
           alt="Karrie Marie Baxley Website Logo"
           width={800}
-          height={250}
+          height={200}
           quality={100}
         />
       </h1>
