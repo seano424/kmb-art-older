@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 import { urlFor } from "../lib/sanity";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function CarouselItem({ image }) {
   return (
