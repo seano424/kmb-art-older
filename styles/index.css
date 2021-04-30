@@ -16,16 +16,40 @@ body {
   font-family: "Jost", sans-serif;
   /* font-family: "Playfair Display", serif; */
   /* font-family: "Inter", sans-serif; */
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
 }
 
 .caption-header {
   font-family: "Playfair Display", serif;
   letter-spacing: 0.2rem;
+}
+
+/* .carousel-image {
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+} */
+
+.carousel-root {
+  height: 60vh;
+  width: 100vw;
+}
+
+.carousel-slider {
+  height: 100%;
+}
+
+.carousel-wrapper {
+  background: aliceblue;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.slider.animated {
+  height: 100%;
+}
+
+.slider-wrapper {
+  height: 100%;
 }
 
 .control-arrow:hover {
