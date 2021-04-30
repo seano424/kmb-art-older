@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Navbar from "../components/navbar";
-import Carousel from "./carousel";
 import SlickCarousel from "./slickCarousel";
 
 export default function Intro({ images }) {
@@ -42,7 +41,6 @@ export default function Intro({ images }) {
       <Navbar />
       <section className="relative flex-col flex md:justify-between h-full">
         <SlickCarousel images={currentImages} />
-        {/* <Carousel images={currentImages} handleCaptionChange={handleChange} /> */}
       </section>
       <section className="caption py-12 flex items-center">
         <h1 className="pl-12 caption-header self-start ml-16 text-lg w-4/6 font-extrabold">
