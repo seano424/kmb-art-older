@@ -30,9 +30,8 @@ export default function LeadCarousel({ images, handleCaptionChange }) {
         verticalSwipe="natural"
         axis="horizontal"
       >
-        <div className="carousel-wrapper relative h-full" key={uuidv4()}>
+        <div key={uuidv4()}>
           <img
-            className="carousel-image"
             layout="fill"
             objectposition="top"
             objectfit="cover"
