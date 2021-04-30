@@ -46,6 +46,7 @@ body {
 
 .slider.animated {
   height: 100%;
+  /* transform: none !important; */
 }
 
 .slider-wrapper {
