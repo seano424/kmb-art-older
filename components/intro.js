@@ -41,7 +41,7 @@ export default function Intro({ images }) {
   return (
     <>
       <Navbar />
-      <section className="relative flex-col md:flex-row flex items-center md:justify-between h-full">
+      <section>
         <Carousel images={currentImages} handleCaptionChange={handleChange} />
       </section>
       <section className="caption py-12 flex items-center">
