@@ -5,9 +5,7 @@ import Layout from "../components/layout";
 import { getAllPostsForHome, getCarouselImages } from "../lib/api";
 import Head from "next/head";
 
-export default function Index({ allPosts, preview, carouselImages }) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+export default function Index({ preview, carouselImages }) {
   return (
     <>
       <Layout preview={preview}>
@@ -21,10 +19,9 @@ export default function Index({ allPosts, preview, carouselImages }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allCarouselImages = await getCarouselImages();
-  const allPosts = await getAllPostsForHome(preview);
+  const allCarouselImages = await getCarouselImages(preview);
   return {
-    props: { allPosts, preview, carouselImages: allCarouselImages },
+    props: { preview, carouselImages: allCarouselImages },
     revalidate: 1,
   };
 }
