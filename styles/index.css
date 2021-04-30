@@ -23,36 +23,6 @@ body {
   letter-spacing: 0.2rem;
 }
 
-/* .carousel-image {
-  height: 100% !important;
-  object-fit: cover;
-  object-position: center;
-} */
-
-.carousel-root {
-  height: 60vh;
-  width: 100vw;
-}
-
-.carousel-slider {
-  height: 100%;
-}
-
-.carousel-wrapper {
-  background: aliceblue;
-  padding-left: 10rem;
-  padding-right: 10rem;
-}
-
-.slider.animated {
-  height: 100%;
-  /* transform: none !important; */
-}
-
-.slider-wrapper {
-  height: 100%;
-}
-
 .control-arrow:hover {
   background: none !important;
 }
