@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/navbar";
 import Carousel from "./carousel";
+import TailwindCarousel from "./tailwind-carousel";
 
 export default function Intro({ images }) {
   const [caption, setCaption] = useState(images[0].mainImage.caption);
@@ -39,7 +40,8 @@ export default function Intro({ images }) {
   return (
     <>
       <Navbar />
-      <Carousel images={currentImages} handleCaptionChange={handleChange} />
+      <TailwindCarousel images={currentImages} />
+      {/* <Carousel images={currentImages} handleCaptionChange={handleChange} /> */}
       <section className="caption py-12 flex items-center">
         <h1 className="pl-12 caption-header self-start ml-16 text-lg w-4/6 font-extrabold">
           <span className="text-salmon">A</span>

@@ -1,5 +1,5 @@
 import { Carousel } from "react-responsive-carousel";
-import CarouselItem from "./carouselItem";
+import CarouselItem from "./carousel-item";
 
 import React from "react";
 
