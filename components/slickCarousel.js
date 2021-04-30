@@ -1,25 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import { v4 as uuidv4 } from "uuid";
-import { urlFor } from "../lib/sanity";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function SlickCarousel({ images }) {
-  const carouselItems = images.slice(1).map((i) => {
-    return (
-      <div key={uuidv4()}>
-        <img
-          className="carousel-image"
-          layout="fill"
-          objectposition="top"
-          objectfit="cover"
-          src={urlFor(i.image).url()}
-          alt={i.caption}
-          quality={100}
-        />
-      </div>
-    );
-  });
-
   let settings = {
     dots: true,
     infinite: true,
@@ -27,5 +11,26 @@ export default function SlickCarousel({ images }) {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  return <Slider {...settings}>{carouselItems}</Slider>;
+  return (
+    <Slider {...settings}>
+      <div className="text-center">
+        <h3>1</h3>
+      </div>
+      <div>
+        <h3>2</h3>
+      </div>
+      <div>
+        <h3>3</h3>
+      </div>
+      <div>
+        <h3>4</h3>
+      </div>
+      <div>
+        <h3>5</h3>
+      </div>
+      <div>
+        <h3>6</h3>
+      </div>
+    </Slider>
+  );
 }
