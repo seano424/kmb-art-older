@@ -4,10 +4,25 @@ import CarouselItem from "./carouselItem";
 import { v4 as uuidv4 } from "uuid";
 import { urlFor } from "../lib/sanity";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import React from "react";
 
 export default function LeadCarousel({ images, handleCaptionChange }) {
+  const imageElement = images.map((i) => {
+    return (
+      <div className="carousel-wrapper relative h-full" key={uuidv4()}>
+        <img
+          className="carousel-image"
+          layout="fill"
+          objectposition="top"
+          objectfit="cover"
+          src={urlFor(i.image).url()}
+          alt={i.caption}
+          quality={100}
+        />
+      </div>
+    );
+  });
+
   const handleChange = (e) => {
     handleCaptionChange(images[e].caption);
   };
@@ -30,19 +45,8 @@ export default function LeadCarousel({ images, handleCaptionChange }) {
         verticalSwipe="natural"
         axis="horizontal"
       >
-        <div key={uuidv4()}>
-          <img
-            layout="fill"
-            objectposition="top"
-            objectfit="cover"
-            src="/images/seahorses.jpg"
-            alt={images[0].caption}
-            quality={100}
-          />
-        </div>
+        {imageElement}
       </Carousel>
     </div>
   );
 }
-
-// {urlFor(images[0].image).url()}

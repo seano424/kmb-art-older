@@ -1,6 +1,4 @@
 import { useState } from "react";
-
-import { CMS_NAME, CMS_URL } from "../lib/constants";
 import Navbar from "../components/navbar";
 import Carousel from "./carousel";
 
