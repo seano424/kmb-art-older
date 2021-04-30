@@ -39,9 +39,12 @@ body {
 }
 
 .carousel-wrapper {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.slide {
   background: aliceblue;
-  padding-left: 10rem;
-  padding-right: 10rem;
 }
 
 .slider.animated {
