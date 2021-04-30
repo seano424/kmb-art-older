@@ -40,7 +40,7 @@ export default function Intro({ images }) {
   return (
     <>
       <Navbar />
-      <section>
+      <section className="relative flex-col flex md:justify-between h-full">
         <SlickCarousel images={currentImages} />
         {/* <Carousel images={currentImages} handleCaptionChange={handleChange} /> */}
       </section>
