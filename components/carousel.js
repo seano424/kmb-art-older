@@ -36,7 +36,7 @@ export default function LeadCarousel({ images, handleCaptionChange }) {
             layout="fill"
             objectposition="top"
             objectfit="cover"
-            src={urlFor(images[0].image).url()}
+            src="/images/seahorses.jpg"
             alt={images[0].caption}
             quality={100}
           />
@@ -45,3 +45,5 @@ export default function LeadCarousel({ images, handleCaptionChange }) {
     </div>
   );
 }
+
+// {urlFor(images[0].image).url()}
