@@ -81,7 +81,7 @@ export default function TailwindCarousel({ images }) {
   );
 
   return (
-    <div style={{ height: "400px" }} className="bg-indigo-100 mb-20 md:px-40">
+    <div style={{ height: "400px" }} className="bg-indigo-100 mb-16 md:px-40">
       <FaArrowLeft
         onClick={moveLeft}
         className="hidden md:block cursor-pointer  arrows left opacity-25 hover:opacity-75 transition-opacity duration-100 ease-in-out"
