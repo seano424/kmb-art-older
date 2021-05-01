@@ -18,21 +18,31 @@ body {
   /* font-family: "Inter", sans-serif; */
 }
 
+.arrows {
+  position: absolute;
+  top: 21rem;
+  font-size: 2rem;
+  /* opacity: 0.4; */
+}
+
+.arrows.left {
+  left: 1rem;
+}
+
+.arrows.right {
+  right: 1rem;
+}
+
 .caption-header {
   font-family: "Playfair Display", serif;
   letter-spacing: 0.2rem;
 }
 
-/* .carousel-image {
-  height: 100% !important;
-  object-fit: cover;
-  object-position: center;
-} */
-
 .carousel-images {
   object-fit: cover;
   object-position: top;
   position: relative;
+  height: 400px;
 }
 
 .carousel-image-1 {
