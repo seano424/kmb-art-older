@@ -3,7 +3,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { urlFor } from "../lib/sanity";
 
-export default function TailwindCarousel({ images }) {
+export default function TailwindCarousel({ images, handleCaptionChange }) {
   const [show, setShow] = useState(3);
 
   useEffect(() => {
@@ -12,6 +12,7 @@ export default function TailwindCarousel({ images }) {
       setShow(num);
     }, 8000);
     return () => {
+      handleCaptionChange(images[show].caption);
       clearTimeout(timeout);
     };
   }, [show]);

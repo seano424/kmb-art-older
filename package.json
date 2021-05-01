@@ -22,7 +22,6 @@
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.7.0",
     "react-icons": "^4.2.0",
-    "react-responsive-carousel": "^3.2.18",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
     "swr": "^0.2.3",
