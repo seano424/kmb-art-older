@@ -6,7 +6,7 @@ import Head from "next/head";
 export default function Index({ preview, carouselImages }) {
   return (
     <>
-      <Layout preview={preview}>
+      <Layout footer preview={preview}>
         <Head>
           <title>Karrie Marie Baxley</title>
         </Head>

@@ -2,14 +2,14 @@ import Alert from "../components/alert";
 import Footer from "../components/footer";
 import Meta from "../components/meta";
 
-export default function Layout({ preview, children }) {
+export default function Layout({ footer, preview, children }) {
   return (
     <>
       <Meta />
       <div>
         <main>{children}</main>
       </div>
-      <Footer />
+      {footer && <Footer />}
     </>
   );
 }
