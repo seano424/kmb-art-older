@@ -6,10 +6,10 @@ import Image from "next/image";
 import { urlFor } from "../../lib/sanity";
 
 export default function InkWork({ preview, inkWorks }) {
-  const artWork = inkWorks.results.map((r) => r.artWork);
-  const title = inkWorks.results[0].title;
-  const artDisplay = artWork[0] ? (
-    artWork[0].map((art) => (
+  const artWork = inkWorks?.results?.map((r) => r.artWork);
+  const title = inkWorks?.results[0]?.title;
+  const artDisplay = inkWorks ? (
+    artWork[0]?.map((art) => (
       <div key={art._key} className="mt-10 h-screen mb-40">
         <div className="relative w-5/5 h-full">
           <Image
@@ -55,6 +55,6 @@ export async function getStaticPaths() {
           slug: post.slug,
         },
       })) || [],
-    fallback: true,
+    fallback: false,
   };
 }
