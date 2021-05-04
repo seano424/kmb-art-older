@@ -5,16 +5,17 @@ import { getPaintings } from "../../lib/api";
 import ImageCard from "../../components/image-card";
 
 export default function Index({ preview, paintings }) {
-  console.log(paintings);
-
   const content = paintings.map((painting) => <ImageCard image={painting} />);
 
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <div className="w-full flex-wrap mt-28">
-          <div className="flex w-full flex-wrap">{content}</div>
-        </div>
+        <main className="mt-28 mx-16">
+          {/* <h1 className=" text-8xl">Exhibitions</h1> */}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-3 gap-3">{content}</div>
+          </div>
+        </main>
       </SidebarLayout>
     </Layout>
   );

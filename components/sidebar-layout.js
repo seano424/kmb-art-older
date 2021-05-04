@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 
 export default function SidebarLayout({ children }) {
   const { pathname } = useRouter();
-  console.log(pathname);
   return (
     <>
       <div className="fixed pl-12 flex min-h-screen top-0 left-0 overflow-x-hidden flex-col w-56 flex-shrink-0">

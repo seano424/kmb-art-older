@@ -4,21 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ImageCard({ image }) {
+  console.log(image.title);
   return (
-    <div
-      className="m-20 shadow-medium p-10 relative w-4/5 h-screen"
-      key={image._id}
-    >
+    <div className="relative" key={image._id}>
       <Link href={`/paintings/${image.slug.current}`}>
-        <a>
+        <a className="">
           <Image
+            className="rounded-sm shadow-xl"
             src={urlFor(image?.featureImage).url()}
             alt="something"
-            layout="fill"
-            objectFit="cover"
+            width="500"
+            height="500"
           />
         </a>
       </Link>
+      <p className="caption-header w-48 text-opacity-25 text-black text-xs leading-relaxed tracking-wider">
+        {image.title}
+      </p>
     </div>
   );
 }
