@@ -13,8 +13,8 @@ export default function Charcoals({ preview, charcoals }) {
     <Layout preview={preview}>
       <SidebarLayout>
         <main className="my-20 mx-16">
-          <h1 className="pl-6 text-7xl mt-10 shadow opacity-50 mb-10">
-            Charcoals & Pastels by Karrie
+          <h1 className="pl-6 text-2xl mt-10 shadow-small opacity-25 mb-10">
+            Art Series / Charcoals & Pastels
           </h1>
           <div className="flex justify-center">
             <div className="grid grid-cols-2 gap-3">{content}</div>

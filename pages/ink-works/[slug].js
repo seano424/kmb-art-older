@@ -30,7 +30,7 @@ export default function InkWork({ preview, inkWorks }) {
     <Layout preview={preview}>
       <SidebarLayout>
         <div className="">
-          <h1 className="text-2xl  mt-10 shadow opacity-25">{title}</h1>
+          <h1 className="text-2xl mt-10 shadow-small opacity-25">{title}</h1>
           {artDisplay}
         </div>
       </SidebarLayout>

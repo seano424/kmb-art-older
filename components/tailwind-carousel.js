@@ -43,7 +43,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
   };
 
   const carouselImage = (
-    <div className=" cursor-pointer">
+    <div className=" cursor-pointer h-full">
       <img
         className={`carousel-images w-full transition-opacity duration-1000 ease-in-out ${
           show !== 0 ? "opacity-0" : "opacity-100"
