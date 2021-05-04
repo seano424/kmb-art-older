@@ -36,7 +36,7 @@ export default function Navbar() {
             PAINTINGS
           </a>
         </Link>
-        <Link href="/">
+        <Link href="/charcoals">
           <a
             style={maxContent}
             className="lg:w-max mx-2 lg:mx-6 hover:text-primary text-xs"
@@ -44,7 +44,7 @@ export default function Navbar() {
             CHARCOALS
           </a>
         </Link>
-        <Link href="/">
+        <Link href="/ink-works">
           <a
             style={maxContent}
             className="lg:w-max mx-2 lg:mx-6 hover:text-primary text-xs"

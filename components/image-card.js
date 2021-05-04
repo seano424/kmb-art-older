@@ -7,7 +7,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 export default function ImageCard({ image }) {
   return (
     <div className="relative" key={image._id}>
-      <Link href={`/${image.category}/${image.slug.current}`}>
+      <Link href={`/${image.category}/${image.slug.current}`} passHref>
         <div className="cursor-pointer">
           <a className="">
             <Image
