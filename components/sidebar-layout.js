@@ -12,7 +12,7 @@ export default function SidebarLayout({ children }) {
           <a>
             <h2
               style={{ textDecorationColor: "blanchedalmond" }}
-              className="text-6xl leading-none my-8 hover:underline cursor-default"
+              className="text-6xl leading-none my-8 hover:underline cursor-pointer"
             >
               Karrie Marie Baxley
             </h2>

@@ -5,9 +5,9 @@ import { getExhibition, getAllPaintingsWithSlug } from "../../lib/api";
 import Image from "next/image";
 import { urlFor } from "../../lib/sanity";
 
-export default function Painting({ preview, paintings }) {
-  const artWork = paintings.results.map((r) => r.artWork);
-  const title = paintings.results[0].title;
+export default function InkWork({ preview, inkWorks }) {
+  const artWork = inkWorks.results.map((r) => r.artWork);
+  const title = inkWorks.results[0].title;
   const artDisplay = artWork[0] ? (
     artWork[0].map((art) => (
       <div key={art._key} className="mt-10 h-screen mb-40">
@@ -30,7 +30,7 @@ export default function Painting({ preview, paintings }) {
     <Layout preview={preview}>
       <SidebarLayout>
         <div className="">
-          <h1 className="text-2xl mt-10 shadow opacity-25">{title}</h1>
+          <h1 className="text-2xl  mt-10 shadow opacity-25">{title}</h1>
           {artDisplay}
         </div>
       </SidebarLayout>
@@ -39,9 +39,9 @@ export default function Painting({ preview, paintings }) {
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const allPaintings = await getExhibition(params.slug, preview);
+  const allInkWorks = await getExhibition(params.slug, preview);
   return {
-    props: { preview, paintings: allPaintings },
+    props: { preview, inkWorks: allInkWorks },
     revalidate: 1,
   };
 }

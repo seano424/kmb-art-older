@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { urlFor } from "../lib/sanity";
+import Link from "next/link";
 
 export default function TailwindCarousel({ images, handleCaptionChange }) {
   const [show, setShow] = useState(3);
@@ -42,7 +43,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
   };
 
   const carouselImage = (
-    <>
+    <div className=" cursor-pointer">
       <img
         className={`carousel-images w-full transition-opacity duration-1000 ease-in-out ${
           show !== 0 ? "opacity-0" : "opacity-100"
@@ -78,7 +79,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
         src={urlFor(images[4]?.image).url()}
         alt={images[4]?.content}
       />
-    </>
+    </div>
   );
 
   return (
@@ -87,7 +88,9 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
         onClick={moveLeft}
         className="hidden md:block cursor-pointer  arrows left opacity-25 hover:opacity-75 transition-opacity duration-100 ease-in-out"
       />
-      {carouselImage}
+      <Link href="/paintings">
+        <a>{carouselImage}</a>
+      </Link>
       <FaArrowRight
         onClick={moveRight}
         className="hidden md:block cursor-pointer arrows right opacity-25 hover:opacity-75 transition-opacity duration-100 ease-in-out"

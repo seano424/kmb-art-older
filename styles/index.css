@@ -31,7 +31,7 @@ body {
 
 .carousel-images {
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   position: relative;
   height: 400px;
 }

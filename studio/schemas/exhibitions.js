@@ -26,7 +26,7 @@ export default {
       type: "string",
       options: {
         list: [
-          { title: "Ink Works", value: "inkWorks" },
+          { title: "Ink Works", value: "ink-works" },
           { title: "Paintings", value: "paintings" },
           { title: "Charcoals", value: "charcoals" },
         ],

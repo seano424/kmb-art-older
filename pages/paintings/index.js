@@ -6,14 +6,14 @@ import ImageCard from "../../components/image-card";
 
 export default function Index({ preview, paintings }) {
   const content = paintings.map((painting) => (
-    <ImageCard key={painting._id} image={painting} />
+    <ImageCard key={painting._id} image={painting} title={painting.title} />
   ));
 
   return (
     <Layout preview={preview}>
       <SidebarLayout>
         <main className="my-20 mx-16">
-          <h1 className=" text-8xl">Paintings by Karrie</h1>
+          <h1 className="pl-6 text-7xl">Paintings by Karrie</h1>
           <div className="flex justify-center">
             <div className="grid grid-cols-2 gap-8">{content}</div>
           </div>

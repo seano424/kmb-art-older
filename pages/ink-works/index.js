@@ -6,14 +6,13 @@ import ImageCard from "../../components/image-card";
 
 export default function Index({ preview, inkWorks }) {
   const content = inkWorks.map((inkWork) => (
-    <ImageCard key={inkWork._id} image={inkWork} />
+    <ImageCard key={inkWork._id} image={inkWork} title={inkWork.title} />
   ));
-  console.log(inkWorks);
   return (
     <Layout preview={preview}>
       <SidebarLayout>
         <main className="my-20 mx-16">
-          <h1 className=" text-8xl">Ink Works by Karrie</h1>
+          <h1 className="pl-8 text-7xl">Ink Works by Karrie</h1>
           <div className="flex justify-center">
             <div className="grid grid-cols-2 gap-3">{content}</div>
           </div>
