@@ -54,7 +54,7 @@ export default function SidebarLayout({ children }) {
             Exhibitions
           </a>
         </Link>
-        <Link href="#">
+        <Link href="/dancing-with-a-thousand-bees">
           <a
             className={`text-base ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/book" && "bg-design-yellow"

@@ -13,6 +13,7 @@ import comment from "./comment";
 import carousel from "./carousel";
 import exhibitions from "./exhibitions";
 import artwork from "./artwork";
+import book from "./book";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,6 +25,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     post,
+    book,
     author,
     category,
     carousel,

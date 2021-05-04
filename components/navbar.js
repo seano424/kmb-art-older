@@ -60,7 +60,7 @@ export default function Navbar() {
             EXHIBITIONS
           </a>
         </Link>
-        <Link href="/">
+        <Link href="/dancing-with-a-thousand-bees">
           <a
             style={maxContent}
             className="lg:w-max mx-2 lg:mx-6 hover:text-primary text-xs"
