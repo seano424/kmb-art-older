@@ -4,9 +4,8 @@
 
 html,
 body {
-  font-family: "Jost", sans-serif;
-  /* font-family: "Playfair Display", serif; */
-  /* font-family: "Inter", sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .arrows {
