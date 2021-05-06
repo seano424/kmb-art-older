@@ -3,9 +3,10 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { urlFor } from "../lib/sanity";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function TailwindCarousel({ images, handleCaptionChange }) {
-  const [show, setShow] = useState(3);
+  const [show, setShow] = useState(0);
 
   useEffect(() => {
     let timeout = setTimeout(() => {
@@ -43,58 +44,63 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
   };
 
   const carouselImage = (
-    <div className=" cursor-pointer h-full">
-      <img
-        className={`carousel-images w-full transition-opacity duration-1000 ease-in-out ${
+    <div className="relative cursor-pointer h-full">
+      <Image
+        className={`carousel-images w-full transition-opacity duration-500 ease-in-out ${
           show !== 0 ? "opacity-0" : "opacity-100"
         }`}
         src={urlFor(images[0]?.image).url()}
         alt={images[0]?.content}
+        layout="fill"
       />
-      <img
-        className={`carousel-images carousel-image-1 w-full transition-opacity duration-1000 ease-in-out ${
+      <Image
+        className={`carousel-images carousel-image-1 w-full transition-opacity duration-500 ease-in-out ${
           show !== 1 ? "opacity-0" : "opacity-100"
         }`}
         src={urlFor(images[1]?.image).url()}
         alt={images[1]?.content}
+        layout="fill"
       />
-      <img
-        className={`carousel-images carousel-image-2 w-full transition-opacity duration-1000 ease-in-out ${
+      <Image
+        className={`carousel-images carousel-image-2 w-full transition-opacity duration-500 ease-in-out ${
           show !== 2 ? "opacity-0" : "opacity-100"
         }`}
         src={urlFor(images[2]?.image).url()}
         alt={images[2]?.content}
+        layout="fill"
       />
-      <img
-        className={`carousel-images carousel-image-3 w-full transition-opacity duration-1000 ease-in-out ${
+      <Image
+        className={`carousel-images carousel-image-3 w-full transition-opacity duration-500 ease-in-out ${
           show !== 3 ? "opacity-0" : "opacity-100"
         }`}
         src={urlFor(images[3]?.image).url()}
         alt={images[3]?.content}
+        layout="fill"
       />
-      <img
-        className={`carousel-images carousel-image-4 w-full transition-opacity duration-1000 ease-in-out ${
+      <Image
+        className={`carousel-images carousel-image-4 w-full transition-opacity duration-500 ease-in-out ${
           show !== 4 ? "opacity-0" : "opacity-100"
         }`}
         src={urlFor(images[4]?.image).url()}
         alt={images[4]?.content}
+        layout="fill"
       />
     </div>
   );
 
   return (
-    <div style={{ height: "400px" }} className="bg-indigo-100 mb-16 md:px-40">
-      <FaArrowLeft
+    <div style={{ height: "500px" }} className="mb-8 md:px-20 w-screen">
+      {/* <FaArrowLeft
         onClick={moveLeft}
-        className="hidden md:block cursor-pointer  arrows left opacity-25 hover:opacity-75 transition-opacity duration-100 ease-in-out"
-      />
+        className="ml-20 hidden md:block cursor-pointer arrows left opacity-25 hover:opacity-75 transition-opacity duration-500 ease-in-out"
+      /> */}
       <Link href="/paintings">
         <a>{carouselImage}</a>
       </Link>
-      <FaArrowRight
+      {/* <FaArrowRight
         onClick={moveRight}
-        className="hidden md:block cursor-pointer arrows right opacity-25 hover:opacity-75 transition-opacity duration-100 ease-in-out"
-      />
+        className="mr-20 hidden md:block cursor-pointer arrows right opacity-25 hover:opacity-75 transition-opacity duration-500 ease-in-out"
+      /> */}
     </div>
   );
 }

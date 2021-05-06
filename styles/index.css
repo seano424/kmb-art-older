@@ -29,10 +29,10 @@ body {
 }
 
 .carousel-images {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  position: relative;
-  height: 400px;
+  /* position: relative; */
+  /* height: 400px; */
 }
 
 .carousel-image-1 {

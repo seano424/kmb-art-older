@@ -8,7 +8,7 @@ const maxContent = {
 
 export default function Navbar() {
   return (
-    <section className="flex md:px-12 items-center mx-32 my-8">
+    <section className="flex md:px-12 items-center mx-32 mb-4 mt-1">
       <h1 className="relative h-28 w-full">
         <Image
           src="/images/full-signature.png"
