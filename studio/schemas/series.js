@@ -5,7 +5,7 @@ export default {
   fields: [
     // ... lots of fields, probably ...
     {
-      title: "Exhibition Title",
+      title: "Series Title",
       name: "title",
       type: "string",
     },

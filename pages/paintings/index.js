@@ -6,6 +6,7 @@ import PostTitle from "@/components/post-title";
 import FeatureImage from "@/components/feature-image";
 
 export default function Index({ preview, paintings }) {
+  console.log(paintings);
   return (
     <Layout preview={preview}>
       <SidebarLayout>

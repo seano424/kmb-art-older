@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../../components/layout";
 import SidebarLayout from "../../components/sidebar-layout";
-import { getExhibition, getAllPaintingsWithSlug } from "../../lib/api";
+import { getSerie, getAllPaintingsWithSlug } from "../../lib/api";
 import ImagesDisplay from "@/components/images-display";
 
 export default function Painting({ preview, paintings }) {
+  console.log(paintings);
   return (
     <Layout preview={preview}>
       <SidebarLayout>
@@ -15,7 +16,7 @@ export default function Painting({ preview, paintings }) {
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const allPaintings = await getExhibition(params.slug, preview);
+  const allPaintings = await getSerie(params.slug, preview);
   return {
     props: { preview, paintings: allPaintings },
     revalidate: 1,
