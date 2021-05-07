@@ -2,11 +2,10 @@ import React from "react";
 import { urlFor } from "../lib/sanity";
 import Image from "next/image";
 import Link from "next/link";
-import { FaExternalLinkAlt } from "react-icons/fa";
 
-export default function ImageCard({ image }) {
+export default function ImageCard({ image, title }) {
   return (
-    <div className="relative" key={image._id}>
+    <div className="relative">
       <Link href={`/${image.category}/${image.slug.current}`} passHref>
         <div className="cursor-pointer">
           <a className="">
@@ -14,13 +13,13 @@ export default function ImageCard({ image }) {
               className="rounded-sm shadow-xl"
               src={urlFor(image?.featureImage).url()}
               alt="something"
-              width="500"
-              height="500"
+              width="300"
+              height="300"
             />
           </a>
           <div className="flex justify-between">
-            <p className="caption-header w-48 text-opacity-25 text-black text-md leading-relaxed tracking-wider">
-              {image.title}
+            <p className="caption-header italic text-sm text-black text-md leading-relaxed tracking-wider">
+              <span className="opacity-50">series:</span> {title}
             </p>
             {/* <FaExternalLinkAlt /> */}
           </div>

@@ -9,24 +9,31 @@ export default {
       type: "string",
     },
     {
-      name: "image",
-      title: "Image",
+      name: "front_image",
+      title: "Front Image",
       type: "image",
       options: {
         hotspot: true,
       },
     },
     {
-      name: "bio",
-      title: "Bio",
-      type: "array",
-      of: [{ type: "block" }],
+      name: "back_image",
+      title: "Back Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "body",
+      title: "Body",
+      type: "blockContent",
     },
   ],
   preview: {
     select: {
       title: "title",
-      media: "image",
+      media: "front_image",
     },
   },
 };

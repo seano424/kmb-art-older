@@ -11,7 +11,7 @@ import post from "./post";
 import author from "./author";
 import comment from "./comment";
 import carousel from "./carousel";
-import exhibitions from "./exhibitions";
+import series from "./series";
 import artwork from "./artwork";
 import book from "./book";
 
@@ -24,12 +24,12 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    post,
+    series,
     book,
+    carousel,
+    post,
     author,
     category,
-    carousel,
-    exhibitions,
     artwork,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

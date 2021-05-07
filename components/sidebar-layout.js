@@ -47,7 +47,7 @@ export default function SidebarLayout({ children }) {
         </Link>
         <Link href="#">
           <a
-            className={`text-base ml-1 font-light mb-1 hover:bg-design-yellow ${
+            className={`text-base uppercase font-semibold ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/exhibitions" && "bg-design-yellow"
             }`}
           >
@@ -56,7 +56,7 @@ export default function SidebarLayout({ children }) {
         </Link>
         <Link href="/dancing-with-a-thousand-bees">
           <a
-            className={`text-base ml-1 font-light mb-1 hover:bg-design-yellow ${
+            className={`text-sm ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/book" && "bg-design-yellow"
             }`}
           >
@@ -65,7 +65,7 @@ export default function SidebarLayout({ children }) {
         </Link>
         <Link href="#">
           <a
-            className={`text-base ml-1 font-light mb-1 hover:bg-design-yellow ${
+            className={`text-sm ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/about" && "bg-design-yellow"
             }`}
           >
@@ -74,11 +74,20 @@ export default function SidebarLayout({ children }) {
         </Link>
         <Link href="#">
           <a
-            className={`text-base ml-1 font-light mb-1 hover:bg-design-yellow ${
+            className={`text-sm ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/contact" && "bg-design-yellow"
             }`}
           >
             Contact
+          </a>
+        </Link>
+        <Link href="#">
+          <a
+            className={`text-sm ml-1 font-light mb-1 hover:bg-design-yellow ${
+              pathname === "/about" && "bg-design-yellow"
+            }`}
+          >
+            Blog
           </a>
         </Link>
       </div>

@@ -1,24 +1,17 @@
 import React from "react";
-import Layout from "../../components/layout";
-import SidebarLayout from "../../components/sidebar-layout";
+import Layout from "@/components/layout";
+import SidebarLayout from "@/components/sidebar-layout";
 import { getCharcoals } from "../../lib/api";
-import ImageCard from "../../components/image-card";
+import PostTitle from "@/components/post-title";
+import FeatureImage from "@/components/feature-image";
 
 export default function Charcoals({ preview, charcoals }) {
-  console.log(charcoals);
-  const content = charcoals.map((charcoal) => (
-    <ImageCard key={charcoal._id} image={charcoal} title={charcoal.title} />
-  ));
   return (
     <Layout preview={preview}>
       <SidebarLayout>
         <main className="my-20 mx-16">
-          <h1 className="pl-6 text-2xl mt-10 shadow-small opacity-25 mb-10">
-            Art Series / Charcoals & Pastels
-          </h1>
-          <div className="flex justify-center">
-            <div className="grid grid-cols-2 gap-3">{content}</div>
-          </div>
+          <PostTitle>Art Series / Charcoals & Pastels</PostTitle>
+          <FeatureImage content={charcoals} />
         </main>
       </SidebarLayout>
     </Layout>

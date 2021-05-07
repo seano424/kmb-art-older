@@ -2,37 +2,13 @@ import React from "react";
 import Layout from "../../components/layout";
 import SidebarLayout from "../../components/sidebar-layout";
 import { getExhibition, getAllPaintingsWithSlug } from "../../lib/api";
-import Image from "next/image";
-import { urlFor } from "../../lib/sanity";
+import ImagesDisplay from "@/components/images-display";
 
 export default function Painting({ preview, paintings }) {
-  const artWork = paintings?.results?.map((r) => r.artWork);
-  const title = paintings?.results[0]?.title;
-  const artDisplay = paintings ? (
-    artWork[0]?.map((art) => (
-      <div key={art._key} className="mt-10 h-screen mb-40">
-        <div className="relative w-5/5 h-full">
-          <Image
-            src={urlFor(art.artworkImage).url()}
-            alt={art.caption}
-            layout="fill"
-            objectFit="contain"
-            quality={100}
-          />
-        </div>
-        <h1 className="text-center m-2">{art.caption}</h1>
-      </div>
-    ))
-  ) : (
-    <h1>No artwork has been added to this exhibit so far...</h1>
-  );
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <div className="">
-          <h1 className="text-2xl mt-10 shadow opacity-25">{title}</h1>
-          {artDisplay}
-        </div>
+        <ImagesDisplay series={paintings} />
       </SidebarLayout>
     </Layout>
   );
