@@ -44,9 +44,9 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
   };
 
   const carouselImage = (
-    <div className="relative cursor-pointer h-full">
+    <div className="relative cursor-pointer w-full h-full">
       <Image
-        className={`carousel-images w-full transition-opacity duration-500 ease-in-out ${
+        className={`carousel-images w-screen transition-opacity duration-500 ease-in-out ${
           show !== 0 ? "opacity-0" : "opacity-100"
         }`}
         src={urlFor(images[0]?.image).url()}
@@ -89,7 +89,10 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
   );
 
   return (
-    <div style={{ height: "500px" }} className="mb-8 md:px-20 w-screen">
+    <div
+      style={{ height: "490px" }}
+      className="mb-8 md:px-10 w-full bg-gray-100  -mt-10"
+    >
       {/* <FaArrowLeft
         onClick={moveLeft}
         className="ml-20 hidden md:block cursor-pointer arrows left opacity-25 hover:opacity-75 transition-opacity duration-500 ease-in-out"
