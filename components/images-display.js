@@ -7,7 +7,11 @@ export default function ImagesDisplay({ series }) {
   const title = series?.results[0]?.title;
   const artDisplay = series ? (
     artWork[0]?.map((art) => (
-      <div key={art._key} className="mt-10 h-screen mb-40">
+      <div
+        onContextMenu={(e) => e.preventDefault()}
+        key={art._key}
+        className="mt-10 h-screen mb-40"
+      >
         <div className="relative w-5/5 h-full">
           {art.artworkImage && (
             <Img

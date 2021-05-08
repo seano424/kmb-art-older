@@ -43,7 +43,10 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
   };
 
   const carouselImage = (
-    <div className="relative cursor-pointer w-full h-full">
+    <div
+      onContextMenu={(e) => e.preventDefault()}
+      className="relative cursor-pointer w-full h-full"
+    >
       <Image
         className={`carousel-images w-screen transition-opacity duration-500 ease-in-out ${
           show !== 0 ? "opacity-0" : "opacity-100"

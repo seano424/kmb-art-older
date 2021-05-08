@@ -6,7 +6,7 @@ export default function FeatureImage({ content }) {
     <ImageCard key={c._id} image={c} title={c.title} />
   ));
   return (
-    <div className="flex m-12">
+    <div onContextMenu={(e) => e.preventDefault()} className="flex m-12">
       <div className="grid grid-cols-2 gap-10">{image}</div>
     </div>
   );
