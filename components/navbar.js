@@ -8,7 +8,7 @@ const maxContent = {
 
 export default function Navbar() {
   return (
-    <section className="flex md:px-12 items-center mb-10 mt-8">
+    <section className="flex md:px-12 items-center mb-10 mt-2">
       <h1
         style={{ height: "6rem", width: "100%" }}
         className="relative w-3/5 h-24"
@@ -26,7 +26,10 @@ export default function Navbar() {
         className="relative w-full hidden md:flex md:pr-28 xl:pr-0 md:h-20 items-center justify-end"
       >
         <Link href="/paintings" passHref>
-          <div className=" hover:bg-red-300 cursor-pointer">
+          <div
+            style={{ width: "max-content" }}
+            className=" hover:bg-red-300 w-max cursor-pointer"
+          >
             <a
               style={maxContent}
               className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
@@ -36,7 +39,10 @@ export default function Navbar() {
           </div>
         </Link>
         <Link href="/paintings" passHref>
-          <div className="hover:bg-red-300 cursor-pointer">
+          <div
+            style={{ width: "max-content" }}
+            className="hover:bg-red-300 w-max cursor-pointer"
+          >
             <a
               style={maxContent}
               className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
@@ -46,7 +52,10 @@ export default function Navbar() {
           </div>
         </Link>
         <Link href="/paintings" passHref>
-          <div className="hover:bg-red-300 cursor-pointer">
+          <div
+            style={{ width: "max-content" }}
+            className="hover:bg-red-300 w-max cursor-pointer"
+          >
             <a
               style={maxContent}
               className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
@@ -56,7 +65,10 @@ export default function Navbar() {
           </div>
         </Link>
         <Link href="/paintings" passHref>
-          <div className="hover:bg-red-300 cursor-pointer">
+          <div
+            style={{ width: "max-content" }}
+            className="hover:bg-red-300 w-max cursor-pointer"
+          >
             <a
               style={maxContent}
               className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
@@ -66,7 +78,10 @@ export default function Navbar() {
           </div>
         </Link>
         <Link href="/dancing-with-a-thousand-bees" passHref>
-          <div className="hover:bg-red-300 cursor-pointer">
+          <div
+            style={{ width: "max-content" }}
+            className="hover:bg-red-300 w-max cursor-pointer"
+          >
             <a
               style={maxContent}
               className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
@@ -76,7 +91,10 @@ export default function Navbar() {
           </div>
         </Link>
         <Link href="/" passHref>
-          <div className="hover:bg-red-300 cursor-pointer">
+          <div
+            style={{ width: "max-content" }}
+            className="hover:bg-red-300 w-max cursor-pointer"
+          >
             <a
               style={maxContent}
               className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
@@ -86,7 +104,7 @@ export default function Navbar() {
           </div>
         </Link>
         <Link href="/" passHref>
-          <div className="hover:bg-red-300 cursor-pointer">
+          <div className="hover:bg-red-300 w-max cursor-pointer">
             <a
               style={maxContent}
               className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
