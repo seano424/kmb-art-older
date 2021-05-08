@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
 import { urlFor } from "../lib/sanity";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,10 +12,11 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
       setShow(num);
     }, 8000);
     return () => {
-      handleCaptionChange(images[show].caption);
       clearTimeout(timeout);
     };
   }, [show]);
+
+  handleCaptionChange(images[show].caption);
 
   useEffect(() => {
     window.addEventListener("keydown", downHandler);
