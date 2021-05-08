@@ -5,6 +5,7 @@ import { getSerie, getAllPaintingsWithSlug } from "../../lib/api";
 import ImagesDisplay from "@/components/images-display";
 
 export default function InkWork({ preview, inkWorks }) {
+  console.log(inkWorks);
   return (
     <Layout preview={preview}>
       <SidebarLayout>
