@@ -10,6 +10,8 @@ export default function Navbar() {
     width: "max-content",
   };
 
+  const bgheight = open ? "100vh" : "0";
+
   return (
     <>
       <header className="flex md:px-12 items-center mb-10 mt-2 justify-around">
@@ -144,7 +146,7 @@ export default function Navbar() {
         </div>
       </header>
       <section
-        style={{ top: "100px" }}
+        style={{ top: "100px", height: bgheight }}
         className={`absolute z-10 bg-white h-0 w-full transition-all duration-200 ease-linear ${
           open ? `h-full visible opacity-100 w-full` : `opacity-0`
         }`}
