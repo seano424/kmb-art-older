@@ -13,14 +13,19 @@ export default function Navbar() {
   return (
     <>
       <header className="flex md:px-12 items-center mb-10 mt-2 justify-around">
-        <h1 style={{ height: "6rem" }} className="relative w-3/5 xl:w-5/5 h-24">
-          <Image
-            src="/images/full-signature.png"
-            alt="Karrie Marie Baxley Website Logo"
-            layout="fill"
-            objectFit="contain"
-          />
-        </h1>
+        <Link href="/paintings" passHref>
+          <h1
+            style={{ height: "6rem" }}
+            className="relative w-3/5 xl:w-5/5 h-24 cursor-pointer"
+          >
+            <Image
+              src="/images/full-signature.png"
+              alt="Karrie Marie Baxley Website Logo"
+              layout="fill"
+              objectFit="contain"
+            />
+          </h1>
+        </Link>
 
         <div
           // style={{ top: "1rem", right: "3rem" }}
