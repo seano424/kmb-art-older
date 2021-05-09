@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import MainMobileNav from "./main-mobile-nav";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -143,38 +144,7 @@ export default function Navbar() {
           open ? `h-full visible opacity-100 w-full` : `opacity-0`
         }`}
       >
-        <div className="flex flex-col items-center justify-center m-12">
-          <Link href="/paintings">
-            <a className="mt-4 text-4xl uppercase hover:bg-teal-300 rounded px-2">
-              Paintings
-            </a>
-          </Link>
-          <Link href="/charcoals">
-            <a className="mt-4 text-4xl uppercase hover:bg-teal-300 rounded px-2">
-              Charcoals
-            </a>
-          </Link>
-          <Link href="/ink-works">
-            <a className="mt-4 text-4xl uppercase hover:bg-teal-300 rounded px-2">
-              Ink Works
-            </a>
-          </Link>
-          <Link href="/dancing-with-a-thousand-bees">
-            <a className="mt-4 text-4xl uppercase hover:bg-teal-300 rounded px-2">
-              Book
-            </a>
-          </Link>
-          <Link href="/paintings">
-            <a className="mt-4 text-4xl uppercase hover:bg-teal-300 rounded px-2">
-              About
-            </a>
-          </Link>
-          <Link href="/paintings">
-            <a className="mt-4 text-4xl uppercase hover:bg-teal-300 rounded px-2">
-              Contact
-            </a>
-          </Link>
-        </div>
+        <MainMobileNav />
       </section>
     </>
   );
