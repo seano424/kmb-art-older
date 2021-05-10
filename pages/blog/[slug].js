@@ -32,7 +32,7 @@ export default function Post({ post, morePosts, preview }) {
             <PostTitle>Loading…</PostTitle>
           ) : (
             <>
-              <article>
+              <article className="mx-20">
                 <PostHeader
                   title={post.title}
                   coverImage={post.coverImage}
@@ -41,9 +41,8 @@ export default function Post({ post, morePosts, preview }) {
                 />
                 <PostBody content={post.body} />
               </article>
-
-              {/* <Comments comments={post.comments} /> */}
-              {/* <Form _id={post._id} /> */}
+              <Comments comments={post.comments} />
+              <Form _id={post._id} />
 
               <SectionSeparator />
               {morePosts.length > 0 && <MoreStories posts={morePosts} />}

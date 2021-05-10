@@ -19,6 +19,9 @@ export default function Index({ allPosts, preview }) {
         <SidebarLayout>
           <Container>
             <PostTitle>Writings by Karrie</PostTitle>
+            <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+              Most Recent
+            </h2>
             {heroPost && (
               <HeroPost
                 title={heroPost.title}

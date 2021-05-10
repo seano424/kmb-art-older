@@ -47,6 +47,12 @@ export default {
       title: "Body",
       type: "blockContent",
     },
+    {
+      title: "Art Work",
+      name: "artWork",
+      type: "array",
+      of: [{ type: "artwork" }],
+    },
   ],
 
   preview: {

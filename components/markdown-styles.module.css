@@ -1,12 +1,12 @@
 .markdown {
-  @apply text-lg leading-relaxed shadow-xl p-5;
+  @apply text-lg leading-relaxed;
 }
 
 .markdown p,
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply text-base opacity-75 italic mx-16;
+  @apply text-base opacity-75;
 }
 
 .markdown p {
@@ -21,10 +21,10 @@
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
 
-.markdown p > a {
-  @apply text-lg;
+.markdown a {
+  @apply text-lg opacity-75 bg-teal-200;
 }
 
-.markdown p > a:hover {
-  @apply bg-red-300;
+.markdown a:hover {
+  @apply bg-teal-300 opacity-100;
 }
