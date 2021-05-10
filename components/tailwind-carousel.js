@@ -16,7 +16,9 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
     };
   }, [show]);
 
-  handleCaptionChange(images[show].caption);
+  useEffect(() => {
+    handleCaptionChange(images[show].caption);
+  }, [show]);
 
   useEffect(() => {
     window.addEventListener("keydown", downHandler);
