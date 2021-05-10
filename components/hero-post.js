@@ -1,7 +1,7 @@
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from '../components/cover-image'
-import Link from 'next/link'
+import Avatar from "../components/avatar";
+import Date from "../components/date";
+import CoverImage from "../components/cover-image";
+import Link from "next/link";
 
 export default function HeroPost({
   title,
@@ -12,26 +12,31 @@ export default function HeroPost({
   slug,
 }) {
   return (
-    <section>
-      <div className="mb-8 md:mb-16">
-        <CoverImage slug={slug} imageObject={coverImage} title={title} url={coverImage} />
+    <section className="m-10">
+      <div className="">
+        <CoverImage
+          slug={slug}
+          imageObject={coverImage}
+          title={title}
+          url={coverImage}
+        />
       </div>
-      <div className="md:grid md:grid-cols-2 md:col-gap-16 lg:col-gap-8 mb-20 md:mb-28">
-        <div>
-          <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
-            <Link as={`/posts/${slug}`} href="/posts/[slug]">
-              <a className="hover:underline">{title}</a>
-            </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
+      <div className="flex flex-col mb-20">
+        <h3 className="mb-4 leading-tight">
+          <Link as={`/blog/${slug}`} href="/blog/[slug]">
+            <a className=" text-3xl font-bold hover:underline">{title}</a>
+          </Link>
+        </h3>
+        <div className="flex items-center">
+          <div className="mr-2">
+            <p className="leading-relaxed">{excerpt}</p>
+            <Avatar name={author?.name} picture={author?.picture} />
+          </div>
+          <div className="text-lg opacity-50">
             <Date dateString={date} />
           </div>
         </div>
-        <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <Avatar name={author?.name} picture={author?.picture} />
-        </div>
       </div>
     </section>
-  )
+  );
 }

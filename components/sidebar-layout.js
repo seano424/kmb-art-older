@@ -81,7 +81,7 @@ export default function SidebarLayout({ children }) {
             Contact
           </a>
         </Link>
-        <Link href="#">
+        <Link href="/blog">
           <a
             className={`text-sm ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/about" && "bg-design-yellow"

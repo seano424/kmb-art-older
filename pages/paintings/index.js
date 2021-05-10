@@ -4,16 +4,17 @@ import SidebarLayout from "@/components/sidebar-layout";
 import { getPaintings } from "../../lib/api";
 import PostTitle from "@/components/post-title";
 import FeatureImage from "@/components/feature-image";
+import Container from "@/components/container";
 
 export default function Index({ preview, paintings }) {
   console.log(paintings);
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <main className="my-20 mx-16">
+        <Container>
           <PostTitle>Art Series / Paintings</PostTitle>
           <FeatureImage content={paintings} />
-        </main>
+        </Container>
       </SidebarLayout>
     </Layout>
   );

@@ -2,6 +2,7 @@ import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getCarouselImages } from "../lib/api";
 import Head from "next/head";
+import Nav from "@/components/navbar";
 
 export default function Index({ preview, carouselImages }) {
   return (
@@ -10,6 +11,7 @@ export default function Index({ preview, carouselImages }) {
         <Head>
           <title>Karrie Marie Baxley</title>
         </Head>
+        <Nav />
         <Intro images={carouselImages} />
       </Layout>
     </>

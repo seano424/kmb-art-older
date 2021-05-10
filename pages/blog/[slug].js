@@ -12,6 +12,7 @@ import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
+import SidebarLayout from "@/components/sidebar-layout";
 import Form from "../../components/form";
 
 export default function Post({ post, morePosts, preview }) {
@@ -21,36 +22,35 @@ export default function Post({ post, morePosts, preview }) {
   }
   return (
     <Layout preview={preview}>
-      <Container>
-        <Header />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article>
-              <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                {/* <meta property="og:image" content={post.ogImage.url} /> */}
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.body} />
-            </article>
+      <Head>
+        <title>{post.title}</title>
+        {/* <meta property="og:image" content={post.ogImage.url} /> */}
+      </Head>
+      <SidebarLayout>
+        <Container>
+          {router.isFallback ? (
+            <PostTitle>Loading…</PostTitle>
+          ) : (
+            <>
+              <article>
+                <PostHeader
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  author={post.author}
+                />
+                <PostBody content={post.body} />
+              </article>
 
-            {/* <Comments comments={post.comments} /> */}
-            {/* <Form _id={post._id} /> */}
+              {/* <Comments comments={post.comments} /> */}
+              {/* <Form _id={post._id} /> */}
 
-            <SectionSeparator />
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-          </>
-        )}
-      </Container>
+              <SectionSeparator />
+              {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+            </>
+          )}
+        </Container>
+      </SidebarLayout>
     </Layout>
   );
 }

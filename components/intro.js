@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Navbar from "../components/navbar";
 import TailwindCarousel from "./tailwind-carousel";
 
 export default function Intro({ images }) {
@@ -38,7 +37,6 @@ export default function Intro({ images }) {
 
   return (
     <>
-      <Navbar />
       <TailwindCarousel
         images={currentImages}
         handleCaptionChange={handleChange}
