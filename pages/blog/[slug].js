@@ -32,7 +32,7 @@ export default function Post({ post, morePosts, preview }) {
             <PostTitle>Loading…</PostTitle>
           ) : (
             <>
-              <article className="mx-20">
+              <article className="lg:mx-20">
                 <PostHeader
                   title={post.title}
                   coverImage={post.coverImage}

@@ -10,9 +10,9 @@ export default function ImagesDisplay({ series }) {
       <div
         onContextMenu={(e) => e.preventDefault()}
         key={art._key}
-        className="mt-10 h-screen mb-40"
+        className="lg:mt-10 mt-5 mx-10 lg:mx-0 h-screen mb-40"
       >
-        <div className="relative w-5/5 h-full">
+        <div className="relative lg:w-5/5 h-full">
           {art.artworkImage && (
             <Img
               src={urlFor(art.artworkImage).url()}
@@ -23,7 +23,7 @@ export default function ImagesDisplay({ series }) {
             />
           )}
         </div>
-        <p className="italic text-sm mt-5 ml-48">{art.caption}</p>
+        <p className="italic text-sm ml-1 lg:ml-48">{art.caption}</p>
       </div>
     ))
   ) : (
@@ -32,7 +32,9 @@ export default function ImagesDisplay({ series }) {
 
   return (
     <div className="">
-      <h1 className="text-2xl mt-10 shadow opacity-25">{title}</h1>
+      <h1 className="text-2xl mt-10 mx-10 lg:mx-0 shadow opacity-25">
+        {title}
+      </h1>
       {artDisplay}
     </div>
   );

@@ -43,7 +43,7 @@ export default function Form({ _id }) {
   }
 
   return (
-    <div className="mt-20 mx-40">
+    <div className="mt-20 lg:mx-40">
       <h1 className="mb-2 italic opacity-75 text-3xl">
         To comment, write below
       </h1>

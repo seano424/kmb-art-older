@@ -19,7 +19,7 @@ export default function ImageCard({ image, title }) {
           </a>
           <div className="flex justify-between">
             <p className="caption-header italic text-sm text-black text-md leading-relaxed tracking-wider">
-              <span className="opacity-50">series:</span> {title}
+              <span className="opacity-50 px-1">series:</span> {title}
             </p>
             {/* <FaExternalLinkAlt /> */}
           </div>

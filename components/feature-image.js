@@ -7,7 +7,12 @@ export default function FeatureImage({ content }) {
   ));
   return (
     <div onContextMenu={(e) => e.preventDefault()} className="flex m-12">
-      <div className="grid grid-cols-3 gap-10">{image}</div>
+      <div
+        style={{ border: "10px solid rgba(0,0,0,0.06)" }}
+        className="grid lg:grid-cols-3 gap-10"
+      >
+        {image}
+      </div>
     </div>
   );
 }
