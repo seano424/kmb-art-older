@@ -7,11 +7,10 @@ import FeatureImage from "@/components/feature-image";
 import Container from "@/components/container";
 
 export default function Index({ preview, paintings }) {
-  console.log(paintings);
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <Container>
+        <Container background="images/background.jpg">
           <PostTitle>Art Series / Paintings</PostTitle>
           <FeatureImage content={paintings} />
         </Container>

@@ -1,15 +1,21 @@
-import React from "react";
+import { useContext } from "react";
+import { NavContext } from "../context/NavContext";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function SidebarLayout({ children }) {
+  const { open, toggleOpen } = useContext(NavContext);
   const { pathname } = useRouter();
   return (
     <>
-      <div className="hidden shadow-md fixed pl-12 lg:flex min-h-screen top-0 left-0 overflow-x-hidden flex-col w-64 flex-shrink-0">
+      <div
+        className={`transition-opacity duration-500 ease-in-out fixed z-20 bg-white shadow-md lg:pl-12 flex min-h-screen top-24 lg:mt-0 lg:top-0 overflow-x-hidden flex-col lg:w-64 flex-shrink-0 ${
+          open ? "w-full text-center opacity-100" : "w-0 opacity-0"
+        }`}
+      >
         <Link href="/">
-          <a>
+          <a onClick={toggleOpen}>
             <h2
               style={{ textDecorationColor: "blanchedalmond" }}
               className="text-6xl leading-none my-8 hover:underline cursor-pointer"
@@ -20,7 +26,10 @@ export default function SidebarLayout({ children }) {
         </Link>
         <Link href="/paintings">
           <a
-            className={`text-base ml-1 font-light mb-1 hover:bg-design-yellow ${
+            onClick={toggleOpen}
+            className={`${
+              open ? "text-4xl" : "text-base"
+            } ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/paintings" && "bg-design-yellow"
             }`}
           >
@@ -29,7 +38,10 @@ export default function SidebarLayout({ children }) {
         </Link>
         <Link href="/ink-works">
           <a
-            className={`text-base ml-1 font-light mb-1 hover:bg-design-yellow ${
+            onClick={toggleOpen}
+            className={`${
+              open ? "text-4xl" : "text-base"
+            } ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/ink-works" && "bg-design-yellow"
             }`}
           >
@@ -38,25 +50,22 @@ export default function SidebarLayout({ children }) {
         </Link>
         <Link href="/charcoals">
           <a
-            className={`text-base ml-1 font-light mb-1 hover:bg-design-yellow ${
+            onClick={toggleOpen}
+            className={`${
+              open ? "text-4xl" : "text-base"
+            } ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/charcoals" && "bg-design-yellow"
             }`}
           >
             Charcoals
           </a>
         </Link>
-        <Link href="#">
-          <a
-            className={`text-base uppercase font-semibold ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === "/exhibitions" && "bg-design-yellow"
-            }`}
-          >
-            Exhibitions
-          </a>
-        </Link>
         <Link href="/dancing-with-a-thousand-bees">
           <a
-            className={`text-sm ml-1 font-light mb-1 hover:bg-design-yellow ${
+            onClick={toggleOpen}
+            className={`${
+              open ? "text-4xl" : "text-sm"
+            } ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/book" && "bg-design-yellow"
             }`}
           >
@@ -65,7 +74,10 @@ export default function SidebarLayout({ children }) {
         </Link>
         <Link href="#">
           <a
-            className={`text-sm ml-1 font-light mb-1 hover:bg-design-yellow ${
+            onClick={toggleOpen}
+            className={`${
+              open ? "text-4xl" : "text-sm"
+            } ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/about" && "bg-design-yellow"
             }`}
           >
@@ -74,7 +86,10 @@ export default function SidebarLayout({ children }) {
         </Link>
         <Link href="#">
           <a
-            className={`text-sm ml-1 font-light mb-1 hover:bg-design-yellow ${
+            onClick={toggleOpen}
+            className={`${
+              open ? "text-4xl" : "text-sm"
+            } ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/contact" && "bg-design-yellow"
             }`}
           >
@@ -83,7 +98,10 @@ export default function SidebarLayout({ children }) {
         </Link>
         <Link href="/blog">
           <a
-            className={`text-sm ml-1 font-light mb-1 hover:bg-design-yellow ${
+            onClick={toggleOpen}
+            className={`${
+              open ? "text-4xl" : "text-sm"
+            } ml-1 font-light mb-1 hover:bg-design-yellow ${
               pathname === "/about" && "bg-design-yellow"
             }`}
           >
