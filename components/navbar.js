@@ -124,7 +124,7 @@ export default function Navbar() {
         </div>
         <div
           onClick={() => setOpen(!open)}
-          className="xl:hidden cursor-pointer flex flex-col justify-center"
+          className="xl:hidden cursor-pointer flex flex-col justify-center p-3"
         >
           <div
             className={`w-8 h-1 bg-blue-900 rounded-lg transition-all duration-150 ease-linear relative ${
