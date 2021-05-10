@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { NavContext } from "../context/NavContext";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function SidebarLayout({ children }) {
@@ -11,7 +10,9 @@ export default function SidebarLayout({ children }) {
     <>
       <div
         className={`transition-opacity duration-500 ease-in-out fixed z-20 bg-white shadow-md lg:pl-12 flex min-h-screen top-28 lg:mt-0 lg:top-0 overflow-x-hidden flex-col lg:w-64 flex-shrink-0 ${
-          open ? "w-full text-center opacity-100" : "w-0 opacity-0"
+          open
+            ? "w-full text-center opacity-100"
+            : "w-0 opacity-0 lg:opacity-100"
         }`}
       >
         <Link href="/">
