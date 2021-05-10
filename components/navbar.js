@@ -31,7 +31,7 @@ export default function Navbar() {
 
         <div
           // style={{ top: "1rem", right: "3rem" }}
-          className="relative w-full hidden xl:flex md:pr-28 xl:pr-0 md:h-20 items-center justify-end"
+          className="relative w-full hidden lg:flex md:pr-28 xl:pr-0 md:h-20 items-center justify-end"
         >
           <Link href="/paintings" passHref>
             <div
