@@ -23,7 +23,7 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>{post.title}</title>
+        <title>{post ? post.title : "KMB Arts"}</title>
         {/* <meta property="og:image" content={post.ogImage.url} /> */}
       </Head>
       <SidebarLayout>
@@ -76,6 +76,6 @@ export async function getStaticPaths() {
           slug: post.slug,
         },
       })) || [],
-    fallback: true,
+    fallback: false,
   };
 }
