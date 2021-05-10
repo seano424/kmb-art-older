@@ -7,7 +7,7 @@ export default function SidebarLayout({ children }) {
   const { pathname } = useRouter();
   return (
     <>
-      <div className="hidden shadow-md fixed pl-12 lg:flex min-h-screen top-0 left-0 overflow-x-hidden flex-col w-56 flex-shrink-0">
+      <div className="hidden shadow-md fixed pl-12 lg:flex min-h-screen top-0 left-0 overflow-x-hidden flex-col w-64 flex-shrink-0">
         <Link href="/">
           <a>
             <h2
@@ -91,7 +91,7 @@ export default function SidebarLayout({ children }) {
           </a>
         </Link>
       </div>
-      <div className="lg:ml-32">{children}</div>
+      <div className="lg:ml-64">{children}</div>
     </>
   );
 }
