@@ -1,6 +1,8 @@
 import React from "react";
 import { urlFor } from "../lib/sanity";
 import Img from "next/image";
+import PostTitle from "@/components/post-title";
+import Post from "pages/blog/[slug]";
 
 export default function ImagesDisplay({ series }) {
   const artWork = series?.results?.map((r) => r.artWork);
@@ -23,7 +25,9 @@ export default function ImagesDisplay({ series }) {
             />
           )}
         </div>
-        <p className="italic text-sm ml-1 lg:ml-48">{art.caption}</p>
+        <p className="italic text-lg opacity-70 mt-5 text-center shadow-small">
+          {art.caption}
+        </p>
       </div>
     ))
   ) : (
@@ -31,10 +35,8 @@ export default function ImagesDisplay({ series }) {
   );
 
   return (
-    <div className="">
-      <h1 className="text-2xl mt-10 mx-10 lg:mx-0 shadow opacity-25">
-        {title}
-      </h1>
+    <div className="mx-5 lg:mx-40">
+      <PostTitle>{title}</PostTitle>
       {artDisplay}
     </div>
   );

@@ -4,15 +4,16 @@ import SidebarLayout from "@/components/sidebar-layout";
 import { getCharcoals } from "../../lib/api";
 import PostTitle from "@/components/post-title";
 import FeatureImage from "@/components/feature-image";
+import Container from "@/components/container";
 
 export default function Charcoals({ preview, charcoals }) {
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <main className="my-20 mx-16">
+        <Container>
           <PostTitle>Art Series / Charcoals & Pastels</PostTitle>
           <FeatureImage content={charcoals} />
-        </main>
+        </Container>
       </SidebarLayout>
     </Layout>
   );

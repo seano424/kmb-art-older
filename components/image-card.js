@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ImageCard({ image, title }) {
   return (
-    <div className="relative">
+    <div className="relative border-8 border-gray-200">
       <Link href={`/${image.category}/${image.slug.current}`} passHref>
         <div className="cursor-pointer">
           <a className="">
@@ -13,8 +13,8 @@ export default function ImageCard({ image, title }) {
               className="rounded-sm shadow-xl"
               src={urlFor(image?.featureImage).url()}
               alt="something"
-              width="300"
-              height="300"
+              width="400"
+              height="400"
             />
           </a>
           <div className="flex justify-between">

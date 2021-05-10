@@ -22,9 +22,9 @@
 }
 
 .markdown a {
-  @apply text-lg opacity-75 bg-teal-200;
+  @apply text-lg opacity-75;
 }
 
 .markdown a:hover {
-  @apply bg-teal-300 opacity-100;
+  @apply opacity-100;
 }

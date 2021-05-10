@@ -4,15 +4,16 @@ import SidebarLayout from "@/components/sidebar-layout";
 import { getInkWorks } from "../../lib/api";
 import PostTitle from "@/components/post-title";
 import FeatureImage from "@/components/feature-image";
+import Container from "@/components/container";
 
 export default function Index({ preview, inkWorks }) {
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <main className="my-20 mx-16">
+        <Container>
           <PostTitle>Art Series / Ink Works</PostTitle>
           <FeatureImage content={inkWorks} />
-        </main>
+        </Container>
       </SidebarLayout>
     </Layout>
   );
