@@ -10,6 +10,7 @@ export default function CoverImage({
   slug,
   width,
   height,
+  objectfit,
 }) {
   const image = (
     <Image
@@ -20,7 +21,7 @@ export default function CoverImage({
         "hover:shadow-medium transition-shadow duration-200": slug,
       })}
       src={imageBuilder(imageObject).url()}
-      objectFit="cover"
+      objectFit={objectfit ? objectfit : "cover"}
       objectPosition="center"
     />
   );

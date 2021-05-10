@@ -5,7 +5,11 @@ export default function PostTitle({ children }) {
   const { open, toggleOpen } = useContext(NavContext);
 
   return (
-    <div className="flex justify-between uppercase font-bold text-2xl pt-10 shadow-small mb-10">
+    <div
+      className={`flex m-auto justify-between uppercase font-bold text-2xl pt-10 ${
+        open ? "" : "shadow-small"
+      } mb-10`}
+    >
       <div
         onClick={toggleOpen}
         className="xl:hidden cursor-pointer flex flex-col justify-center"
@@ -28,7 +32,7 @@ export default function PostTitle({ children }) {
           }`}
         />
       </div>
-      {children}
+      <div className="pl-20">{children}</div>
     </div>
   );
 }

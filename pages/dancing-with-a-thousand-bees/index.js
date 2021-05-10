@@ -4,15 +4,16 @@ import SidebarLayout from "../../components/sidebar-layout";
 import { getBook } from "../../lib/api";
 import BookDisplay from "../../components/book-display";
 import PostTitle from "../../components/post-title";
+import Container from "@/components/container";
 
 export default function Index({ preview, book }) {
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <main className="my-20 mx-28">
+        <Container>
           <PostTitle>Dancing With A Thousand Bees</PostTitle>
           <BookDisplay book={book[0]} />
-        </main>
+        </Container>
       </SidebarLayout>
     </Layout>
   );
