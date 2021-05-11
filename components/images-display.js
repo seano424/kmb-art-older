@@ -1,12 +1,17 @@
-import React from "react";
+import { useState } from "react";
 import { urlFor } from "../lib/sanity";
 import Img from "next/image";
 import PostTitle from "@/components/post-title";
-import Post from "pages/blog/[slug]";
+import Lightbox from "react-image-lightbox";
 
 export default function ImagesDisplay({ series }) {
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [open, toggleOpen] = useState(false);
+
   const artWork = series?.results?.map((r) => r.artWork);
   const title = series?.results[0]?.title;
+  const images = artWork[0].map((a) => a.artworkImage);
+
   const artDisplay = series ? (
     artWork[0]?.map((art) => (
       <div
@@ -14,7 +19,10 @@ export default function ImagesDisplay({ series }) {
         key={art._key}
         className="lg:mt-10 mx-10 lg:mx-0 h-96 xl:h-screen mb-20 lg:mb-40"
       >
-        <div className="relative lg:w-5/5 h-full">
+        <div
+          onClick={() => toggleOpen(!open)}
+          className="relative lg:w-5/5 h-full"
+        >
           {art.artworkImage && (
             <Img
               src={urlFor(art.artworkImage).url()}
@@ -37,7 +45,25 @@ export default function ImagesDisplay({ series }) {
   return (
     <div className="mx-5 lg:mx-40">
       <PostTitle>{title}</PostTitle>
-      {artDisplay}
+      {open ? (
+        <Lightbox
+          // {urlFor(art.artworkImage).url()}
+          mainSrc={urlFor(images[photoIndex]).url()}
+          nextSrc={urlFor(images[(photoIndex + 1) % images.length]).url()}
+          prevSrc={urlFor(
+            images[(photoIndex + images.length - 1) % images.length]
+          ).url()}
+          onCloseRequest={() => toggleOpen(!open)}
+          onMovePrevRequest={() =>
+            setPhotoIndex((photoIndex + images.length - 1) % images.length)
+          }
+          onMoveNextRequest={() =>
+            setPhotoIndex((photoIndex + 1) % images.length)
+          }
+        />
+      ) : (
+        artDisplay
+      )}
     </div>
   );
 }
