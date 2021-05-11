@@ -9,7 +9,7 @@ export default function SidebarLayout({ children }) {
   return (
     <>
       <div
-        className={`transition-opacity duration-500 ease-in-out absolute z-20 bg-white shadow-md lg:pl-12 flex min-h-screen top-28 lg:pr-12 lg:mt-0 lg:top-0 md:overflow-x-hidden flex-col lg:w-72 flex-shrink-0 ${
+        className={`transition-opacity duration-500 ease-in-out absolute lg:fixed z-20 bg-white shadow-md lg:pl-12 flex min-h-screen top-28 lg:pr-12 lg:mt-0 lg:top-0 md:overflow-x-hidden flex-col lg:w-72 flex-shrink-0 ${
           open
             ? "w-full text-center opacity-100 lg:text-left"
             : "w-0 opacity-0 lg:opacity-100"
