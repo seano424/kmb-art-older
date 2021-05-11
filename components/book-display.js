@@ -16,7 +16,7 @@ export default function BookDisplay({ book }) {
 
   const { front_image, back_image, _id, body } = book;
   return (
-    <div key={_id} className="grid lg:grid-cols-2 gap-8">
+    <div key={_id} className="grid lg:grid-cols-2 pb-28">
       <div className="cursor-pointer">
         <a
           target="_blank"
