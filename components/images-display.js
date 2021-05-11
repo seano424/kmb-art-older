@@ -46,21 +46,22 @@ export default function ImagesDisplay({ series }) {
     <div className="mx-5 lg:mx-40">
       <PostTitle>{title}</PostTitle>
       {open ? (
-        <Lightbox
-          // {urlFor(art.artworkImage).url()}
-          mainSrc={urlFor(images[photoIndex]).url()}
-          nextSrc={urlFor(images[(photoIndex + 1) % images.length]).url()}
-          prevSrc={urlFor(
-            images[(photoIndex + images.length - 1) % images.length]
-          ).url()}
-          onCloseRequest={() => toggleOpen(!open)}
-          onMovePrevRequest={() =>
-            setPhotoIndex((photoIndex + images.length - 1) % images.length)
-          }
-          onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % images.length)
-          }
-        />
+        <div onContextMenu={(e) => e.preventDefault()}>
+          <Lightbox
+            mainSrc={urlFor(images[photoIndex]).url()}
+            nextSrc={urlFor(images[(photoIndex + 1) % images.length]).url()}
+            prevSrc={urlFor(
+              images[(photoIndex + images.length - 1) % images.length]
+            ).url()}
+            onCloseRequest={() => toggleOpen(!open)}
+            onMovePrevRequest={() =>
+              setPhotoIndex((photoIndex + images.length - 1) % images.length)
+            }
+            onMoveNextRequest={() =>
+              setPhotoIndex((photoIndex + 1) % images.length)
+            }
+          />
+        </div>
       ) : (
         artDisplay
       )}

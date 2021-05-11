@@ -8,7 +8,7 @@
   }
 }
 
-@media all and (min-width: 1024px) and (max-width: 1366px) {
+@media all and (min-width: 1124px) and (max-width: 1366px) {
   .carousel {
     height: 990px;
   }
