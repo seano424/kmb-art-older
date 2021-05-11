@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-accent-1 border-t border-accent-2 mt-auto px-2 flex-1">
-      <div className="flex py-12 justify-between items-center">
+      <div className="flex w-3/5 lg:w-5/6 m-auto py-12 justify-between items-center">
         <a
           className="text-base hidden lg:flex"
           href="https://www.seanoreilly.me/"
