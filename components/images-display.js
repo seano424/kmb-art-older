@@ -12,7 +12,7 @@ export default function ImagesDisplay({ series }) {
       <div
         onContextMenu={(e) => e.preventDefault()}
         key={art._key}
-        className="lg:mt-10 mt-5 mx-10 lg:mx-0 h-screen mb-40"
+        className="lg:mt-10 mx-10 lg:mx-0 h-96 xl:h-screen mb-20 lg:mb-40"
       >
         <div className="relative lg:w-5/5 h-full">
           {art.artworkImage && (
@@ -25,7 +25,7 @@ export default function ImagesDisplay({ series }) {
             />
           )}
         </div>
-        <p className="italic text-lg opacity-70 mt-5 text-center shadow-small">
+        <p className="italic py-2 text-lg opacity-70 text-center shadow-small">
           {art.caption}
         </p>
       </div>

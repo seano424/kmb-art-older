@@ -25,8 +25,8 @@ export default function BookDisplay({ book }) {
           <CoverImage
             imageObject={bookSideBack ? front_image : back_image}
             title="Dancing with a thousand bees book"
-            height={700}
-            width={500}
+            height={1000}
+            width={1000}
             objectfit="contain"
           />
         </a>
