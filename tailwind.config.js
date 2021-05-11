@@ -1,20 +1,17 @@
 // 0 1px 0px 0 rgb(0 0 0 / 10%), 0 0px 0px 0 rgb(0 0 0 / 7%)
 
 module.exports = {
-  purge: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.js",
-    "./pages/**/*.ts",
-    "./pages/**/*.jsx",
-    "./pages/**/*.tsx",
-    "./components/**/*.js",
-    "./components/**/*.ts",
-    "./components/**/*.jsx",
-    "./components/**/*.tsx",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./layout/**/*.{js,ts,jsx,tsx}",
-    "./helpers/**/*.{js,ts,jsx,tsx}",
-  ],
+  purge: {
+    content: [
+      "./components/**/*.{js,ts,jsx,tsx}",
+      "./pages/**/*.{js,ts,jsx,tsx}",
+    ],
+    options: {
+      safelist: {
+        standard: ["outline-none"],
+      },
+    },
+  },
   theme: {
     extend: {
       colors: {
