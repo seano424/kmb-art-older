@@ -1,0 +1,9 @@
+.carousel {
+  height: 490px;
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .carousel {
+    height: 990px;
+  }
+}

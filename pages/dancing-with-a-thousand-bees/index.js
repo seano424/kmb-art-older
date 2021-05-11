@@ -11,9 +11,7 @@ export default function Index({ preview, book }) {
     <Layout preview={preview}>
       <SidebarLayout>
         <Container>
-          <PostTitle>
-            Dancing With A Thousand Bees by Karrie Marie Baxley
-          </PostTitle>
+          <PostTitle>Dancing With A Thousand Bees</PostTitle>
           <BookDisplay book={book[0]} />
         </Container>
       </SidebarLayout>

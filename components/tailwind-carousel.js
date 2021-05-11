@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { urlFor } from "../lib/sanity";
 import Link from "next/link";
 import Image from "next/image";
+import styles from "./tailwind-carousel.module.css";
 
 export default function TailwindCarousel({ images, handleCaptionChange }) {
   const [show, setShow] = useState(0);
@@ -94,8 +95,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
 
   return (
     <div
-      style={{ height: "490px" }}
-      className="mb-8 md:px-10 w-full bg-gray-100  -mt-10"
+      className={`${styles.carousel} mb-8 md:px-10 w-full bg-gray-100  -mt-10`}
     >
       {/* <FaArrowLeft
         onClick={moveLeft}

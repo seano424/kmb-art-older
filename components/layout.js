@@ -6,10 +6,20 @@ export default function Layout({ footer, preview, children }) {
   return (
     <>
       <Meta />
-      <div>
+      <div className="flex min-h-screen flex-col">
         <main>{children}</main>
+        {footer && <Footer />}
       </div>
-      {footer && <Footer />}
     </>
   );
 }
+
+// .Site {
+//   display: flex;
+//   min-height: 100vh;
+//   flex-direction: column;
+// }
+
+// .Site-content {
+//   flex: 1;
+// }

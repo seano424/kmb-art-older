@@ -28,6 +28,11 @@ export default function MainMobileNav() {
           About
         </a>
       </Link>
+      <Link href="/blog">
+        <a className="mt-4 text-4xl uppercase hover:bg-teal-300 rounded px-2">
+          Blog
+        </a>
+      </Link>
       <Link href="/paintings">
         <a className="mt-4 text-4xl uppercase hover:bg-teal-300 rounded px-2">
           Contact
