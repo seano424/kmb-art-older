@@ -7,7 +7,12 @@ export default function FeatureImage({ content }) {
   ));
   return (
     <div onContextMenu={(e) => e.preventDefault()} className="flex m-12">
-      <div className="selectDisable grid lg:grid-cols-2 gap-10">{image}</div>
+      <div
+        draggable={false}
+        className="selectDisable grid lg:grid-cols-2 gap-10"
+      >
+        {image}
+      </div>
     </div>
   );
 }
