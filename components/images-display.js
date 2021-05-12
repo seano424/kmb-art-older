@@ -10,7 +10,7 @@ export default function ImagesDisplay({ series }) {
 
   const artWork = series?.results?.map((r) => r.artWork);
   const title = series?.results[0]?.title;
-  const images = artWork[0].map((a) => a.artworkImage);
+  const images = artWork[0]?.map((a) => a.artworkImage);
 
   const artDisplay = series ? (
     artWork[0]?.map((art) => (

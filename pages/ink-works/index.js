@@ -10,7 +10,7 @@ export default function Index({ preview, inkWorks }) {
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <Container>
+        <Container background="images/background.jpg">
           <PostTitle>Art Series / Ink Works</PostTitle>
           <FeatureImage content={inkWorks} />
         </Container>

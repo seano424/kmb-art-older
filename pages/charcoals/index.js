@@ -10,7 +10,7 @@ export default function Charcoals({ preview, charcoals }) {
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <Container>
+        <Container background="images/background.jpg">
           <PostTitle>Art Series / Charcoals & Pastels</PostTitle>
           <FeatureImage content={charcoals} />
         </Container>
