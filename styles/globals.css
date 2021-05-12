@@ -12,6 +12,14 @@ body {
   min-height: 100vh;
 }
 
+.selectDisable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 .ril-toolbar.ril__toolbar {
   opacity: 0 !important;
 }
