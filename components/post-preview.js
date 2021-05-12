@@ -12,7 +12,7 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div>
+    <div className="mb-12 shadow-lg p-5">
       <div className="mb-5">
         <CoverImage
           slug={slug}
