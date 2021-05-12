@@ -111,7 +111,7 @@ export default function Navbar() {
               </a>
             </div>
           </Link>
-          <Link href="/" passHref>
+          <Link href="/contact" passHref>
             <div className="hover:bg-red-300 w-max cursor-pointer">
               <a
                 style={maxContent}

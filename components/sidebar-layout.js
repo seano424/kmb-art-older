@@ -85,7 +85,7 @@ export default function SidebarLayout({ children }) {
             About
           </a>
         </Link>
-        <Link href="#">
+        <Link href="/contact">
           <a
             onClick={toggleOpen}
             className={`${
