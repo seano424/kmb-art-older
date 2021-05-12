@@ -6,8 +6,8 @@ export default function PostTitle({ children }) {
 
   return (
     <div
-      className={`flex m-auto justify-between uppercase font-bold text-2xl pt-10 ${
-        open ? "" : "shadow-small"
+      className={`flex m-auto items-center justify-between uppercase font-bold text-2xl pt-10 ${
+        open ? "" : "lg:shadow-small"
       } mb-10`}
     >
       <div
@@ -32,7 +32,7 @@ export default function PostTitle({ children }) {
           }`}
         />
       </div>
-      <div className="pl-20">{children}</div>
+      <div className="pl-20 text-base">{children}</div>
     </div>
   );
 }
