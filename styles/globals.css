@@ -12,6 +12,10 @@ body {
   min-height: 100vh;
 }
 
+img {
+  pointer-events: none;
+}
+
 .selectDisable {
   -webkit-user-select: none;
   -khtml-user-select: none;

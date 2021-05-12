@@ -12,10 +12,15 @@ export default function ImagesDisplay({ series }) {
   const title = series?.results[0]?.title;
   const images = artWork[0]?.map((a) => a.artworkImage);
 
+  const handleContext = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   const artDisplay = series ? (
     artWork[0]?.map((art) => (
       <div
-        onContextMenu={(e) => e.preventDefault()}
+        onContextMenu={handleContext}
         key={art._key}
         className="lg:mt-10 mx-10 lg:mx-0 h-96 xl:h-screen mb-20 lg:mb-40"
       >
@@ -46,7 +51,7 @@ export default function ImagesDisplay({ series }) {
     <div className="mx-5 lg:mx-40">
       <PostTitle>{title}</PostTitle>
       {open ? (
-        <div onContextMenu={(e) => e.preventDefault()}>
+        <div onContextMenu={handleContext}>
           <Lightbox
             mainSrc={urlFor(images[photoIndex]).url()}
             nextSrc={urlFor(images[(photoIndex + 1) % images.length]).url()}
