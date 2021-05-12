@@ -45,12 +45,18 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
     show >= images.length - 1 ? setShow(0) : setShow(show + 1);
   };
 
+  const handleContext = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   const carouselImage = (
     <div
-      onContextMenu={(e) => e.preventDefault()}
+      onContextMenu={handleContext}
       className="relative cursor-pointer w-full h-full"
     >
       <Image
+        onContextMenu={handleContext}
         className={`carousel-images w-screen transition-opacity duration-500 ease-in-out ${
           show !== 0 ? "opacity-0" : "opacity-100"
         }`}
@@ -59,6 +65,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
         layout="fill"
       />
       <Image
+        onContextMenu={handleContext}
         className={`carousel-images carousel-image-1 w-full transition-opacity duration-500 ease-in-out ${
           show !== 1 ? "opacity-0" : "opacity-100"
         }`}
@@ -67,6 +74,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
         layout="fill"
       />
       <Image
+        onContextMenu={handleContext}
         className={`carousel-images carousel-image-2 w-full transition-opacity duration-500 ease-in-out ${
           show !== 2 ? "opacity-0" : "opacity-100"
         }`}
@@ -75,6 +83,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
         layout="fill"
       />
       <Image
+        onContextMenu={handleContext}
         className={`carousel-images carousel-image-3 w-full transition-opacity duration-500 ease-in-out ${
           show !== 3 ? "opacity-0" : "opacity-100"
         }`}
@@ -83,6 +92,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
         layout="fill"
       />
       <Image
+        onContextMenu={handleContext}
         className={`carousel-images carousel-image-4 w-full transition-opacity duration-500 ease-in-out ${
           show !== 4 ? "opacity-0" : "opacity-100"
         }`}
@@ -97,17 +107,9 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
     <div
       className={`${styles.carousel} mb-8 md:px-10 w-full bg-gray-100  -mt-10`}
     >
-      {/* <FaArrowLeft
-        onClick={moveLeft}
-        className="ml-20 hidden md:block cursor-pointer arrows left opacity-25 hover:opacity-75 transition-opacity duration-500 ease-in-out"
-      /> */}
       <Link href="/paintings">
         <a>{carouselImage}</a>
       </Link>
-      {/* <FaArrowRight
-        onClick={moveRight}
-        className="mr-20 hidden md:block cursor-pointer arrows right opacity-25 hover:opacity-75 transition-opacity duration-500 ease-in-out"
-      /> */}
     </div>
   );
 }
