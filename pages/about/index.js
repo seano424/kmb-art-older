@@ -4,7 +4,6 @@ import { getAboutContent } from "../../lib/api";
 import PostTitle from "@/components/post-title";
 import Container from "@/components/container";
 import PostBody from "@/components/post-body";
-import CoverImage from "@/components/cover-image";
 import { imageBuilder } from "../../lib/sanity";
 import Image from "next/image";
 
@@ -18,8 +17,8 @@ export default function About({ preview, content }) {
       <SidebarLayout>
         <Container background="images/background.jpg">
           <PostTitle>{title}</PostTitle>
-          <article className="grid lg:grid-cols-6">
-            <div className="lg:col-span-2">
+          <article className="grid grid-cols-1 md:grid-cols-6">
+            <div className="md:col-span-2 col-span-1">
               <Image
                 className="rounded"
                 src={imageBuilder(image).url()}
@@ -30,7 +29,7 @@ export default function About({ preview, content }) {
                 objectPosition="center"
               />
             </div>
-            <div className="lg:col-span-4 bg-transparent bg-white flex items-center mb-1">
+            <div className="md:col-span-4 col-span-1 bg-transparent bg-white flex items-center mb-1">
               <PostBody content={body} />
             </div>
           </article>
