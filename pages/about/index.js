@@ -17,8 +17,8 @@ export default function About({ preview, content }) {
       <SidebarLayout>
         <Container background="images/background.jpg">
           <PostTitle>{title}</PostTitle>
-          <article className="grid grid-cols-6">
-            <div className="lg:col-span-2 col-span-6 m-auto my-10 lg:my-0">
+          <article className="flex flex-wrap justify-center">
+            <div className="">
               <Image
                 className="rounded"
                 src={imageBuilder(image).url()}
@@ -29,7 +29,7 @@ export default function About({ preview, content }) {
                 objectPosition="center"
               />
             </div>
-            <div className="lg:col-span-4 col-span-6 bg-transparent bg-white flex items-center mb-1">
+            <div className="md:m-20 mb-10 my-8 md:p-8 xl:m-0 xl:p-0 xl:w-1/2 bg-transparent lg:bg-white flex items-center">
               <PostBody content={body} />
             </div>
           </article>
