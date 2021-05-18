@@ -63,6 +63,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
         src={urlFor(images[0]?.image).url()}
         alt={images[0]?.content}
         layout="fill"
+        priority={true}
       />
       <Image
         onContextMenu={handleContext}
@@ -72,6 +73,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
         src={urlFor(images[1]?.image).url()}
         alt={images[1]?.content}
         layout="fill"
+        priority={true}
       />
       <Image
         onContextMenu={handleContext}
@@ -81,6 +83,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
         src={urlFor(images[2]?.image).url()}
         alt={images[2]?.content}
         layout="fill"
+        priority={true}
       />
       <Image
         onContextMenu={handleContext}
@@ -90,6 +93,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
         src={urlFor(images[3]?.image).url()}
         alt={images[3]?.content}
         layout="fill"
+        priority={true}
       />
       <Image
         onContextMenu={handleContext}
@@ -99,6 +103,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
         src={urlFor(images[4]?.image).url()}
         alt={images[4]?.content}
         layout="fill"
+        priority={true}
       />
     </div>
   );
