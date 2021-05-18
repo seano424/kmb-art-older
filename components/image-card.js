@@ -15,6 +15,7 @@ export default function ImageCard({ image, title }) {
               alt="something"
               width="400"
               height="400"
+              priority={true}
             />
           </a>
           <div className="flex justify-between">
