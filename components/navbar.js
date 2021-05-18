@@ -151,7 +151,7 @@ export default function Navbar() {
           open ? `h-full visible opacity-100 w-full` : `opacity-0`
         }`}
       >
-        <MainMobileNav />
+        {open && <MainMobileNav />}
       </section>
     </>
   );
