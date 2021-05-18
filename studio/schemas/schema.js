@@ -14,6 +14,7 @@ import carousel from "./carousel";
 import series from "./series";
 import artwork from "./artwork";
 import book from "./book";
+import about from "./about";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -26,9 +27,10 @@ export default createSchema({
     // in the studio.
     series,
     book,
-    carousel,
+    about,
     post,
     author,
+    carousel,
     category,
     artwork,
     // When added to this list, object types can be used as
