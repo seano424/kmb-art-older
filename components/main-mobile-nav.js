@@ -23,7 +23,7 @@ export default function MainMobileNav() {
           Book
         </a>
       </Link>
-      <Link href="/paintings">
+      <Link href="/about">
         <a className="mt-4 text-4xl uppercase hover:bg-green-200 rounded px-2">
           About
         </a>

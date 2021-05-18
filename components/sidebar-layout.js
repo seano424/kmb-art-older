@@ -73,7 +73,7 @@ export default function SidebarLayout({ children }) {
             Book
           </a>
         </Link>
-        <Link href="#">
+        <Link href="/about">
           <a
             onClick={toggleOpen}
             className={`${
@@ -103,7 +103,7 @@ export default function SidebarLayout({ children }) {
             className={`${
               open ? "text-2xl md:text-3xl lg:text-base" : "text-base"
             } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === "/about" && "bg-design-yellow"
+              pathname === "/blog" && "bg-design-yellow"
             }`}
           >
             Blog

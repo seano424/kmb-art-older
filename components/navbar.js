@@ -98,7 +98,7 @@ export default function Navbar() {
               </a>
             </div>
           </Link>
-          <Link href="/" passHref>
+          <Link href="/about" passHref>
             <div
               style={{ width: "max-content" }}
               className="hover:bg-red-300 w-max cursor-pointer"
