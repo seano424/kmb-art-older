@@ -1,7 +1,7 @@
 // 0 1px 0px 0 rgb(0 0 0 / 10%), 0 0px 0px 0 rgb(0 0 0 / 7%)
 
 module.exports = {
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  purge: [],
   theme: {
     extend: {
       colors: {
@@ -31,10 +31,6 @@ module.exports = {
         "7xl": "4.5rem",
         "8xl": "6.25rem",
       },
-      // boxShadow: {
-      //   small: "0 5px 10px rgba(0, 0, 0, 0.12)",
-      //   medium: "0 8px 30px rgba(0, 0, 0, 0.12)",
-      // },
       boxShadow: {
         sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
         small: "0 1px 0px 0 rgb(0 0 0 / 0.1), 0 0px 0px 0 rgb(0 0 0 / 0.06)",
