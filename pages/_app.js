@@ -7,7 +7,7 @@ import "react-image-lightbox/style.css";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    TagManager.initialize({ gtmId: "UA-171312622-1" });
+    TagManager.initialize({ gtmId: "GTM-56JGB7K" });
   }, []);
 
   return (
