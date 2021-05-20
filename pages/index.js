@@ -9,7 +9,7 @@ export default function Index({ preview, carouselImages }) {
     <>
       <Layout footer preview={preview}>
         <Head>
-          <title>Karrie Marie Baxley</title>
+          <title>Karrie Marie Baxley Arts</title>
         </Head>
         <Nav />
         <Intro images={carouselImages} />
