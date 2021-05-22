@@ -20,12 +20,11 @@ export default function Navbar() {
             style={{ height: "6rem" }}
             className="relative w-3/5 xl:w-5/5 h-24 cursor-pointer"
           >
-            <Image
+            <img
               src="/images/full-signature.png"
               alt="Karrie Marie Baxley Website Logo"
               layout="fill"
               objectFit="contain"
-              priority={true}
             />
           </h1>
         </Link>
