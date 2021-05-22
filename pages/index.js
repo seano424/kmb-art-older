@@ -22,6 +22,6 @@ export async function getStaticProps({ preview = false }) {
   const allCarouselImages = await getCarouselImages(preview);
   return {
     props: { preview, carouselImages: allCarouselImages },
-    revalidate: 60,
+    revalidate: 1,
   };
 }

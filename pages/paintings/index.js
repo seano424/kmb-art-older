@@ -23,6 +23,6 @@ export async function getStaticProps({ preview = false }) {
   const allPaintings = await getPaintings(preview);
   return {
     props: { preview, paintings: allPaintings },
-    revalidate: 60,
+    revalidate: 1,
   };
 }

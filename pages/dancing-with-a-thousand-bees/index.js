@@ -23,6 +23,6 @@ export async function getStaticProps({ preview = false }) {
   const book = await getBook(preview);
   return {
     props: { preview, book },
-    revalidate: 60,
+    revalidate: 1,
   };
 }

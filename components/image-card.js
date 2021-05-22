@@ -18,6 +18,7 @@ export default function ImageCard({ image, title }) {
                 alt="something"
                 width="400"
                 height="400"
+                priority
               />
             </a>
             <div className="flex items-center">
