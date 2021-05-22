@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="flex w-3/5 lg:w-5/6 m-auto py-12 justify-between items-center">
         <a
           className="text-base hidden lg:flex"
-          href="https://www.seanoreilly.me/"
+          href="https://www.seanpatrick.io"
           target="_blank"
         >
           Site created by Sean O'Reilly
