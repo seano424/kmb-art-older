@@ -4,6 +4,7 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
 export default function Meta() {
   return (
     <Head>
+      <title>Karrie Marie Baxley Arts</title>
       <link rel="shortcut icon" href="/images/favicon.ico" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
