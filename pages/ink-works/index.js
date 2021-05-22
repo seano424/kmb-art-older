@@ -23,6 +23,6 @@ export async function getStaticProps({ preview = false }) {
   const allInkWorks = await getInkWorks(preview);
   return {
     props: { preview, inkWorks: allInkWorks },
-    revalidate: 1,
+    revalidate: 60,
   };
 }

@@ -25,6 +25,7 @@ export default function Navbar() {
               alt="Karrie Marie Baxley Website Logo"
               layout="fill"
               objectFit="contain"
+              priority={true}
             />
           </h1>
         </Link>
