@@ -35,7 +35,7 @@ export default function ImagesDisplay({ series }) {
               layout="fill"
               objectFit="contain"
               quality={100}
-              priority
+              priority={true}
             />
           )}
         </div>

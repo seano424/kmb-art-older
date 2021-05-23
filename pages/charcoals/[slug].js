@@ -18,7 +18,7 @@ export async function getStaticProps({ params, preview = false }) {
   const allCharcoals = await getSerie(params.slug, preview);
   return {
     props: { preview, charcoals: allCharcoals },
-    revalidate: 60,
+    revalidate: 1,
   };
 }
 
