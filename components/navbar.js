@@ -35,6 +35,7 @@ export default function Navbar() {
         >
           <Link href="/paintings" passHref>
             <div
+              passhref="true"
               style={{ width: "max-content" }}
               className=" hover:bg-red-300 w-max cursor-pointer"
             >
@@ -48,6 +49,7 @@ export default function Navbar() {
           </Link>
           <Link href="/ink-works" passHref>
             <div
+              passhref="true"
               style={{ width: "max-content" }}
               className="hover:bg-red-300 w-max cursor-pointer"
             >
@@ -61,6 +63,7 @@ export default function Navbar() {
           </Link>
           <Link href="/charcoals" passHref>
             <div
+              passhref="true"
               style={{ width: "max-content" }}
               className="hover:bg-red-300 w-max cursor-pointer"
             >
@@ -74,6 +77,7 @@ export default function Navbar() {
           </Link>
           <Link href="/blog" passHref>
             <div
+              passhref="true"
               style={{ width: "max-content" }}
               className="hover:bg-red-300 w-max cursor-pointer"
             >
@@ -87,6 +91,7 @@ export default function Navbar() {
           </Link>
           <Link href="/dancing-with-a-thousand-bees" passHref>
             <div
+              passhref="true"
               style={{ width: "max-content" }}
               className="hover:bg-red-300 w-max cursor-pointer"
             >
@@ -100,6 +105,7 @@ export default function Navbar() {
           </Link>
           <Link href="/about" passHref>
             <div
+              passhref="true"
               style={{ width: "max-content" }}
               className="hover:bg-red-300 w-max cursor-pointer"
             >
