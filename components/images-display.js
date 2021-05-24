@@ -22,7 +22,7 @@ export default function ImagesDisplay({ series }) {
       <div
         onContextMenu={handleContext}
         key={art._key}
-        className="lg:mt-10 mx-10 lg:mx-0 h-96 xl:h-screen mb-20 lg:mb-40"
+        className="lg:mt-10 mx-10 lg:mx-0 mb-20 lg:mb-40"
       >
         <div
           onClick={() => toggleOpen(!open)}
@@ -32,7 +32,9 @@ export default function ImagesDisplay({ series }) {
             <Img
               src={urlFor(art.artworkImage).url()}
               alt={art.caption}
-              layout="fill"
+              layout="responsive"
+              width={1000}
+              height={1000}
               objectFit="contain"
               quality={100}
               priority={true}
