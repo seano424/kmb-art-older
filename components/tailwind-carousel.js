@@ -51,7 +51,10 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
   };
 
   const carouselImage = (
-    <div onContextMenu={handleContext} className="relative w-full h-full">
+    <div
+      onContextMenu={handleContext}
+      className="relative cursor-pointer w-full h-full"
+    >
       <Image
         onContextMenu={handleContext}
         className={`carousel-images w-screen transition-opacity duration-500 ease-in-out ${
@@ -109,7 +112,12 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
     <div
       className={`${styles.carousel} mb-8 md:px-10 w-full bg-gray-100  -mt-10`}
     >
-      {carouselImage}
+      <Link href="/paintings">
+        <a aria-label="Link to the paintings series by Karrie Marie Baxley">
+          {" "}
+          {carouselImage}
+        </a>
+      </Link>
     </div>
   );
 }
