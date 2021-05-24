@@ -48,7 +48,7 @@ export default function Intro({ images }) {
           <span className="">r</span>
           twork by Karrie Marie Baxley
         </h1>
-        <h1 className="mr-16 md:mr-0 caption-header w-48 text-opacity-25 text-black text-xs">
+        <h1 className="mr-16 md:mr-0 caption-header w-48 text-opacity-75 text-black text-xs">
           {caption ? caption : "Artwork by Karrie Marie Baxley"}
         </h1>
       </section>

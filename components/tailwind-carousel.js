@@ -7,6 +7,8 @@ import styles from "./tailwind-carousel.module.css";
 export default function TailwindCarousel({ images, handleCaptionChange }) {
   const [show, setShow] = useState(0);
 
+  console.log(images);
+
   useEffect(() => {
     let timeout = setTimeout(() => {
       let num = show > images.length - 2 ? 0 : show + 1;
@@ -61,7 +63,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           show !== 0 ? "opacity-0" : "opacity-100"
         }`}
         src={urlFor(images[0]?.image).url()}
-        alt={images[0]?.content}
+        alt={images[0]?.caption}
         layout="fill"
         priority={true}
       />
@@ -71,7 +73,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           show !== 1 ? "opacity-0" : "opacity-100"
         }`}
         src={urlFor(images[1]?.image).url()}
-        alt={images[1]?.content}
+        alt={images[1]?.caption}
         layout="fill"
         priority={true}
       />
@@ -81,7 +83,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           show !== 2 ? "opacity-0" : "opacity-100"
         }`}
         src={urlFor(images[2]?.image).url()}
-        alt={images[2]?.content}
+        alt={images[2]?.caption}
         layout="fill"
         priority={true}
       />
@@ -91,7 +93,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           show !== 3 ? "opacity-0" : "opacity-100"
         }`}
         src={urlFor(images[3]?.image).url()}
-        alt={images[3]?.content}
+        alt={images[3]?.caption}
         layout="fill"
         priority={true}
       />
@@ -101,7 +103,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           show !== 4 ? "opacity-0" : "opacity-100"
         }`}
         src={urlFor(images[4]?.image).url()}
-        alt={images[4]?.content}
+        alt={images[4]?.caption}
         layout="fill"
         priority={true}
       />
