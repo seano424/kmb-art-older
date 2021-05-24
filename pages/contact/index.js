@@ -8,7 +8,7 @@ export default function index() {
   return (
     <Layout>
       <SidebarLayout>
-        <Container background="images/background.jpg">
+        <Container>
           <PostTitle>Contact Karrie</PostTitle>
           <div>
             <h4>Karrie Marie Baxley, Kansas City</h4>

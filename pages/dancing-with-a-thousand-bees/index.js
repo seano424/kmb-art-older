@@ -10,7 +10,7 @@ export default function Index({ preview, book }) {
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <Container>
+        <Container background>
           <PostTitle>Dancing With A Thousand Bees</PostTitle>
           <BookDisplay book={book[0]} />
         </Container>

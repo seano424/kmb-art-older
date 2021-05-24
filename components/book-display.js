@@ -31,7 +31,9 @@ export default function BookDisplay({ book }) {
           />
         </a>
       </div>
-      <PostBody content={body} />
+      <div className="bg-white h-full flex items-center">
+        <PostBody content={body} />
+      </div>
     </div>
   );
 }

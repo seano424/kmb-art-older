@@ -15,7 +15,7 @@ export default function About({ preview, content }) {
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <Container background="images/background.jpg">
+        <Container background>
           <PostTitle>{title}</PostTitle>
           <article className="flex flex-wrap justify-center">
             <div className="">
