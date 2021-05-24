@@ -6,19 +6,22 @@ import Btn from "@/components/btn";
 import { BsArrowUpRight } from "react-icons/bs";
 
 export default function ImageCard({ image, title }) {
+  console.log(image);
   return (
     <Link href={`/${image.category}/${image.slug.current}`} passHref>
       <div>
         <div className="relative border-8 border-gray-200">
-          <div className="cursor-pointer">
-            <a className="">
+          <div className="cursor-pointer w-96">
+            <a>
               <Image
                 className="rounded-sm shadow-xl"
                 src={urlFor(image?.featureImage).url()}
-                alt="something"
-                width="400"
-                height="400"
-                priority
+                alt={`Gallery for ${image.title} by Karrie Marie Baxley`}
+                layout="responsive"
+                width={100}
+                height={120}
+                priority={true}
+                objectFit="cover"
               />
             </a>
             <div className="flex items-center">
