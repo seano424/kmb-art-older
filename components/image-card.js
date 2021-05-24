@@ -6,7 +6,6 @@ import Btn from "@/components/btn";
 import { BsArrowUpRight } from "react-icons/bs";
 
 export default function ImageCard({ image, title }) {
-  console.log(image);
   return (
     <Link href={`/${image.category}/${image.slug.current}`} passHref>
       <div>
