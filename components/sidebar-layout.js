@@ -67,7 +67,7 @@ export default function SidebarLayout({ children }) {
             className={`${
               open ? "text-2xl md:text-3xl lg:text-base" : "text-base"
             } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === "/book" && "bg-design-yellow"
+              pathname === "/dancing-with-a-thousand-bees" && "bg-design-yellow"
             }`}
           >
             Book
