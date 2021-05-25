@@ -4,7 +4,7 @@ import SidebarLayout from "@/components/sidebar-layout";
 import { getSerie, getAllPaintingsWithSlug } from "../../lib/api";
 import ImagesDisplay from "@/components/images-display";
 
-export default function Painting({ preview, charcoals }) {
+export default function Charcoal({ preview, charcoals }) {
   return (
     <Layout preview={preview}>
       <SidebarLayout>

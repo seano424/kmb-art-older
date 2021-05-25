@@ -30,3 +30,9 @@ img {
 .ril-toolbar.ril__toolbar {
   opacity: 0 !important;
 }
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 100vw !important;
+  }
+}

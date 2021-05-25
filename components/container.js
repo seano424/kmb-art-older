@@ -8,7 +8,7 @@ export default function Container({ children, background }) {
       style={{
         backgroundImage: background ? `url("images/background.webp")` : "",
       }}
-      className={`h-screen ${styles.backgroundContainer} container mx-auto px-10 lg:w-4/5`}
+      className={`h-screen ${styles.backgroundContainer} container mx-auto px-10  lg:w-4/5 lg:right-0`}
     >
       {children}
     </div>

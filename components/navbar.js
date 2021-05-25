@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="flex md:px-12 items-center mb-10 mt-2 justify-around">
+      <nav className="flex md:px-12 items-center mb-10 mt-2 justify-around">
         <Link href="/paintings" passHref>
           <h1
             style={{ height: "6rem" }}
@@ -29,7 +29,7 @@ export default function Navbar() {
           </h1>
         </Link>
 
-        <div
+        <article
           // style={{ top: "1rem", right: "3rem" }}
           className="relative w-full hidden lg:flex md:pr-28 xl:pr-0 md:h-20 items-center justify-end"
         >
@@ -127,8 +127,8 @@ export default function Navbar() {
               </a>
             </div>
           </Link>
-        </div>
-        <div
+        </article>
+        <article
           onClick={() => setOpen(!open)}
           className="xl:hidden cursor-pointer flex flex-col justify-center p-3"
         >
@@ -149,8 +149,8 @@ export default function Navbar() {
               open ? `transform -rotate-45 -mt-2` : `transform rotate-0 mt-1 `
             }`}
           />
-        </div>
-      </header>
+        </article>
+      </nav>
       <section
         style={{ top: "100px", height: bgheight }}
         className={`absolute z-10 bg-white h-0 w-full transition-all duration-200 ease-linear ${
