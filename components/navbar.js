@@ -29,10 +29,7 @@ export default function Navbar() {
           </h1>
         </Link>
 
-        <article
-          // style={{ top: "1rem", right: "3rem" }}
-          className="relative w-full hidden lg:flex md:pr-28 xl:pr-0 md:h-20 items-center justify-end"
-        >
+        <article className="relative w-full hidden lg:flex md:pr-28 xl:pr-0 md:h-20 items-center justify-end">
           <Link href="/paintings" passHref>
             <div
               passhref="true"
