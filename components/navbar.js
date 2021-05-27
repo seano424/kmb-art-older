@@ -30,99 +30,61 @@ export default function Navbar() {
         </Link>
 
         <article className="relative w-full hidden lg:flex md:pr-28 xl:pr-0 md:h-20 items-center justify-end">
-          <Link href="/paintings" passHref>
-            <div
-              passhref="true"
-              style={{ width: "max-content" }}
-              className=" hover:bg-red-300 w-max cursor-pointer"
+          <Link href="/paintings">
+            <a
+              style={maxContent}
+              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
             >
-              <a
-                style={maxContent}
-                className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
-              >
-                Paintings
-              </a>
-            </div>
+              Paintings
+            </a>
           </Link>
-          <Link href="/ink-works" passHref>
-            <div
-              passhref="true"
-              style={{ width: "max-content" }}
-              className="hover:bg-red-300 w-max cursor-pointer"
+          <Link href="/ink-works">
+            <a
+              style={maxContent}
+              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
             >
-              <a
-                style={maxContent}
-                className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
-              >
-                Ink Works
-              </a>
-            </div>
+              Ink Works
+            </a>
           </Link>
-          <Link href="/charcoals" passHref>
-            <div
-              passhref="true"
-              style={{ width: "max-content" }}
-              className="hover:bg-red-300 w-max cursor-pointer"
+          <Link href="/charcoals">
+            <a
+              style={maxContent}
+              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
             >
-              <a
-                style={maxContent}
-                className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
-              >
-                Charcoals
-              </a>
-            </div>
+              Charcoals
+            </a>
           </Link>
-          <Link href="/blog" passHref>
-            <div
-              passhref="true"
-              style={{ width: "max-content" }}
-              className="hover:bg-red-300 w-max cursor-pointer"
+          <Link href="/blog">
+            <a
+              style={maxContent}
+              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
             >
-              <a
-                style={maxContent}
-                className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
-              >
-                Blog
-              </a>
-            </div>
+              Blog
+            </a>
           </Link>
-          <Link href="/dancing-with-a-thousand-bees" passHref>
-            <div
-              passhref="true"
-              style={{ width: "max-content" }}
-              className="hover:bg-red-300 w-max cursor-pointer"
+          <Link href="/dancing-with-a-thousand-bees">
+            <a
+              style={maxContent}
+              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
             >
-              <a
-                style={maxContent}
-                className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
-              >
-                Book
-              </a>
-            </div>
+              Book
+            </a>
           </Link>
-          <Link href="/about" passHref>
-            <div
-              passhref="true"
-              style={{ width: "max-content" }}
-              className="hover:bg-red-300 w-max cursor-pointer"
+          <Link href="/about">
+            <a
+              style={maxContent}
+              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
             >
-              <a
-                style={maxContent}
-                className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
-              >
-                About
-              </a>
-            </div>
+              About
+            </a>
           </Link>
-          <Link href="/contact" passHref>
-            <div className="hover:bg-red-300 w-max cursor-pointer">
-              <a
-                style={maxContent}
-                className="lg:w-max mx-2 md:mx-4 text-xs uppercase font-normal tracking-widest"
-              >
-                Contact
-              </a>
-            </div>
+          <Link href="/contact">
+            <a
+              style={maxContent}
+              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
+            >
+              Contact
+            </a>
           </Link>
         </article>
         <article
