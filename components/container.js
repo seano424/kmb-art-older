@@ -1,7 +1,6 @@
 import styles from "./container.module.css";
 
 export default function Container({ children, background }) {
-  console.log(background);
   return (
     // background-image: url("paper.gif");
     <div

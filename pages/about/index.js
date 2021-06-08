@@ -11,7 +11,6 @@ export default function About({ preview, content }) {
   const image = content[0].main_image;
   const body = content[0].body;
   const title = content[0].title;
-  console.log(image);
   return (
     <Layout preview={preview}>
       <SidebarLayout>

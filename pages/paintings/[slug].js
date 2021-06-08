@@ -5,7 +5,6 @@ import { getSerie, getAllPaintingsWithSlug } from "../../lib/api";
 import ImagesDisplay from "@/components/images-display";
 
 export default function Painting({ preview, paintings }) {
-  console.log(paintings);
   return (
     <Layout preview={preview}>
       <SidebarLayout>
