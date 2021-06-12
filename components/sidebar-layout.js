@@ -1,116 +1,140 @@
 import { useContext } from 'react'
-import { NavContext } from '../context/NavContext'
+
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+
+import { NavContext } from '../context/NavContext'
+import MainMobileNav from './main-mobile-nav'
 
 export default function SidebarLayout({ children }) {
   const { open, toggleOpen } = useContext(NavContext)
   const { pathname } = useRouter()
+  const bgheight = open ? '100vh' : '0'
   return (
     <>
-      <div
-        className={`transition-opacity duration-100 ease-in-out fixed z-20 bg-gray-50 shadow-md lg:pl-12 flex min-h-full top-24 lg:pr-12 lg:mt-0 lg:top-0 md:overflow-x-hidden flex-col lg:w-72 flex-shrink-0 ${
-          open
-            ? 'w-full text-center opacity-100 lg:text-left'
-            : 'w-0 opacity-0 lg:opacity-100'
+      <section>
+        <article
+          className={`transition-opacity duration-100 ease-in-out fixed z-20 bg-gray-50 shadow-md lg:pl-12 lg:flex min-h-full top-24 lg:pr-12 lg:mt-0 lg:top-0 md:overflow-x-hidden flex-col lg:w-72 flex-shrink-0 hidden`}
+        >
+          <Link href="/">
+            <a onClick={toggleOpen}>
+              <h2
+                style={{ textDecorationColor: 'blanchedalmond' }}
+                className="text-6xl leading-none my-8 hover:underline cursor-pointer"
+              >
+                Karrie Marie Baxley
+              </h2>
+            </a>
+          </Link>
+          <Link href="/paintings">
+            <a
+              onClick={toggleOpen}
+              className={`${
+                open
+                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  : 'text-base'
+              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
+                pathname === '/paintings' && 'text-gray-300'
+              }`}
+            >
+              Paintings
+            </a>
+          </Link>
+          <Link href="/ink-works">
+            <a
+              onClick={toggleOpen}
+              className={`${
+                open
+                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  : 'text-base'
+              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
+                pathname === '/ink-works' && 'text-gray-300'
+              }`}
+            >
+              Ink Works
+            </a>
+          </Link>
+          <Link href="/charcoals">
+            <a
+              onClick={toggleOpen}
+              className={`${
+                open
+                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  : 'text-base'
+              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
+                pathname === '/charcoals' && 'text-gray-300'
+              }`}
+            >
+              Charcoals
+            </a>
+          </Link>
+          <Link href="/dancing-with-a-thousand-bees">
+            <a
+              onClick={toggleOpen}
+              className={`${
+                open
+                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  : 'text-base'
+              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
+                pathname === '/dancing-with-a-thousand-bees' && 'text-gray-300'
+              }`}
+            >
+              Book
+            </a>
+          </Link>
+          <Link href="/about">
+            <a
+              onClick={toggleOpen}
+              className={`${
+                open
+                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  : 'text-base'
+              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
+                pathname === '/about' && 'text-gray-300'
+              }`}
+            >
+              About
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a
+              onClick={toggleOpen}
+              className={`${
+                open
+                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  : 'text-base'
+              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
+                pathname === '/contact' && 'text-gray-300'
+              }`}
+            >
+              Contact
+            </a>
+          </Link>
+          <Link href="/blog">
+            <a
+              onClick={toggleOpen}
+              className={`${
+                open
+                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  : 'text-base'
+              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
+                pathname === '/blog' && 'text-gray-300'
+              }`}
+            >
+              Blog
+            </a>
+          </Link>
+        </article>
+        <article className="lg:ml-72">{children}</article>
+      </section>
+      <section
+        style={{ top: '90px', height: bgheight }}
+        className={`absolute z-10 bg-gray-50 h-0 w-full transition-all duration-50 ease-linear ${
+          open ? `h-full visible opacity-100 w-full` : `opacity-0`
         }`}
       >
-        <Link href="/">
-          <a onClick={toggleOpen}>
-            <h2
-              style={{ textDecorationColor: 'blanchedalmond' }}
-              className="text-6xl leading-none my-8 hover:underline cursor-pointer"
-            >
-              Karrie Marie Baxley
-            </h2>
-          </a>
-        </Link>
-        <Link href="/paintings">
-          <a
-            onClick={toggleOpen}
-            className={`${
-              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
-            } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === '/paintings' && 'bg-design-yellow'
-            }`}
-          >
-            Paintings
-          </a>
-        </Link>
-        <Link href="/ink-works">
-          <a
-            onClick={toggleOpen}
-            className={`${
-              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
-            } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === '/ink-works' && 'bg-design-yellow'
-            }`}
-          >
-            Ink Works
-          </a>
-        </Link>
-        <Link href="/charcoals">
-          <a
-            onClick={toggleOpen}
-            className={`${
-              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
-            } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === '/charcoals' && 'bg-design-yellow'
-            }`}
-          >
-            Charcoals
-          </a>
-        </Link>
-        <Link href="/dancing-with-a-thousand-bees">
-          <a
-            onClick={toggleOpen}
-            className={`${
-              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
-            } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === '/dancing-with-a-thousand-bees' && 'bg-design-yellow'
-            }`}
-          >
-            Book
-          </a>
-        </Link>
-        <Link href="/about">
-          <a
-            onClick={toggleOpen}
-            className={`${
-              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
-            } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === '/about' && 'bg-design-yellow'
-            }`}
-          >
-            About
-          </a>
-        </Link>
-        <Link href="/contact">
-          <a
-            onClick={toggleOpen}
-            className={`${
-              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
-            } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === '/contact' && 'bg-design-yellow'
-            }`}
-          >
-            Contact
-          </a>
-        </Link>
-        <Link href="/blog">
-          <a
-            onClick={toggleOpen}
-            className={`${
-              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
-            } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === '/blog' && 'bg-design-yellow'
-            }`}
-          >
-            Blog
-          </a>
-        </Link>
-      </div>
-      <div className="lg:ml-72">{children}</div>
+        {open && <MainMobileNav />}
+      </section>
     </>
   )
 }

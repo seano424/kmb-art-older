@@ -10,7 +10,7 @@
 }
 
 .markdown p {
-  @apply mt-8;
+  @apply mt-8 leading-relaxed;
 }
 
 .markdown h2 {

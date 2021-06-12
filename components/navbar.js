@@ -111,8 +111,8 @@ export default function Navbar() {
         </article>
       </nav>
       <section
-        style={{ top: '100px', height: bgheight }}
-        className={`absolute z-10 bg-white h-0 w-full transition-all duration-200 ease-linear ${
+        style={{ top: '90px', height: bgheight }}
+        className={`absolute z-10 bg-gray-50 h-0 w-full transition-all duration-200 ease-linear ${
           open ? `h-full visible opacity-100 w-full` : `opacity-0`
         }`}
       >
