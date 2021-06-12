@@ -3,18 +3,17 @@ import Layout from '@/components/layout'
 import SidebarLayout from '@/components/sidebar-layout'
 import { getSeries } from '../../lib/api'
 import PostTitle from '@/components/post-title'
-import FeatureImage from '@/components/feature-image'
 import Container from '@/components/container'
 import Galleries from '@/components/galleries'
 
-export default function Index({ preview, series }) {
-  // console.log(series)
+export default function Index(props) {
+  // console.log(props)
   return (
-    <Layout preview={preview}>
+    <Layout>
       <SidebarLayout>
         <Container background>
           <PostTitle>Galleries</PostTitle>
-          <Galleries series={series} />
+          <Galleries series={props.series} />
         </Container>
       </SidebarLayout>
     </Layout>

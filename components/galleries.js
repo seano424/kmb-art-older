@@ -4,8 +4,6 @@ import Link from 'next/link'
 import { imageBuilder } from '../lib/sanity'
 
 export default function Galleries({ series }) {
-  console.log(series)
-
   return (
     <section className="grid grid-cols-2 lg:grid-cols-3 gap-4">
       {series.map((serie) => (
