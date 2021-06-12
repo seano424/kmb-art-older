@@ -24,7 +24,7 @@ export default function index() {
 
     const { sendForm, init } = (await import('emailjs-com')).default
 
-    init('user_RZe3wfpwRqUFxAV07nmSv')
+    init(process.env.NEXT_PUBLIC_VERCEL_EMAIL_JS_ID)
     sendForm('default_service', 'template_cauvbxi', '#contact-form').then(
       function (response) {
         console.log('SUCCESS!', response.status, response.text)
