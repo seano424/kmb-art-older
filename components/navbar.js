@@ -30,6 +30,14 @@ export default function Navbar() {
         </Link>
 
         <article className="relative w-full hidden lg:flex md:pr-28 xl:pr-0 md:h-20 items-center justify-end">
+          <Link href="/galleries">
+            <a
+              style={maxContent}
+              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
+            >
+              Galleries
+            </a>
+          </Link>
           <Link href="/paintings">
             <a
               style={maxContent}

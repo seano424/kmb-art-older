@@ -1,18 +1,20 @@
 import React from 'react'
 import Layout from '@/components/layout'
 import SidebarLayout from '@/components/sidebar-layout'
-import { getInkWorks } from '../../lib/api'
+import { getSeries } from '../../lib/api'
 import PostTitle from '@/components/post-title'
 import FeatureImage from '@/components/feature-image'
 import Container from '@/components/container'
+import Galleries from '@/components/galleries'
 
-export default function Index({ preview, inkWorks }) {
+export default function Index({ preview, series }) {
+  // console.log(series)
   return (
     <Layout preview={preview}>
       <SidebarLayout>
         <Container background>
-          <PostTitle>My Various Galleries</PostTitle>
-          <FeatureImage content={inkWorks} />
+          <PostTitle>Galleries</PostTitle>
+          <Galleries series={series} />
         </Container>
       </SidebarLayout>
     </Layout>
@@ -20,9 +22,9 @@ export default function Index({ preview, inkWorks }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allInkWorks = await getInkWorks(preview)
+  const allSeries = await getSeries(preview)
   return {
-    props: { preview, inkWorks: allInkWorks },
+    props: { preview, series: allSeries },
     revalidate: 1,
   }
 }
