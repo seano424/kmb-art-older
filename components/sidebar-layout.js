@@ -1,24 +1,24 @@
-import { useContext } from "react";
-import { NavContext } from "../context/NavContext";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { useContext } from 'react'
+import { NavContext } from '../context/NavContext'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function SidebarLayout({ children }) {
-  const { open, toggleOpen } = useContext(NavContext);
-  const { pathname } = useRouter();
+  const { open, toggleOpen } = useContext(NavContext)
+  const { pathname } = useRouter()
   return (
     <>
       <div
-        className={`transition-opacity duration-500 ease-in-out fixed z-20 bg-white shadow-md lg:pl-12 flex min-h-full top-28 lg:pr-12 lg:mt-0 lg:top-0 md:overflow-x-hidden flex-col lg:w-72 flex-shrink-0 ${
+        className={`transition-opacity duration-100 ease-in-out fixed z-20 bg-gray-50 shadow-md lg:pl-12 flex min-h-full top-24 lg:pr-12 lg:mt-0 lg:top-0 md:overflow-x-hidden flex-col lg:w-72 flex-shrink-0 ${
           open
-            ? "w-full text-center opacity-100 lg:text-left"
-            : "w-0 opacity-0 lg:opacity-100"
+            ? 'w-full text-center opacity-100 lg:text-left'
+            : 'w-0 opacity-0 lg:opacity-100'
         }`}
       >
         <Link href="/">
           <a onClick={toggleOpen}>
             <h2
-              style={{ textDecorationColor: "blanchedalmond" }}
+              style={{ textDecorationColor: 'blanchedalmond' }}
               className="text-6xl leading-none my-8 hover:underline cursor-pointer"
             >
               Karrie Marie Baxley
@@ -29,9 +29,9 @@ export default function SidebarLayout({ children }) {
           <a
             onClick={toggleOpen}
             className={`${
-              open ? "text-2xl md:text-3xl lg:text-base" : "text-base"
+              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
             } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === "/paintings" && "bg-design-yellow"
+              pathname === '/paintings' && 'bg-design-yellow'
             }`}
           >
             Paintings
@@ -41,9 +41,9 @@ export default function SidebarLayout({ children }) {
           <a
             onClick={toggleOpen}
             className={`${
-              open ? "text-2xl md:text-3xl lg:text-base" : "text-base"
+              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
             } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === "/ink-works" && "bg-design-yellow"
+              pathname === '/ink-works' && 'bg-design-yellow'
             }`}
           >
             Ink Works
@@ -53,9 +53,9 @@ export default function SidebarLayout({ children }) {
           <a
             onClick={toggleOpen}
             className={`${
-              open ? "text-2xl md:text-3xl lg:text-base" : "text-base"
+              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
             } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === "/charcoals" && "bg-design-yellow"
+              pathname === '/charcoals' && 'bg-design-yellow'
             }`}
           >
             Charcoals
@@ -65,9 +65,9 @@ export default function SidebarLayout({ children }) {
           <a
             onClick={toggleOpen}
             className={`${
-              open ? "text-2xl md:text-3xl lg:text-base" : "text-base"
+              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
             } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === "/dancing-with-a-thousand-bees" && "bg-design-yellow"
+              pathname === '/dancing-with-a-thousand-bees' && 'bg-design-yellow'
             }`}
           >
             Book
@@ -77,9 +77,9 @@ export default function SidebarLayout({ children }) {
           <a
             onClick={toggleOpen}
             className={`${
-              open ? "text-2xl md:text-3xl lg:text-base" : "text-base"
+              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
             } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === "/about" && "bg-design-yellow"
+              pathname === '/about' && 'bg-design-yellow'
             }`}
           >
             About
@@ -89,9 +89,9 @@ export default function SidebarLayout({ children }) {
           <a
             onClick={toggleOpen}
             className={`${
-              open ? "text-2xl md:text-3xl lg:text-base" : "text-base"
+              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
             } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === "/contact" && "bg-design-yellow"
+              pathname === '/contact' && 'bg-design-yellow'
             }`}
           >
             Contact
@@ -101,9 +101,9 @@ export default function SidebarLayout({ children }) {
           <a
             onClick={toggleOpen}
             className={`${
-              open ? "text-2xl md:text-3xl lg:text-base" : "text-base"
+              open ? 'text-2xl md:text-3xl lg:text-base' : 'text-base'
             } ml-1 font-light mb-1 hover:bg-design-yellow ${
-              pathname === "/blog" && "bg-design-yellow"
+              pathname === '/blog' && 'bg-design-yellow'
             }`}
           >
             Blog
@@ -112,5 +112,5 @@ export default function SidebarLayout({ children }) {
       </div>
       <div className="lg:ml-72">{children}</div>
     </>
-  );
+  )
 }

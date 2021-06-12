@@ -2733,6 +2733,11 @@
     "minimalistic-assert" "^1.0.1"
     "minimalistic-crypto-utils" "^1.0.1"
 
+"emailjs-com@^3.0.2":
+  "integrity" "sha512-nbVFnvCQfemx5kh1W+MNmRCayHhruRbg5mJX27bV8NrpzPfa0T/tOxTJQWk8asHJ9Lx0L2SVndEiMIxJp+fGAw=="
+  "resolved" "https://registry.npmjs.org/emailjs-com/-/emailjs-com-3.0.2.tgz"
+  "version" "3.0.2"
+
 "emoji-regex@^7.0.1":
   "integrity" "sha512-CwBLREIQ7LvYFB0WyRvwhq5N5qPhc6PMjD6bYggFlI5YyDgl+0vxq5VHbMOFqLg7hfWzmu8T5Z1QofhmTIhItA=="
   "resolved" "https://registry.npmjs.org/emoji-regex/-/emoji-regex-7.0.3.tgz"
@@ -6284,10 +6289,10 @@
   "resolved" "https://registry.npmjs.org/react-gtm-module/-/react-gtm-module-2.0.11.tgz"
   "version" "2.0.11"
 
-"react-hook-form@^6.7.0":
-  "integrity" "sha512-TyLqWHgFS1WLELDuUBvMWLHEzmR7aS7xOY+eOxMtS1w4jFhqF1xmHnMhJsbiFPSgC+OeTJ1Pc0U4K0y6cA7ERA=="
-  "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-6.9.6.tgz"
-  "version" "6.9.6"
+"react-hook-form@^6.15.8":
+  "integrity" "sha512-prq82ofMbnRyj5wqDe8hsTRcdR25jQ+B8KtCS7BLCzjFHAwNuCjRwzPuP4eYLsEBjEIeYd6try+pdLdw0kPkpg=="
+  "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-6.15.8.tgz"
+  "version" "6.15.8"
 
 "react-icons@^4.2.0":
   "integrity" "sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ=="
@@ -6338,7 +6343,7 @@
     "lodash.debounce" "^4.0.8"
     "resize-observer-polyfill" "^1.5.0"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^16.13.1", "react@^16.6.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.9.0 || ^17", "react@^16.x", "react@15.x.x || 16.x.x || 17.x.x":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^16.13.1", "react@^16.6.0 || ^17", "react@^16.8.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.9.0 || ^17", "react@^16.x", "react@15.x.x || 16.x.x || 17.x.x":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
   "version" "16.14.0"

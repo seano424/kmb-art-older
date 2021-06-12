@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function MainMobileNav() {
   return (
@@ -39,5 +39,5 @@ export default function MainMobileNav() {
         </a>
       </Link>
     </div>
-  );
+  )
 }

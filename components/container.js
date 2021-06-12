@@ -1,15 +1,15 @@
-import styles from "./container.module.css";
+import styles from './container.module.css'
 
 export default function Container({ children, background }) {
   return (
     // background-image: url("paper.gif");
     <div
       style={{
-        backgroundImage: background ? `url("images/background.webp")` : "",
+        backgroundImage: background ? `url("images/background.webp")` : '',
       }}
-      className={`h-screen ${styles.backgroundContainer} container mx-auto px-10  lg:w-4/5 lg:right-0`}
+      className={`h-screen ${styles.backgroundContainer} container mx-auto px-10 bg-gray-50  lg:w-4/5 lg:right-0`}
     >
       {children}
     </div>
-  );
+  )
 }

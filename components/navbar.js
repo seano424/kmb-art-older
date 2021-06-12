@@ -1,23 +1,23 @@
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import MainMobileNav from "./main-mobile-nav";
+import { useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import MainMobileNav from './main-mobile-nav'
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   const maxContent = {
-    width: "max-content",
-  };
+    width: 'max-content',
+  }
 
-  const bgheight = open ? "100vh" : "0";
+  const bgheight = open ? '100vh' : '0'
 
   return (
     <>
-      <nav className="flex md:px-12 items-center mb-10 mt-2 justify-around">
+      <nav className="flex bg-gray-50 md:px-12 items-center mb-10 justify-around">
         <Link href="/paintings" passHref>
           <h1
-            style={{ height: "6rem" }}
+            style={{ height: '6rem' }}
             className="relative w-3/5 xl:w-5/5 h-24 cursor-pointer"
           >
             <Image
@@ -111,7 +111,7 @@ export default function Navbar() {
         </article>
       </nav>
       <section
-        style={{ top: "100px", height: bgheight }}
+        style={{ top: '100px', height: bgheight }}
         className={`absolute z-10 bg-white h-0 w-full transition-all duration-200 ease-linear ${
           open ? `h-full visible opacity-100 w-full` : `opacity-0`
         }`}
@@ -119,5 +119,5 @@ export default function Navbar() {
         {open && <MainMobileNav />}
       </section>
     </>
-  );
+  )
 }

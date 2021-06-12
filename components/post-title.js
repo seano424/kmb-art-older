@@ -1,18 +1,14 @@
-import { useContext } from "react";
-import { NavContext } from "../context/NavContext";
+import { useContext } from 'react'
+import { NavContext } from '../context/NavContext'
 
 export default function PostTitle({ children }) {
-  const { open, toggleOpen } = useContext(NavContext);
+  const { open, toggleOpen } = useContext(NavContext)
 
   return (
-    <div
-      className={`flex m-auto items-center justify-between uppercase font-bold text-2xl pt-10 ${
-        open ? "" : "lg:shadow-small"
-      } mb-10`}
-    >
+    <div className="flex m-auto items-center justify-between uppercase font-bold text-2xl pt-10 mb-10">
       <div
         onClick={toggleOpen}
-        className="xl:hidden cursor-pointer flex flex-col justify-center"
+        className="lg:hidden cursor-pointer flex flex-col justify-center"
       >
         <div
           className={`w-8 h-1 bg-gray-900 rounded-lg transition-all duration-150 ease-linear relative ${
@@ -34,5 +30,5 @@ export default function PostTitle({ children }) {
       </div>
       <div className="pl-20 text-base">{children}</div>
     </div>
-  );
+  )
 }
