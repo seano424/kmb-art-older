@@ -129,9 +129,10 @@ export default function SidebarLayout({ children }) {
       </section>
       <section
         style={{ top: '90px', height: bgheight }}
-        className={`absolute z-10 bg-gray-50 h-0 w-full transition-all duration-50 ease-linear ${
+        className={`absolute flex md:hidden z-10 bg-gray-50 h-0 w-full transition-all duration-500 ease-linear ${
           open ? `h-full visible opacity-100 w-full` : `opacity-0`
         }`}
+        // className={`flex md:hidden`}
       >
         {open && <MainMobileNav />}
       </section>
