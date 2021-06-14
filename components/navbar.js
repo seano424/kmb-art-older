@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex bg-gray-50 md:px-12 items-center mb-10 justify-around">
+      <nav className="flex bg-gray-50 md:px-12 items-center pb-10 justify-around">
         <Link href="/paintings" passHref>
           <h1
             style={{ height: '6rem' }}
@@ -120,7 +120,7 @@ export default function Navbar() {
       </nav>
       <section
         style={{ top: '90px', height: bgheight }}
-        className={`absolute z-10 bg-gray-50 h-0 w-full transition-all duration-200 ease-linear ${
+        className={`absolute z-50 bg-gray-50 h-0 w-full transition-all duration-200 ease-linear ${
           open ? `h-full visible opacity-100 w-full` : `opacity-0`
         }`}
       >

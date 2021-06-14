@@ -1,9 +1,10 @@
 import { useState } from 'react'
+import styles from './tailwind-carousel.module.css'
 import TailwindCarousel from './tailwind-carousel'
 
 export default function Intro({ images }) {
   const [caption, setCaption] = useState(images[0].mainImage.caption)
-
+  console.log(images)
   let allImages = []
   images.map(
     (i) => (
@@ -37,19 +38,23 @@ export default function Intro({ images }) {
 
   return (
     <>
-      <TailwindCarousel
-        images={currentImages}
-        handleCaptionChange={handleChange}
-      />
-      {/* <Carousel images={currentImages} handleCaptionChange={handleChange} /> */}
-      <section className="caption pl-12 py-8 flex-col-reverse items-baselines lg:flex-row flex lg:items-center bg-gray-50">
-        <h1 className="pr-2 mt-6 md:pr-0 lg:ml-16 caption-header self-start text-lg lg:w-4/6 font-extrabold">
+      <div className={` ${styles.carousel} bg-gray-50 h-full`}>
+        <TailwindCarousel
+          images={currentImages}
+          handleCaptionChange={handleChange}
+        />
+      </div>
+      <section className="caption flex-col-reverse items-base -mt-40 sm:mt-0 md:-mt-4 lg:-mt-1 xl:-mt-20 py-10 px-20 lg:flex-row flex lg:items-center bg-gradient-to-r from-blue-50 via-blue-200 to-green-300">
+        <h1 className="pr-2 md:pr-0 mt-2 lg:ml-16 caption-header self-start text-2xl italic lg:w-4/6 font-extrabold">
           <span className="text-salmon">A</span>
           <span className="">r</span>
           twork by Karrie Marie Baxley
         </h1>
-        <h1 className="mr-16 md:mr-0 caption-header w-48 text-opacity-75 text-black text-xs">
-          {caption ? caption : 'Artwork by Karrie Marie Baxley'}
+        <h1 className="mr-16 md:mr-0 caption-header w-48 text-opacity-75 text-black">
+          <span className="text-gray-700">Art Piece Title:</span>{' '}
+          <span className="font-black">
+            {caption ? caption : 'Artwork by Karrie Marie Baxley'}
+          </span>
         </h1>
       </section>
     </>

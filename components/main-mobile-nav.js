@@ -8,30 +8,6 @@ export default function MainMobileNav() {
   console.log(open)
   return (
     <div className="flex flex-col items-center mt-20 w-full gap-4">
-      {/* <Link href="/paintings">
-        <a
-          onClick={() => toggleOpen(!open)}
-          className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
-        >
-          Paintings
-        </a>
-      </Link>
-      <Link href="/charcoals">
-        <a
-          onClick={() => toggleOpen(!open)}
-          className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
-        >
-          Charcoals
-        </a>
-      </Link>
-      <Link href="/ink-works">
-        <a
-          onClick={() => toggleOpen(!open)}
-          className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
-        >
-          Ink Works
-        </a>
-      </Link> */}
       <Link href="/galleries">
         <a
           onClick={() => toggleOpen(!open)}
