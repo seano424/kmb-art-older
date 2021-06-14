@@ -7,7 +7,6 @@ import Container from '@/components/container'
 import Galleries from '@/components/galleries'
 
 export default function Index(props) {
-  // console.log(props)
   return (
     <Layout>
       <SidebarLayout>

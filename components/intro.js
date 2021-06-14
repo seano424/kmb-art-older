@@ -4,7 +4,6 @@ import TailwindCarousel from './tailwind-carousel'
 
 export default function Intro({ images }) {
   const [caption, setCaption] = useState(images[0].mainImage.caption)
-  console.log(images)
   let allImages = []
   images.map(
     (i) => (

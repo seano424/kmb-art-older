@@ -5,7 +5,6 @@ import Link from 'next/link'
 export default function MainMobileNav() {
   const { open, toggleOpen } = useContext(NavContext)
 
-  console.log(open)
   return (
     <div className="flex flex-col items-center mt-20 w-full gap-4">
       <Link href="/galleries">

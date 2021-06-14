@@ -1,28 +1,36 @@
-import React from "react";
-import Layout from "@/components/layout";
-import SidebarLayout from "@/components/sidebar-layout";
-import { getPaintings } from "../../lib/api";
-import PostTitle from "@/components/post-title";
-import FeatureImage from "@/components/feature-image";
-import Container from "@/components/container";
+import React from 'react'
+import Layout from '@/components/layout'
+import SidebarLayout from '@/components/sidebar-layout'
+import { getPaintings } from '../../lib/api'
+import PostTitle from '@/components/post-title'
+import Container from '@/components/container'
+import Artwork from '@/components/artwork'
 
-export default function Index({ preview, paintings }) {
+export default function Index({ preview, content }) {
+  console.log(content)
   return (
     <Layout preview={preview}>
       <SidebarLayout>
         <Container background>
-          <PostTitle>Art Series / Paintings</PostTitle>
-          <FeatureImage content={paintings} />
+          <PostTitle>All Paintings by Karrie Marie </PostTitle>
+          <section className="mx-20">
+            {content.map((p) => (
+              <>
+                <h1 className="my-8">{p.title}</h1>
+                <Artwork artwork={p.artWork} />
+              </>
+            ))}
+          </section>
         </Container>
       </SidebarLayout>
     </Layout>
-  );
+  )
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allPaintings = await getPaintings(preview);
+  const allPaintings = await getPaintings(preview)
   return {
-    props: { preview, paintings: allPaintings },
+    props: { preview, content: allPaintings },
     revalidate: 1,
-  };
+  }
 }
