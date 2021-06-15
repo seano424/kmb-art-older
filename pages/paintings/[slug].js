@@ -1,29 +1,37 @@
-import React from "react";
-import Layout from "../../components/layout";
-import SidebarLayout from "../../components/sidebar-layout";
-import { getSerie, getAllPaintingsWithSlug } from "../../lib/api";
-import ImagesDisplay from "@/components/images-display";
+import React from 'react'
+import Layout from '@/components/layout'
+import SidebarLayout from '@/components/sidebar-layout'
+import { getSerie, getAllPaintingsWithSlug } from '../../lib/api'
+import Artwork from '@/components/artwork'
 
-export default function Painting({ preview, paintings }) {
+export default function InkWork({ preview, paintings }) {
+  const content = paintings.results
   return (
     <Layout preview={preview}>
       <SidebarLayout>
-        <ImagesDisplay series={paintings} />
+        <section className="mx-20">
+          {content.map((p) => (
+            <>
+              <h1 className="my-8">{p.title}</h1>
+              <Artwork artwork={p.artWork} />
+            </>
+          ))}
+        </section>
       </SidebarLayout>
     </Layout>
-  );
+  )
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const allPaintings = await getSerie(params.slug, preview);
+  const allPaintings = await getSerie(params.slug, preview)
   return {
     props: { preview, paintings: allPaintings },
     revalidate: 1,
-  };
+  }
 }
 
 export async function getStaticPaths() {
-  const allPosts = await getAllPaintingsWithSlug();
+  const allPosts = await getAllPaintingsWithSlug()
   return {
     paths:
       allPosts?.map((post) => ({
@@ -32,5 +40,5 @@ export async function getStaticPaths() {
         },
       })) || [],
     fallback: false,
-  };
+  }
 }

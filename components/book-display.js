@@ -16,7 +16,6 @@ export default function BookDisplay({ book }) {
 
   const { front_image, back_image, _id, body } = book
 
-  console.log(bookSideBack)
   return (
     <section key={_id} className="md:flex grid grid-cols-3 mx-10">
       <article

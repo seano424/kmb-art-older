@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 html,
 body {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -29,6 +29,10 @@ img {
 
 .ril-toolbar.ril__toolbar {
   opacity: 0 !important;
+}
+
+.ril__outer {
+  background-color: rgba(255, 255, 255, 0.85) !important;
 }
 
 @media (min-width: 640px) {
