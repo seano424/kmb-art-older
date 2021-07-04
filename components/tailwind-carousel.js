@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { urlFor } from '../lib/sanity'
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './tailwind-carousel.module.css'
 
 export default function TailwindCarousel({ images, handleCaptionChange }) {
   const [show, setShow] = useState(0)
@@ -38,13 +37,6 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
     }
   }
 
-  const moveLeft = () => {
-    show <= 0 ? setShow(images.length - 1) : setShow(show - 1)
-  }
-  const moveRight = () => {
-    show >= images.length - 1 ? setShow(0) : setShow(show + 1)
-  }
-
   const handleContext = (e) => {
     e.preventDefault()
     e.stopPropagation()
@@ -63,11 +55,9 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           }`}
           src={urlFor(images[0]?.image).url()}
           alt={images[0]?.caption}
-          // layout="fill"
           layout="responsive"
-          width={100}
-          height={40}
-          priority={true}
+          width={10}
+          height={4}
         />
       </div>
       <div className="absolute w-full lg:w-full xl:w-3/4">
@@ -78,10 +68,9 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           }`}
           src={urlFor(images[1]?.image).url()}
           alt={images[1]?.caption}
-          // layout="fill"
           layout="responsive"
-          width={100}
-          height={40}
+          width={10}
+          height={4}
         />
       </div>
       <div className="absolute w-full lg:w-full xl:w-3/4">
@@ -92,10 +81,9 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           }`}
           src={urlFor(images[2]?.image).url()}
           alt={images[2]?.caption}
-          // layout="fill"
           layout="responsive"
-          width={100}
-          height={40}
+          width={10}
+          height={4}
         />
       </div>
       <div className="absolute w-full xl:w-3/4">
@@ -106,10 +94,9 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           }`}
           src={urlFor(images[3]?.image).url()}
           alt={images[3]?.caption}
-          // layout="fill"
           layout="responsive"
-          width={100}
-          height={40}
+          width={10}
+          height={4}
         />
       </div>
       <div className="absolute w-full xl:w-3/4">
@@ -120,10 +107,9 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           }`}
           src={urlFor(images[4]?.image).url()}
           alt={images[4]?.caption}
-          // layout="fill"
           layout="responsive"
-          width={100}
-          height={40}
+          width={10}
+          height={4}
         />
       </div>
     </div>
