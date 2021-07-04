@@ -58,6 +58,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           layout="responsive"
           width={10}
           height={4}
+          priority={true}
         />
       </div>
       <div className="absolute w-full lg:w-full xl:w-3/4">
@@ -71,6 +72,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           layout="responsive"
           width={10}
           height={4}
+          priority={true}
         />
       </div>
       <div className="absolute w-full lg:w-full xl:w-3/4">
@@ -84,6 +86,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           layout="responsive"
           width={10}
           height={4}
+          priority={true}
         />
       </div>
       <div className="absolute w-full xl:w-3/4">
@@ -97,6 +100,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           layout="responsive"
           width={10}
           height={4}
+          priority={true}
         />
       </div>
       <div className="absolute w-full xl:w-3/4">
@@ -110,6 +114,7 @@ export default function TailwindCarousel({ images, handleCaptionChange }) {
           layout="responsive"
           width={10}
           height={4}
+          priority={true}
         />
       </div>
     </div>
