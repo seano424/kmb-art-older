@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import CarouselImages from './carousel-images'
 
-export default function TailwindCarousel({ images, handleCaptionChange }) {
+export default function Carousel({ images, handleCaptionChange }) {
   const [show, setShow] = useState(0)
 
   useEffect(() => {

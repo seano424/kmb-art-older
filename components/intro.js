@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import styles from './tailwind-carousel.module.css'
-import TailwindCarousel from './tailwind-carousel'
+import styles from './carousel.module.css'
+import Carousel from './Carousel'
 
 export default function Intro({ images }) {
   const [caption, setCaption] = useState(images[0].mainImage.caption)
@@ -38,10 +38,7 @@ export default function Intro({ images }) {
   return (
     <>
       <div className={` ${styles.carousel} bg-gray-50 h-full`}>
-        <TailwindCarousel
-          images={currentImages}
-          handleCaptionChange={handleChange}
-        />
+        <Carousel images={currentImages} handleCaptionChange={handleChange} />
       </div>
       <section className="caption flex-col-reverse items-base -mt-40 sm:mt-0 md:-mt-4 lg:-mt-1 xl:-mt-20 py-10 px-20 lg:flex-row flex lg:items-center bg-gradient-to-r from-blue-50 via-blue-200 to-green-300">
         <h1 className="pr-2 md:pr-0 mt-2 lg:ml-16 caption-header self-start text-2xl italic lg:w-4/6 font-extrabold">
