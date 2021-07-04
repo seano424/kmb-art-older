@@ -19,8 +19,8 @@ export default function CarouselImages({ images, show }) {
             src={urlFor(image?.image).url()}
             alt={image?.caption}
             layout="responsive"
-            width={10}
-            height={4}
+            width={500}
+            height={200}
             priority={true}
           />
         </div>
