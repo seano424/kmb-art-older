@@ -2,7 +2,7 @@ Next JS app generated with [sanity](https://www.sanity.io/), deployed with [verc
 
 # [KMB](https://karriemariebaxley.com)
 
-Source code for Schoolgoal MVP ✨
+Source code for this artist website ✨
 
 Check the live version [here](https://karriemariebaxley.com) ⚡️
 
