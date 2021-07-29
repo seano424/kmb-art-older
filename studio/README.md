@@ -1,11 +1,47 @@
-# Sanity Blogging Content Studio
+Next JS app generated with [sanity](https://www.sanity.io/), deployed with [vercel](https://vercel.com/), and styled with [TailwindCSS](tailwindcss.com/docs/guides/nextjs).
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+# [KMB](https://karriemariebaxley.com)
 
-Now you can do the following things:
+Source code for Schoolgoal MVP ✨
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- Check out the example frontend: [React/Next.js](https://github.com/sanity-io/tutorial-sanity-blog-react-next)
-- [Read the blog post about this template](https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+Check the live version [here](https://karriemariebaxley.com) ⚡️
+
+![home](./public/images/home-image.png)
+
+## ⚡️ Features:
+
+Live previews, including website preview for products
+Frontend with product pages styled using Tailwind.css
+Content types for artwork, blog, social media
+
+## 📦 Made with
+
+- Next JS
+- TailwindCSS
+- React Icons
+- React Image Lightbox
+- Sanity CMS
+- Email JS
+
+## 💻 Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+# or
+yarn
+```
+
+Then, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Found
+This site can be found [here](https://wwww.karriemariebaxley.com)
