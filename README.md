@@ -1,22 +1,47 @@
-# Next.js blog with comment section
+Next JS app generated with [sanity](https://www.sanity.io/), deployed with [vercel](https://vercel.com/), and styled with [TailwindCSS](tailwindcss.com/docs/guides/nextjs).
 
-This is a demo of how to add a simple comment section to blog post using [Next.js](https://nextjs.org), [Sanity.io](https://www.sanity.io), and [Vercel](https://vercel.com).
+# [KMB](https://karriemariebaxley.com)
 
+Source code for Schoolgoal MVP ✨
 
-### Running the front-end
+Check the live version [here](https://karriemariebaxley.com) ⚡️
 
-Rename the `.env.test` file to `.env` and store the environment variables that Next and Sanity will use to pull data from the Sanity API. You can get or create the tokens, ids, and secrets from [manage.sanity.io](https://manage.sanity.io).
+![home](./public/images/home-image.png)
 
-Once those env variables are ready, you can run the following commands to get Next's development server up and running:
+## ⚡️ Features:
+
+Live previews, including website preview for products
+Frontend with product pages styled using Tailwind.css
+Content types for artwork, blog, social media
+
+## 📦 Made with
+
+- Next JS
+- TailwindCSS
+- React Icons
+- React Image Lightbox
+- Sanity CMS
+- Email JS
+
+## 💻 Getting Started
+
+Install dependencies:
 
 ```bash
 npm install
-
-# Run the frontend
-npm run dev
-
-# Run the Studio
-npm run start:sanity
+# or
+yarn
 ```
 
-The blog will be running at `http://localhost:3000`, the Studio will run at `http://localhost:3333`.
+Then, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Found
+This site can be found [here](https://wwww.karriemariebaxley.com)
