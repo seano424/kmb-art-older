@@ -34,12 +34,14 @@ export default function SidebarLayout({ children }) {
                   ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
                   : 'text-base'
               } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
-                pathname === '/galleries' && 'text-gray-300'
+                pathname === '/galleries' ||
+                (pathname === '/' && 'text-gray-300')
               }`}
             >
               Galleries
             </a>
           </Link>
+
           <Link href="/paintings">
             <a
               onClick={toggleOpen}

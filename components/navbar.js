@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex bg-gray-50 md:px-12 items-center pb-10 justify-around">
+      <nav className="flex bg-gray-50 md:px-12 items-center justify-around">
         <Link href="/paintings" passHref>
           <h1
             style={{ height: '6rem' }}
@@ -36,10 +36,10 @@ export default function Navbar() {
               style={maxContent}
               className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
             >
-              Galleries
+              Artwork
             </a>
           </Link>
-          <Link href="/paintings">
+          {/* <Link href="/paintings">
             <a
               style={maxContent}
               className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
@@ -62,21 +62,14 @@ export default function Navbar() {
             >
               Charcoals
             </a>
-          </Link>
-          <Link href="/blog">
-            <a
-              style={maxContent}
-              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
-            >
-              Blog
-            </a>
-          </Link>
+          </Link> */}
+
           <Link href="/dancing-with-a-thousand-bees">
             <a
               style={maxContent}
               className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
             >
-              Book
+              My Book
             </a>
           </Link>
           <Link href="/about">
@@ -84,7 +77,15 @@ export default function Navbar() {
               style={maxContent}
               className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
             >
-              About
+              About Karrie
+            </a>
+          </Link>
+          <Link href="/blog">
+            <a
+              style={maxContent}
+              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
+            >
+              Blog
             </a>
           </Link>
           <Link href="/contact">

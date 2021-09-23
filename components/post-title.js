@@ -28,7 +28,7 @@ export default function PostTitle({ children }) {
           }`}
         />
       </div>
-      <div className="pl-20 text-base">{children}</div>
+      <div className="text-3xl border-b pb-1">{children}</div>
     </div>
   )
 }

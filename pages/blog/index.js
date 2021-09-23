@@ -1,15 +1,18 @@
-import Container from "@/components/container";
-import MoreStories from "@/components/more-stories";
-import HeroPost from "@/components/hero-post";
-import Layout from "@/components/layout";
-import Head from "next/head";
-import { getAllPostsForHome } from "../../lib/api";
-import SidebarLayout from "@/components/sidebar-layout";
-import PostTitle from "@/components/post-title";
+import Container from '@/components/container'
+import MoreStories from '@/components/more-stories'
+import HeroPost from '@/components/hero-post'
+import Layout from '@/components/layout'
+import Head from 'next/head'
+import { getAllPostsForHome, getUpcomingEvents } from '../../lib/api'
+import SidebarLayout from '@/components/sidebar-layout'
+import PostTitle from '@/components/post-title'
+import relevantEvents from 'utils/relevantEvents'
 
-export default function Index({ allPosts, preview }) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+export default function Index({ allPosts, preview, upcomingEvents }) {
+  const events = relevantEvents(upcomingEvents)
+
+  const heroPost = allPosts[0]
+  const morePosts = allPosts.slice(1)
   return (
     <>
       <Layout preview={preview}>
@@ -17,7 +20,7 @@ export default function Index({ allPosts, preview }) {
           <title>ARTIST PORTFOLIO</title>
         </Head>
         <SidebarLayout>
-          <Container>
+          <Container upcomingEvent={events ? events[0] : null}>
             <PostTitle>Writings by Karrie</PostTitle>
             <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
               Most Recent
@@ -37,13 +40,14 @@ export default function Index({ allPosts, preview }) {
         </SidebarLayout>
       </Layout>
     </>
-  );
+  )
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allPosts = await getAllPostsForHome(preview);
+  const upcomingEvents = await getUpcomingEvents(preview)
+  const allPosts = await getAllPostsForHome(preview)
   return {
-    props: { allPosts, preview },
+    props: { allPosts, preview, upcomingEvents },
     revalidate: 1,
-  };
+  }
 }

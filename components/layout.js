@@ -6,7 +6,7 @@ export default function Layout({ footer, children }) {
     <>
       <Meta />
       <div className="flex min-h-screen flex-col">
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         {footer && <Footer />}
       </div>
     </>

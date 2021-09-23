@@ -1,27 +1,32 @@
-import Intro from "../components/intro";
-import Layout from "../components/layout";
-import { getCarouselImages } from "../lib/api";
-import Head from "next/head";
-import Nav from "@/components/navbar";
+import React from 'react'
+import Layout from '@/components/layout'
+import SidebarLayout from '@/components/sidebar-layout'
+import PostTitle from '@/components/post-title'
+import Container from '@/components/container'
+import Galleries from '@/components/galleries'
+import { getSeries, getUpcomingEvents } from 'lib/api'
+import relevantEvents from 'utils/relevantEvents'
 
-export default function Index({ preview, carouselImages }) {
+export default function Index({ series, upcomingEvents }) {
+  const events = relevantEvents(upcomingEvents)
+
   return (
-    <>
-      <Layout footer preview={preview}>
-        <Head>
-          <title>Karrie Marie Baxley | Artist and Writer</title>
-        </Head>
-        <Nav />
-        <Intro images={carouselImages} />
-      </Layout>
-    </>
-  );
+    <Layout>
+      <SidebarLayout>
+        <Container upcomingEvent={events ? events[0] : null} background>
+          <PostTitle>Galleries</PostTitle>
+          <Galleries series={series} />
+        </Container>
+      </SidebarLayout>
+    </Layout>
+  )
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allCarouselImages = await getCarouselImages(preview);
+  const upcomingEvents = await getUpcomingEvents(preview)
+  const allSeries = await getSeries(preview)
   return {
-    props: { preview, carouselImages: allCarouselImages },
+    props: { preview, series: allSeries, upcomingEvents },
     revalidate: 1,
-  };
+  }
 }
