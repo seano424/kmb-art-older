@@ -1,4 +1,5 @@
 import styles from './container.module.css'
+import Link from 'next/link'
 
 export default function Container({ children, background, upcomingEvent }) {
   return (
@@ -9,16 +10,17 @@ export default function Container({ children, background, upcomingEvent }) {
       className={`h-screen ${styles.backgroundContainer} container mx-auto bg-gray-50 bg-opacity-20  lg:w-4/5 lg:right-0`}
     >
       {upcomingEvent && (
-        <div className="p-5 font-thin tracking-wide text-red-400 shadow-sm">
-          <span className="text-gray-900">Upcoming Event </span>
-          <span className="">{upcomingEvent.title}</span>
+        <div className="p-5 font-light text-opacity-80 tracking-wide text-gray-600  shadow-sm">
+          <span className="">Upcoming Event </span>
+          <span className="text-red-400 text-opacity-80">
+            {upcomingEvent.title}
+          </span>
           {upcomingEvent.linkUrl && (
-            <a
-              className="text-base pl-1 underline"
-              href={upcomingEvent.linkUrl}
-            >
-              See more here!
-            </a>
+            <Link href="/upcoming-events">
+              <a className="text-base pl-1 underline text-red-400 text-opacity-80">
+                See more here!
+              </a>
+            </Link>
           )}
         </div>
       )}

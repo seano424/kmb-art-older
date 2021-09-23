@@ -17,13 +17,16 @@ export default function SidebarLayout({ children }) {
           className={`transition-opacity duration-100 ease-in-out fixed z-20 bg-gray-50 shadow-md lg:pl-12 lg:flex min-h-full top-24 lg:pr-12 lg:mt-0 lg:top-0 md:overflow-x-hidden flex-col lg:w-72 flex-shrink-0 hidden`}
         >
           <Link href="/">
-            <a onClick={toggleOpen}>
+            <a className="my-8" onClick={toggleOpen}>
               <h2
                 style={{ textDecorationColor: 'blanchedalmond' }}
-                className="text-6xl leading-none my-8 hover:underline cursor-pointer"
+                className="text-6xl leading-none hover:underline cursor-pointer"
               >
                 Karrie Marie Baxley
               </h2>
+              <p className="text-lg pl-1 text-gray-400 pt-1">
+                artist & creator
+              </p>
             </a>
           </Link>
           <Link href="/galleries">
@@ -34,8 +37,8 @@ export default function SidebarLayout({ children }) {
                   ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
                   : 'text-base'
               } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
-                pathname === '/galleries' ||
-                (pathname === '/' && 'text-gray-300')
+                (pathname === '/galleries' || pathname === '/') &&
+                'text-gray-300'
               }`}
             >
               Galleries
@@ -110,6 +113,20 @@ export default function SidebarLayout({ children }) {
               }`}
             >
               About
+            </a>
+          </Link>
+          <Link href="/upcoming-events">
+            <a
+              onClick={toggleOpen}
+              className={`${
+                open
+                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  : 'text-base'
+              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
+                pathname === '/upcoming-events' && 'text-gray-300'
+              }`}
+            >
+              Upcoming Events
             </a>
           </Link>
           <Link href="/contact">

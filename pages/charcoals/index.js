@@ -14,12 +14,12 @@ export default function Index({ preview, content, upcomingEvents }) {
     <Layout preview={preview}>
       <SidebarLayout>
         <Container upcomingEvent={events ? events[0] : null} background>
-          <PostTitle>All Charcoals by Karrie Marie </PostTitle>
+          <PostTitle>Charcoals by Karrie Marie </PostTitle>
           <section className="mx-20">
             {content.map((p) => (
               <>
-                <h1 className="my-8">{p.title}</h1>
-                <Artwork artwork={p.artWork} />
+                <h1 className="text-lg font-bold text-gray-300">{p.title}</h1>
+                <Artwork artwork={p.artWork} title={p.title} />
               </>
             ))}
           </section>

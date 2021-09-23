@@ -1,5 +1,14 @@
 module.exports = {
-  images: {
-    domains: ["cdn.sanity.io"],
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/paintings',
+        permanent: true,
+      },
+    ]
   },
-};
+  images: {
+    domains: ['cdn.sanity.io'],
+  },
+}
