@@ -37,36 +37,25 @@ export default function Carousel({ images, handleCaptionChange }) {
     }
   }
 
-  const handleContext = (e) => {
-    e.preventDefault()
-    e.stopPropagation()
-  }
-
   return (
-    <div className={`md:px-10 bg-gray-50`}>
-      <Link href="/paintings">
-        <a aria-label="Link to the paintings series by Karrie Marie Baxley">
-          {' '}
-          <div className="cursor-pointer h-96 flex justify-center">
-            {images.map((image, idx) => (
-              <div className="absolute w-full lg:w-full xl:w-3/4">
-                <Image
-                  onContextMenu={handleContext}
-                  className={`carousel-images transition-opacity duration-500 ease-in-out ${
-                    show !== idx ? 'opacity-0 z-0' : 'opacity-100 z-10'
-                  }`}
-                  src={urlFor(image?.image).url()}
-                  alt={image?.caption}
-                  layout="responsive"
-                  width={500}
-                  height={200}
-                  priority={true}
-                />
-              </div>
-            ))}
-          </div>
-        </a>
-      </Link>
-    </div>
+    <Link href="/paintings">
+      <a aria-label="Link to the paintings series by Karrie Marie Baxley">
+        {' '}
+        <div className="cursor-pointer h-[500px] relative">
+          {/* <CarouselImages images={images} show={show} /> */}
+          {images.map((image, idx) => (
+            <Image
+              className={`carousel-images transition-opacity duration-500 ease-in-out ${
+                show !== idx ? 'opacity-0 z-0' : 'opacity-100 z-10'
+              }`}
+              src={urlFor(image?.image).url()}
+              alt={image?.caption}
+              layout="fill"
+              priority={true}
+            />
+          ))}
+        </div>
+      </a>
+    </Link>
   )
 }

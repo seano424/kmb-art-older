@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import styles from './carousel.module.css'
 import Carousel from './Carousel'
-import { urlFor } from 'lib/sanity'
-import Image from 'next/image'
 
 export default function Intro({ images }) {
   const [caption, setCaption] = useState(images[0].mainImage.caption)
@@ -31,44 +29,28 @@ export default function Intro({ images }) {
       })
     )
   )
-  const adjustedImages = allImages.filter((i) => i.image !== undefined)
-
-  console.log(
-    adjustedImages[Math.floor(Math.random() * (adjustedImages.length - 1))]
-  )
-
-  const currentImage =
-    adjustedImages[Math.floor(Math.random() * (adjustedImages.length - 1))]
+  const currentImages = allImages.filter((i) => i.image !== undefined)
 
   const handleChange = (newCaption) => {
     setCaption(newCaption)
   }
 
-  const handleContext = (e) => {
-    e.preventDefault()
-    e.stopPropagation()
-  }
-
   return (
-    <div>
-      {/* <section className="caption p-4 flex-col-reverse items-base shadow-md bg-gradient-to-r from-blue-50 via-blue-300 to-green-400">
-        <div className="flex justify-center">
-          <span className="text-5xl">Artwork by Karrie Marie Baxley</span>
-          <span className="font-black">
-            Currently viewing: {currentImage.caption}
+    <>
+      <Carousel images={currentImages} handleCaptionChange={handleChange} />
+      {/* <section className="caption flex-col-reverse items-base -mt-40 sm:mt-0 md:-mt-4 lg:-mt-1 xl:-mt-20 py-10 px-20 lg:flex-row flex lg:items-center bg-black">
+        <h1 className="pr-2 md:pr-0 mt-2 lg:ml-16 caption-header self-start text-2xl italic lg:w-4/6 font-extrabold text-white">
+          <span className="text-salmon">A</span>
+          <span className="text-white">r</span>
+          twork by Karrie Marie Baxley
+        </h1>
+        <h1 className="mr-16 md:mr-0 caption-header w-48 text-opacity-75 text-black">
+          <span className="text-white">Art Piece Title:</span>{' '}
+          <span className="font-black text-white">
+            {caption ? caption : 'Artwork by Karrie Marie Baxley'}
           </span>
-        </div>
+        </h1>
       </section> */}
-      <div className="bg-blue-400 w-full h-screen relative">
-        <Image
-          onContextMenu={handleContext}
-          src={urlFor(currentImage.image).url()}
-          alt={currentImage.caption}
-          layout="fill"
-          priority={true}
-          objectFit="cover"
-        />
-      </div>
-    </div>
+    </>
   )
 }

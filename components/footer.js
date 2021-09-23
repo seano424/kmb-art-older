@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-t border-accent-2 mt-auto px-2 flex-1">
-      <div className="flex w-3/5 lg:w-5/6 m-auto py-12 justify-between items-center">
+    <footer>
+      <div className="flex w-full px-10 bg-black text-white border-8 border-black justify-between items-center">
         <a
           className="text-base hidden lg:flex"
           href="https://www.seanpatrick.io"

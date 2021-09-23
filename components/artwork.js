@@ -19,7 +19,7 @@ export default function Artwork({ artwork }) {
   return (
     <>
       {!open ? (
-        <div className="grid grid-cols-3 gap-12 bg-gray-100 bg-opacity-20">
+        <div className="grid grid-cols-3 gap-12  bg-gray-100 bg-opacity-20">
           {artwork.map((a, idx) => (
             <div
               onClick={() => handleLightbox(idx)}

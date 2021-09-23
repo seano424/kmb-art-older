@@ -14,9 +14,6 @@ export default function Container({ children, background, upcomingEvent }) {
 
   return (
     <div
-      style={{
-        backgroundImage: background ? `url("images/background.webp")` : '',
-      }}
       className={`h-screen ${styles.backgroundContainer} container mx-auto bg-gray-50 bg-opacity-20  lg:w-4/5 lg:right-0`}
     >
       {upcomingEvent && (
