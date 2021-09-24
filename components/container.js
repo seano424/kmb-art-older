@@ -19,20 +19,16 @@ export default function Container({ children, background, upcomingEvent }) {
       {upcomingEvent && (
         <div
           className={`${
-            show ? 'opacity-100' : 'opacity-0'
-          } hidden md:inline-flex transition-all duration-700 hover:opacity-100 ease-out p-5 font-light text-opacity-80 hover:text-opacity-100 tracking-wide text-gray-600  shadow-sm`}
+            show ? 'opacity-100' : 'opacity-100'
+          } hidden md:inline-flex transition-all duration-700 hover:opacity-100 ease-out p-5 font-light text-opacity-80 hover:text-opacity-100 tracking-wide text-gray-600  shadow-sm w-full`}
         >
-          <span className="">Upcoming Event </span>
-          <span className="text-red-400 text-opacity-80">
-            {upcomingEvent.title}
-          </span>
-          {upcomingEvent.linkUrl && (
-            <Link href="/upcoming-events">
-              <a className="text-base pl-1 underline text-red-400 text-opacity-80">
-                See more here!
-              </a>
-            </Link>
-          )}
+          <span className="pr-1 cursor-default">Upcoming Event: </span>
+          <Link href="/upcoming-events">
+            <a className="text-red-400 hover:text-red-300 cursor-pointer text-base">
+              {upcomingEvent.title}
+              <span className=" pl-1 underline">See more here!</span>
+            </a>
+          </Link>
         </div>
       )}
       <div className="px-10">{children}</div>
