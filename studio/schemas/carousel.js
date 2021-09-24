@@ -1,25 +1,25 @@
 export default {
-  name: "carousel",
-  title: "Carousel",
-  type: "document",
+  name: 'carousel',
+  title: 'Homepage Images',
+  type: 'document',
   fields: [
     {
-      name: "title",
-      title: "Title",
-      type: "string",
+      name: 'title',
+      title: 'Title',
+      type: 'string',
     },
     {
-      name: "mainImage",
-      title: "Main image",
-      type: "image",
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'image',
       options: {
         hotspot: true,
       },
       fields: [
         {
-          name: "caption",
-          type: "string",
-          title: "Caption",
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
           options: {
             isHighlighted: true, // <-- make this field easily accessible
           },
@@ -27,18 +27,18 @@ export default {
       ],
     },
     {
-      name: "secondImage",
-      title: "Second image",
-      type: "image",
-      description: "optional",
+      name: 'secondImage',
+      title: 'Second image',
+      type: 'image',
+      description: 'optional',
       options: {
         hotspot: true,
       },
       fields: [
         {
-          name: "caption",
-          type: "string",
-          title: "Caption",
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
           options: {
             isHighlighted: true, // <-- make this field easily accessible
           },
@@ -46,18 +46,18 @@ export default {
       ],
     },
     {
-      name: "thirdImage",
-      title: "Third image",
-      type: "image",
-      description: "optional",
+      name: 'thirdImage',
+      title: 'Third image',
+      type: 'image',
+      description: 'optional',
       options: {
         hotspot: true,
       },
       fields: [
         {
-          name: "caption",
-          type: "string",
-          title: "Caption",
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
           options: {
             isHighlighted: true, // <-- make this field easily accessible
           },
@@ -65,18 +65,18 @@ export default {
       ],
     },
     {
-      name: "fourthImage",
-      title: "Fourth image",
-      type: "image",
-      description: "optional",
+      name: 'fourthImage',
+      title: 'Fourth image',
+      type: 'image',
+      description: 'optional',
       options: {
         hotspot: true,
       },
       fields: [
         {
-          name: "caption",
-          type: "string",
-          title: "Caption",
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
           options: {
             isHighlighted: true, // <-- make this field easily accessible
           },
@@ -84,18 +84,18 @@ export default {
       ],
     },
     {
-      name: "fifthImage",
-      title: "Fifth image",
-      type: "image",
-      description: "optional",
+      name: 'fifthImage',
+      title: 'Fifth image',
+      type: 'image',
+      description: 'optional',
       options: {
         hotspot: true,
       },
       fields: [
         {
-          name: "caption",
-          type: "string",
-          title: "Caption",
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
           options: {
             isHighlighted: true, // <-- make this field easily accessible
           },
@@ -105,8 +105,8 @@ export default {
   ],
   preview: {
     select: {
-      title: "title",
-      media: "mainImage",
+      title: 'title',
+      media: 'mainImage',
     },
   },
-};
+}

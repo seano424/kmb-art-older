@@ -8,7 +8,7 @@ export default function Container({ children, background, upcomingEvent }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(false)
-    }, 3000)
+    }, 7000)
     return () => clearTimeout(timer)
   }, [])
 
@@ -20,7 +20,7 @@ export default function Container({ children, background, upcomingEvent }) {
         <div
           className={`${
             show ? 'opacity-100' : 'opacity-0'
-          } transition-all duration-700 hover:opacity-100 ease-out p-5 font-light text-opacity-80 hover:text-opacity-100 tracking-wide text-gray-600  shadow-sm`}
+          } hidden md:inline-flex transition-all duration-700 hover:opacity-100 ease-out p-5 font-light text-opacity-80 hover:text-opacity-100 tracking-wide text-gray-600  shadow-sm`}
         >
           <span className="">Upcoming Event </span>
           <span className="text-red-400 text-opacity-80">
