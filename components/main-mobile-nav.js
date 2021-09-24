@@ -6,7 +6,7 @@ export default function MainMobileNav() {
   const { open, toggleOpen } = useContext(NavContext)
 
   return (
-    <div className="flex flex-col items-center mt-20 w-full gap-4">
+    <div className="flex flex-col items-center justify-center w-full h-[30rem] gap-4">
       <Link href="/galleries">
         <a
           onClick={() => toggleOpen(!open)}
@@ -42,7 +42,7 @@ export default function MainMobileNav() {
       <Link href="/dancing-with-a-thousand-bees">
         <a
           onClick={() => toggleOpen(!open)}
-          className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
+          className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2 text-center"
         >
           Dancing with a Thousand Bees
         </a>
