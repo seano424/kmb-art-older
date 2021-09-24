@@ -19,25 +19,28 @@ export default function Artwork({ artwork }) {
   return (
     <>
       {!open ? (
-        <div className="grid grid-cols-3 gap-12  bg-gray-100 bg-opacity-20">
+        <div className="flex flex-wrap justify-between gap-6 md:gap-12  bg-gray-100 bg-opacity-20">
           {artwork.map((a, idx) => (
-            <div
-              onClick={() => handleLightbox(idx)}
-              className="hover:bg-gray-200 py-10 hover:bg-opacity-25 cursor-pointer"
-            >
-              <Image
-                src={imageBuilder(a.artworkImage).url()}
-                alt={a.caption}
-                width={1000}
-                height={1000}
-                layout="responsive"
-                objectFit="contain"
-                priority={true}
-              />
-              <p className="w-8/12 my-4 m-auto text-center">
-                {a.caption && a.caption}
-              </p>
-            </div>
+            <>
+              <div
+                onClick={() => handleLightbox(idx)}
+                className="hover:bg-gray-200 py-10 hover:bg-opacity-25 cursor-pointer relative w-40 md:w-80"
+              >
+                <Image
+                  src={imageBuilder(a.artworkImage).url()}
+                  alt={a.caption}
+                  // layout="fill"
+                  width={1000}
+                  height={1000}
+                  layout="responsive"
+                  objectFit="contain"
+                  // priority={true}
+                />
+                <p className="w-8/12 my-4 m-auto text-center hidden">
+                  {a.caption && a.caption}
+                </p>
+              </div>
+            </>
           ))}
         </div>
       ) : (

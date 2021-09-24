@@ -31,7 +31,7 @@ export default function Container({ children, background, upcomingEvent }) {
           </Link>
         </div>
       )}
-      <div className="px-10">{children}</div>
+      <div className="px-3 md:px-10">{children}</div>
     </div>
   )
 }
