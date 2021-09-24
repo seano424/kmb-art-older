@@ -23,6 +23,14 @@ export default function MainMobileNav() {
           Writings & Musings
         </a>
       </Link>
+      <Link href="/upcoming-events">
+        <a
+          onClick={() => toggleOpen(!open)}
+          className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
+        >
+          Upcoming Events
+        </a>
+      </Link>
       <Link href="/about">
         <a
           onClick={() => toggleOpen(!open)}

@@ -32,10 +32,10 @@ export default function Index({ images }) {
   )
   return (
     <>
-      <div className="absolute grid grid-cols-2 h-screen z-50 text-white">
+      <div className="absolute flex justify-center items-center w-screen md:grid md:grid-cols-2 h-screen z-50 text-white">
         <div></div>
-        <div className="flex flex-col justify-center pr-2">
-          <h1 className="self-end leading-tight mb-10 text-[5.5rem] font-secondary uppercase font-bold">
+        <div className="flex flex-col justify-center px-2">
+          <h1 className="leading-tight mb-10 text-[5.5rem] font-secondary uppercase font-bold">
             Karrie Marie Baxley
           </h1>
           <div className="flex space-x-4 items-center">
