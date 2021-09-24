@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { urlFor } from 'lib/sanity'
 import Image from 'next/image'
 
-export default function Carousel({ images, handleCaptionChange }) {
+export default function Carousel({ images }) {
   const [show, setShow] = useState(0)
 
   useEffect(() => {
@@ -14,10 +14,6 @@ export default function Carousel({ images, handleCaptionChange }) {
     return () => {
       clearTimeout(timeout)
     }
-  }, [show])
-
-  useEffect(() => {
-    handleCaptionChange(images[show].caption)
   }, [show])
 
   useEffect(() => {
@@ -41,11 +37,12 @@ export default function Carousel({ images, handleCaptionChange }) {
     <Link href="/paintings">
       <a aria-label="Link to the paintings series by Karrie Marie Baxley">
         {' '}
-        <div className="cursor-pointer h-[500px] relative">
+        <div className="cursor-pointer h-screen w-screen relative">
           {/* <CarouselImages images={images} show={show} /> */}
           {images.map((image, idx) => (
             <Image
-              className={`carousel-images transition-opacity duration-500 ease-in-out ${
+              key={idx}
+              className={`carousel-images object-cover transition-opacity duration-500 ease-in-out ${
                 show !== idx ? 'opacity-0 z-0' : 'opacity-100 z-10'
               }`}
               src={urlFor(image?.image).url()}

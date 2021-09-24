@@ -35,6 +35,9 @@ module.exports = {
         '7xl': '4.5rem',
         '8xl': '6.25rem',
       },
+      fontFamily: {
+        secondary: ['Open Sans', 'sans-serif'],
+      },
       boxShadow: {
         sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
         small: '0 1px 0px 0 rgb(0 0 0 / 0.1), 0 0px 0px 0 rgb(0 0 0 / 0.06)',

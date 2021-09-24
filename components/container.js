@@ -8,7 +8,7 @@ export default function Container({ children, background, upcomingEvent }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(false)
-    }, 3000)
+    }, 7000)
     return () => clearTimeout(timer)
   }, [])
 
