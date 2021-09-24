@@ -19,7 +19,7 @@ export default function Container({ children, background, upcomingEvent }) {
       {upcomingEvent && (
         <div
           className={`${
-            show ? 'opacity-100' : 'opacity-100'
+            show ? 'opacity-100' : 'opacity-0'
           } hidden md:inline-flex transition-all duration-700 hover:opacity-100 ease-out p-5 font-light text-opacity-80 hover:text-opacity-100 tracking-wide text-gray-600  shadow-sm w-full`}
         >
           <span className="pr-1 cursor-default">Upcoming Event: </span>
