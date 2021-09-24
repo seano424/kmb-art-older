@@ -33,7 +33,7 @@ function UpcomingEvents({ upcomingEvents }) {
                     className="text-sm text-primary hover:text-blue-300"
                     href={event.linkUrl}
                   >
-                    Find out more
+                    Find out more about the venue
                   </a>
                 </div>
               </div>
