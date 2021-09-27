@@ -13,6 +13,15 @@ body {
   min-height: 100vh;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 img {
   pointer-events: none;
   user-select: none;

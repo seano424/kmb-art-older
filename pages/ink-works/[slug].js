@@ -5,8 +5,6 @@ import { getSerie, getAllPaintingsWithSlug } from '../../lib/api'
 import Artwork from '@/components/artwork'
 
 export default function InkWork({ preview, inkWorks }) {
-  console.log('inkworks', inkWorks)
-  console.log(inkWorks.results)
   const content = inkWorks.results
   return (
     <Layout preview={preview}>

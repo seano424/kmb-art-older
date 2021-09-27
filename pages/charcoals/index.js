@@ -6,6 +6,7 @@ import PostTitle from '@/components/post-title'
 import Container from '@/components/container'
 import Artwork from '@/components/artwork'
 import relevantEvents from 'utils/relevantEvents'
+import { v4 as uuidv4 } from 'uuid'
 
 export default function Index({ preview, content, upcomingEvents }) {
   const events = relevantEvents(upcomingEvents)
@@ -16,10 +17,7 @@ export default function Index({ preview, content, upcomingEvents }) {
         <Container upcomingEvent={events ? events[0] : null} background>
           <PostTitle>Charcoals </PostTitle>
           {content.map((p) => (
-            <>
-              {/* <h1 className="text-lg font-bold text-gray-300">{p.title}</h1> */}
-              <Artwork artwork={p.artWork} title={p.title} />
-            </>
+            <Artwork key={uuidv4()} artwork={p.artWork} title={p.title} />
           ))}
         </Container>
       </SidebarLayout>

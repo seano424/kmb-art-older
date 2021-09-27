@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import styles from './container.module.css'
 import Link from 'next/link'
 
 export default function Container({ children, background, upcomingEvent }) {
@@ -14,7 +13,7 @@ export default function Container({ children, background, upcomingEvent }) {
 
   return (
     <div
-      className={`h-screen ${styles.backgroundContainer} container mx-auto bg-gray-50 bg-opacity-20  lg:w-4/5 lg:right-0`}
+      className={`h-screen absolute bg-no-repeat bg-fixed top-0 bottom-0 container mx-auto bg-gray-50 bg-opacity-20 md:w-4/6 xl:w-4/5 lg:right-0 lg:overflow-x-scroll`}
     >
       {upcomingEvent && (
         <div

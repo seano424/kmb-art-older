@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import { NavContext } from '../context/NavContext'
@@ -14,7 +15,7 @@ export default function SidebarLayout({ children, background = true }) {
     <>
       <section>
         <article
-          className={`transition-opacity duration-100 ease-in-out fixed z-20 bg-gray-50 shadow-md lg:pl-12 lg:flex min-h-full top-24 lg:pr-12 lg:mt-0 lg:top-0 md:overflow-x-hidden flex-col lg:w-72 flex-shrink-0 hidden`}
+          className={`transition-opacity duration-100 ease-in-out fixed z-20 bg-gray-50 shadow-md md:pl-12 md:flex min-h-full top-24 md:pr-12 md:mt-0 md:top-0 md:overflow-x-hidden flex-col md:w-72 flex-shrink-0 hidden`}
         >
           <div className="flex flex-col mb-6">
             <Link href="/">
@@ -36,7 +37,7 @@ export default function SidebarLayout({ children, background = true }) {
                 onClick={toggleOpen}
                 className={`${
                   open
-                    ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                    ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
                     : 'text-base'
                 } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
                   pathname === '/paintings' && 'text-gray-300'
@@ -50,7 +51,7 @@ export default function SidebarLayout({ children, background = true }) {
                 onClick={toggleOpen}
                 className={`${
                   open
-                    ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                    ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
                     : 'text-base'
                 } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
                   pathname === '/ink-works' && 'text-gray-300'
@@ -64,7 +65,7 @@ export default function SidebarLayout({ children, background = true }) {
                 onClick={toggleOpen}
                 className={`${
                   open
-                    ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                    ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
                     : 'text-base'
                 } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
                   pathname === '/charcoals' && 'text-gray-300'
@@ -78,7 +79,7 @@ export default function SidebarLayout({ children, background = true }) {
                 onClick={toggleOpen}
                 className={`${
                   open
-                    ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                    ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
                     : 'text-base'
                 } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
                   (pathname === '/galleries' || pathname === '/') &&
@@ -93,7 +94,7 @@ export default function SidebarLayout({ children, background = true }) {
                 onClick={toggleOpen}
                 className={`${
                   open
-                    ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                    ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
                     : 'text-base'
                 } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
                   pathname === '/upcoming-events' && 'text-gray-300'
@@ -109,7 +110,7 @@ export default function SidebarLayout({ children, background = true }) {
               onClick={toggleOpen}
               className={`${
                 open
-                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
                   : 'text-base'
               } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
                 pathname === '/dancing-with-a-thousand-bees' && 'text-gray-300'
@@ -123,7 +124,7 @@ export default function SidebarLayout({ children, background = true }) {
               onClick={toggleOpen}
               className={`${
                 open
-                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
                   : 'text-base'
               } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
                 pathname === '/about' && 'text-gray-300'
@@ -138,7 +139,7 @@ export default function SidebarLayout({ children, background = true }) {
               onClick={toggleOpen}
               className={`${
                 open
-                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
                   : 'text-base'
               } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
                 pathname === '/contact' && 'text-gray-300'
@@ -152,7 +153,7 @@ export default function SidebarLayout({ children, background = true }) {
               onClick={toggleOpen}
               className={`${
                 open
-                  ? 'text-2xl md:text-3xl lg:text-base transition-all duration-200 ease-linear'
+                  ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
                   : 'text-base'
               } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
                 pathname === '/blog' && 'text-gray-300'
@@ -162,18 +163,23 @@ export default function SidebarLayout({ children, background = true }) {
             </a>
           </Link>
         </article>
-        <article
-          style={{
-            backgroundImage: background ? `url("images/background.webp")` : '',
-          }}
-          className="lg:ml-72 h-screen "
-        >
+        <article className="md:ml-72 h-screen bg-[##EFF0F0]">
+          <div className="hidden md:inline-flex fixed h-full w-10/12">
+            <Image
+              className="object-cover"
+              src={
+                'https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
+              }
+              alt="bg image"
+              layout="fill"
+            />
+          </div>
           <div className="">{children}</div>
         </article>
       </section>
       <section
         style={{ top: '90px', height: bgheight }}
-        className={`absolute flex lg:hidden z-10 bg-gray-50 h-0 w-full transition-all duration-500 ease-linear ${
+        className={`absolute flex md:hidden z-10 bg-gray-50 h-0 w-full transition-all duration-500 ease-linear ${
           open ? `h-full visible opacity-100 w-full` : `opacity-0`
         }`}
         // className={`flex md:hidden`}

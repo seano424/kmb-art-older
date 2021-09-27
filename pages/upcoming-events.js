@@ -9,7 +9,6 @@ import { urlFor } from 'lib/sanity'
 
 function UpcomingEvents({ upcomingEvents }) {
   const events = relevantEvents(upcomingEvents)
-  console.log(events)
 
   return (
     <Layout>

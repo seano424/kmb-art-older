@@ -87,7 +87,6 @@ export default function ImagesDisplay({ series }) {
       {open ? (
         <div onContextMenu={handleContext}>
           <Lightbox
-            imagePadding="40"
             mainSrc={urlFor(images[photoIndex]).url()}
             nextSrc={urlFor(images[(photoIndex + 1) % images.length]).url()}
             prevSrc={urlFor(
