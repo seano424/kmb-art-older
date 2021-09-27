@@ -1,8 +1,9 @@
 import { getCarouselImages } from '../lib/api'
 import Link from 'next/link'
-import Carousel from '@/components/carousel'
+import Carousel from '@/components/Carousel'
 import { FiInstagram } from 'react-icons/fi'
 import { FaFacebookF } from 'react-icons/fa'
+//changed casing
 
 export default function Index({ images }) {
   let homepageImages = []

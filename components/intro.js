@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from './carousel.module.css'
-import Carousel from './carousel'
+import Carousel from './Carousel'
 
 export default function Intro({ images }) {
   const [caption, setCaption] = useState(images[0].mainImage.caption)
