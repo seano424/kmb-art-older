@@ -99,7 +99,7 @@ export default function Navbar() {
         </article>
         <article
           onClick={() => setOpen(!open)}
-          className="xl:hidden cursor-pointer flex flex-col justify-center p-3"
+          className="xl:hidden cursor-pointer flex flex-col z-50 justify-center p-3"
         >
           <div
             className={`w-8 h-1 bg-gray-900 rounded-lg transition-all duration-150 ease-linear relative ${

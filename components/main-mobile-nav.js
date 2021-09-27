@@ -6,7 +6,7 @@ export default function MainMobileNav() {
   const { open, toggleOpen } = useContext(NavContext)
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-[30rem] gap-4">
+    <div className="flex flex-col items-center justify-center w-full h-[30rem] md:h-[40rem] gap-4">
       <Link href="/galleries">
         <a
           onClick={() => toggleOpen(!open)}
