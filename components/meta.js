@@ -1,11 +1,10 @@
-import Head from "next/head";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
+import Head from 'next/head'
 
 export default function Meta() {
   return (
     <Head>
       <title>Karrie Marie Baxley | Artist and Writer</title>
-      <link rel="shortcut icon" href="/images/favicon.ico" />
+      <link rel="icon" href="/images/favicon.ico" />
       <meta charset="utf-8"></meta>
       <meta
         name="description"
@@ -25,5 +24,5 @@ export default function Meta() {
         content="Karrie Marie Baxley | Artist and Writer"
       />
     </Head>
-  );
+  )
 }

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Carousel from '@/components/Carousel'
 import { FiInstagram } from 'react-icons/fi'
 import { FaFacebookF } from 'react-icons/fa'
-//changed casing
+import Meta from '@/components/meta'
 
 export default function Index({ images }) {
   let homepageImages = []
@@ -33,6 +33,7 @@ export default function Index({ images }) {
   )
   return (
     <>
+      <Meta />
       <div className="absolute flex justify-center items-center w-screen md:grid md:grid-cols-2 h-screen z-50 text-white">
         <div></div>
         <div className="flex flex-col justify-center px-2">
