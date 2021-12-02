@@ -9,15 +9,17 @@ import { urlFor } from 'lib/sanity'
 
 function UpcomingEvents({ upcomingEvents }) {
   const events = relevantEvents(upcomingEvents)
-
   return (
     <Layout>
       <SidebarLayout>
         <Container upcomingEvent={events ? events[0] : null} background>
           <PostTitle>Upcoming Events</PostTitle>
-          <div className="">
-            {events.map((event) => (
-              <div className="my-16 divide-y-2 flex space-x-4" key={event._id}>
+          <div>
+            {events.map((event, idx) => (
+              <div
+                className="py-16 px-8 flex space-x-4 my-8 rounded shadow-lg bg-white max-w-max"
+                key={idx}
+              >
                 <div className="relative w-80 h-40">
                   <Image
                     objectFit="cover"
