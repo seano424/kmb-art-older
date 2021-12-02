@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+
+:root {
+  /* Brand colors */
+  --brand-primary: #2176fb;
+  --brand-primary--inverted: #00adb5;
+  --brand-secondary: #ffffff;
+  --brand-secondary--inverted: #222831;
+  /* Typography */
+  --font-family-sans-serif: 'Playfair Display', serif;
+  --font-size-base: 18px;
+  --text-color: var(--brand-secondary--inverted);
+  /* Main Navigation */
+  --main-navigation-color: var(--brand-secondary);
+  --main-navigation-color--inverted: var(--brand-secondary--inverted);
+}
+
+:global([class*='Navbar_root_']) {
+  align-items: center;
+}

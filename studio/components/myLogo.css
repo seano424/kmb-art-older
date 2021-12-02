@@ -1,0 +1,19 @@
+.myLogo {
+  height: 100%;
+  max-height: 3rem;
+  width: 4rem;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 40rem;
+}
+
+.Navbar_root_2dO1G,
+.Navbar_withToolMenu_0aOyA {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
