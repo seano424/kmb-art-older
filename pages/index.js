@@ -35,14 +35,13 @@ export default function Index({ images }) {
     <>
       <Meta />
       <div className="absolute flex justify-center items-center w-screen md:grid md:grid-cols-2 h-screen z-50 text-white">
-        <div></div>
-        <div className="flex flex-col justify-center px-2">
-          <h1 className="leading-tight mb-10 text-[5.5rem] font-secondary uppercase font-bold">
+        <div className="flex flex-col col-start-2">
+          <h1 className="leading-tight mb-10 text-[5.5rem] uppercase font-bold">
             Karrie Marie Baxley
           </h1>
-          <div className="flex space-x-4 items-center">
+          <div className="ml-2 flex space-x-4 items-center">
             <Link href="/paintings">
-              <a className="text-xl bg-gray-100 text-gray-900 px-3 py-2 uppercase">
+              <a className="text-2xl hover:bg-gray-50 bg-gray-100 filter hover:drop-shadow-2xl hover:brightness-125 transition-all duration-300 text-gray-900 px-10 py-3 uppercase">
                 Enter site
               </a>
             </Link>
@@ -50,10 +49,10 @@ export default function Index({ images }) {
               target="_blank"
               href="https://www.facebook.com/profile.php?id=100009833221050"
             >
-              <FaFacebookF className="text-lg" />
+              <FaFacebookF className="text-3xl" />
             </a>
             <a target="_blank" href="https://www.instagram.com/kmariebaxley/">
-              <FiInstagram className="text-lg" />
+              <FiInstagram className="text-3xl" />
             </a>
           </div>
         </div>
@@ -71,10 +70,3 @@ export async function getStaticProps({ preview = false }) {
   }
 }
 
-// <Layout footer preview={preview}>
-//   <Head>
-//     <title>Karrie Marie Baxley | Artist and Writer</title>
-//   </Head>
-//   <Nav />
-//   <Intro images={carouselImages} />
-// </Layout>

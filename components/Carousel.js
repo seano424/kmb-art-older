@@ -4,7 +4,7 @@ import { urlFor } from 'lib/sanity'
 import Image from 'next/image'
 // changed name again
 export default function Carousel({ images }) {
-  const [show, setShow] = useState(0)
+  const [show, setShow] = useState(3)
 
   useEffect(() => {
     let timeout = setTimeout(() => {

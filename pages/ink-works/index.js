@@ -10,6 +10,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 export default function Index({ preview, content, upcomingEvents }) {
   const events = relevantEvents(upcomingEvents)
+  console.log(content);
 
   return (
     <Layout preview={preview}>

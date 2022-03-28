@@ -20,10 +20,7 @@ export default function SidebarLayout({ children, background = true }) {
           <div className="flex flex-col mb-6">
             <Link href="/">
               <a className="my-8" onClick={toggleOpen}>
-                <h2
-                  style={{ textDecorationColor: 'blanchedalmond' }}
-                  className="text-6xl leading-none hover:underline cursor-pointer"
-                >
+                <h2 className="text-6xl leading-none hover:text-blue-600 transition duration-300 cursor-pointer">
                   Karrie Marie Baxley
                 </h2>
                 <p className="text-lg pl-1 text-gray-400 pt-1">
@@ -37,10 +34,10 @@ export default function SidebarLayout({ children, background = true }) {
                 onClick={toggleOpen}
                 className={`${
                   open
-                    ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
+                    ? 'text-2xl md:text-base transition-all duration-200'
                     : 'text-base'
-                } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
-                  pathname === '/paintings' && 'text-gray-300'
+                } ml-1 font-medium mb-1 hover:text-blue-600 hover:scale-105 transform uppercase tracking-widest ${
+                  pathname === '/paintings' && 'text-blue-600'
                 }`}
               >
                 Paintings
@@ -51,10 +48,10 @@ export default function SidebarLayout({ children, background = true }) {
                 onClick={toggleOpen}
                 className={`${
                   open
-                    ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
+                    ? 'text-2xl md:text-base transition-all duration-200'
                     : 'text-base'
-                } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
-                  pathname === '/ink-works' && 'text-gray-300'
+                } ml-1 font-medium mb-1 hover:text-blue-600 hover:scale-105 transform uppercase tracking-widest ${
+                  pathname === '/ink-works' && 'text-blue-600'
                 }`}
               >
                 Ink Works
@@ -65,10 +62,10 @@ export default function SidebarLayout({ children, background = true }) {
                 onClick={toggleOpen}
                 className={`${
                   open
-                    ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
+                    ? 'text-2xl md:text-base transition-all duration-200'
                     : 'text-base'
-                } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
-                  pathname === '/charcoals' && 'text-gray-300'
+                } ml-1 font-medium mb-1 hover:text-blue-600 hover:scale-105 transform uppercase tracking-widest ${
+                  pathname === '/charcoals' && 'text-blue-600'
                 }`}
               >
                 Charcoals
@@ -79,9 +76,9 @@ export default function SidebarLayout({ children, background = true }) {
                 onClick={toggleOpen}
                 className={`${
                   open
-                    ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
+                    ? 'text-2xl md:text-base transition-all duration-200'
                     : 'text-base'
-                } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
+                } ml-1 font-medium mb-1 hover:text-blue-600 hover:scale-105 transform uppercase tracking-widest ${
                   (pathname === '/galleries' || pathname === '/') &&
                   'text-gray-300'
                 }`}
@@ -94,10 +91,10 @@ export default function SidebarLayout({ children, background = true }) {
                 onClick={toggleOpen}
                 className={`${
                   open
-                    ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
+                    ? 'text-2xl md:text-base transition-all duration-200'
                     : 'text-base'
-                } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
-                  pathname === '/upcoming-events' && 'text-gray-300'
+                } ml-1 font-medium mb-1 hover:text-blue-600 hover:scale-105 transform uppercase tracking-widest ${
+                  pathname === '/upcoming-events' && 'text-blue-600'
                 }`}
               >
                 Upcoming Events
@@ -110,10 +107,10 @@ export default function SidebarLayout({ children, background = true }) {
               onClick={toggleOpen}
               className={`${
                 open
-                  ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
+                  ? 'text-2xl md:text-base transition-all duration-200'
                   : 'text-base'
-              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
-                pathname === '/dancing-with-a-thousand-bees' && 'text-gray-300'
+              } ml-1 font-medium mb-1 hover:text-blue-600 hover:scale-105 transform uppercase tracking-widest ${
+                pathname === '/dancing-with-a-thousand-bees' && 'text-blue-600'
               }`}
             >
               Book
@@ -124,10 +121,10 @@ export default function SidebarLayout({ children, background = true }) {
               onClick={toggleOpen}
               className={`${
                 open
-                  ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
+                  ? 'text-2xl md:text-base transition-all duration-200'
                   : 'text-base'
-              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
-                pathname === '/about' && 'text-gray-300'
+              } ml-1 font-medium mb-1 hover:text-blue-600 hover:scale-105 transform uppercase tracking-widest ${
+                pathname === '/about' && 'text-blue-600'
               }`}
             >
               About
@@ -139,10 +136,10 @@ export default function SidebarLayout({ children, background = true }) {
               onClick={toggleOpen}
               className={`${
                 open
-                  ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
+                  ? 'text-2xl md:text-base transition-all duration-200'
                   : 'text-base'
-              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
-                pathname === '/contact' && 'text-gray-300'
+              } ml-1 font-medium mb-1 hover:text-blue-600 hover:scale-105 transform uppercase tracking-widest ${
+                pathname === '/contact' && 'text-blue-600'
               }`}
             >
               Contact
@@ -153,10 +150,10 @@ export default function SidebarLayout({ children, background = true }) {
               onClick={toggleOpen}
               className={`${
                 open
-                  ? 'text-2xl md:text-3xl md:text-base transition-all duration-200 ease-linear'
+                  ? 'text-2xl md:text-base transition-all duration-200'
                   : 'text-base'
-              } ml-1 font-medium mb-1 hover:text-gray-300 uppercase tracking-widest ${
-                pathname === '/blog' && 'text-gray-300'
+              } ml-1 font-medium mb-1 hover:text-blue-600 hover:scale-105 transform uppercase tracking-widest ${
+                pathname === '/blog' && 'text-blue-600'
               }`}
             >
               Blog
@@ -174,12 +171,12 @@ export default function SidebarLayout({ children, background = true }) {
               layout="fill"
             />
           </div>
-          <div className="">{children}</div>
+          {children}
         </article>
       </section>
       <section
         style={{ top: '90px', height: bgheight }}
-        className={`absolute flex md:hidden z-10 bg-white h-0 w-full transition-all duration-500 ease-linear ${
+        className={`absolute flex md:hidden z-10 bg-white h-0 w-full transition-all duration-300 ${
           open ? `h-full visible opacity-100 w-full` : `opacity-0`
         }`}
         // className={`flex md:hidden`}
