@@ -5,7 +5,7 @@ export default function Meta() {
     <Head>
       <title>Karrie Marie Baxley | Artist and Writer</title>
       <link rel="icon" href="/images/favicon.ico" />
-      <meta charset="utf-8"></meta>
+      <meta charSet="utf-8"></meta>
       <meta
         name="description"
         content="Karrie Marie Baxley is an an artist based in Kansas City. She works in such mediums as paintings, charcoals, and inks."

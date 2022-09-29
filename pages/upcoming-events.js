@@ -27,7 +27,7 @@ function UpcomingEvents({ upcomingEvents }) {
             <div>
               <h1 className="text-lg w-64 mb-4">{event.title}</h1>
               <a
-                className="text-sm text-primary hover:text-blue-300"
+                className="text-sm text-blue-700 hover:text-blue-300"
                 href={event.linkUrl}
               >
                 Find out more about the venue

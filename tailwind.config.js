@@ -1,21 +1,12 @@
 module.exports = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       borderRadius: {
         large: '12px',
-      },
-      colors: {
-        'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
-        success: '#0070f3',
-        cyan: '#79FFE1',
-        primary: '#0339F3',
-        salmon: '#FCB19F',
-        'design-red': '#FF0202',
-        'design-green': '#5BFF21',
-        'design-yellow': '#FEFF00',
       },
       spacing: {
         28: '7rem',
@@ -34,6 +25,7 @@ module.exports = {
       },
       fontFamily: {
         secondary: ['Open Sans', 'sans-serif'],
+        playfair: '"Playfair Display", serif',
       },
       boxShadow: {
         sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -48,4 +40,10 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    require('tailwindcss-debug-screens'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
+  ],
 }

@@ -1,0 +1,6 @@
+@layer base {
+  html,
+  body {
+    @apply flex flex-col overflow-x-hidden w-screen min-h-screen font-playfair;
+  }
+}
