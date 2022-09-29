@@ -1,9 +1,10 @@
 import { getCarouselImages } from '../lib/api'
 import Link from 'next/link'
-import Carousel from '@/components/Carousel'
+import Image from 'next/image'
 import { FiInstagram } from 'react-icons/fi'
 import { FaFacebookF } from 'react-icons/fa'
 import Meta from '@/components/meta'
+import { urlFor } from 'lib/sanity'
 
 export default function Index({ images }) {
   let homepageImages = []
@@ -31,6 +32,7 @@ export default function Index({ images }) {
       })
     )
   )
+  console.log(homepageImages)
   return (
     <>
       <Meta />
@@ -57,7 +59,13 @@ export default function Index({ images }) {
           </div>
         </div>
       </div>
-      <Carousel images={homepageImages} />
+      <Image
+        className="object-cover object-top"
+        src={urlFor(homepageImages[2].image).url()}
+        alt="Homepage Image"
+        layout="fill"
+        priority
+      />
     </>
   )
 }
@@ -69,4 +77,3 @@ export async function getStaticProps({ preview = false }) {
     revalidate: 1,
   }
 }
-
