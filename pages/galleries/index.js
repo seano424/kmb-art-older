@@ -1,11 +1,11 @@
 import React from 'react'
-import Layout from '@/components/layout'
-import SidebarLayout from '@/components/sidebar-layout'
+import Layout from '@/components/Layout'
+import SidebarLayout from '@/components/SidebarLayout'
 import { getSeries, getUpcomingEvents } from '../../lib/api'
 import relevantEvents from 'utils/relevantEvents'
 import PostTitle from '@/components/post-title'
 import Container from '@/components/container'
-import Galleries from '@/components/galleries'
+import Galleries from '@/components/Galleries'
 
 export default function Index({ series, upcomingEvents }) {
   const events = relevantEvents(upcomingEvents)

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import { NavContext } from '../context/NavContext'
-import MainMobileNav from './main-mobile-nav'
+import MainMobileNav from './MainMobileNav'
 
 export default function SidebarLayout({ children, background = true }) {
   const { open, toggleOpen } = useContext(NavContext)

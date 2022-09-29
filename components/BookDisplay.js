@@ -1,5 +1,5 @@
-import CoverImage from './cover-image'
-import PostBody from './post-body'
+import CoverImage from './CoverImage'
+import PostBody from './PostBody'
 
 export default function BookDisplay({ book }) {
   const { front_image, back_image, _id, body } = book

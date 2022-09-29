@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FiInstagram } from 'react-icons/fi'
 import { FaFacebookF } from 'react-icons/fa'
-import Meta from '@/components/meta'
+import Meta from '@/components/Meta'
 import { urlFor } from 'lib/sanity'
 
 export default function Index({ feature }) {

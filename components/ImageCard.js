@@ -2,7 +2,7 @@ import React from "react";
 import { urlFor } from "../lib/sanity";
 import Image from "next/image";
 import Link from "next/link";
-import Btn from "@/components/btn";
+import Btn from "@/components/Button";
 import { BsArrowUpRight } from "react-icons/bs";
 
 export default function ImageCard({ image, title }) {

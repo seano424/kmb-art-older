@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../../components/layout";
-import SidebarLayout from "../../components/sidebar-layout";
+import Layout from "../../components/Layout";
+import SidebarLayout from "../../components/SidebarLayout";
 import { getBook } from "../../lib/api";
-import BookDisplay from "../../components/book-display";
+import BookDisplay from "../../components/BookDisplay";
 import PostTitle from "../../components/post-title";
 import Container from "@/components/container";
 

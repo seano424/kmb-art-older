@@ -1,8 +1,8 @@
 import React from 'react'
-import Layout from '@/components/layout'
-import SidebarLayout from '@/components/sidebar-layout'
+import Layout from '@/components/Layout'
+import SidebarLayout from '@/components/SidebarLayout'
 import { getSerie, getAllPaintingsWithSlug } from '../../lib/api'
-import Artwork from '@/components/artwork'
+import Artwork from '@/components/Artwork'
 
 export default function InkWork({ preview, charcoals }) {
   const content = charcoals.results
