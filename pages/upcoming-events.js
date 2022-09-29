@@ -20,10 +20,7 @@ function UpcomingEvents({ upcomingEvents }) {
         <h2 className="h2 pb-10 font-extrabold ">Upcoming Events</h2>
         <div className="flex flex-col gap-5">
           {events.map((event, idx) => (
-            <div
-              key={idx}
-              className="grid grid-cols-2 gap-5 rounded bg-white p-8 shadow-2xl"
-            >
+            <div key={idx} className="grid grid-cols-2 gap-5 p-8 ">
               <Image
                 className="object-cover object-top"
                 src={urlFor(event.main_image).url()}
@@ -63,7 +60,7 @@ export async function getStaticProps({ preview = false }) {
 
   return {
     props: { upcomingEvents },
-    revalidate: 600
+    revalidate: 600,
   }
 }
 
