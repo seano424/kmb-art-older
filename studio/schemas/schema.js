@@ -10,7 +10,6 @@ import category from './category'
 import post from './post'
 import author from './author'
 import comment from './comment'
-import carousel from './carousel'
 import series from './series'
 import artwork from './artwork'
 import book from './book'
@@ -28,12 +27,11 @@ export default createSchema({
     about,
     post,
     author,
-    carousel,
     category,
     artwork,
     upcomingEvents,
     eventDate,
     blockContent,
-    comment
+    comment,
   ]),
 })
