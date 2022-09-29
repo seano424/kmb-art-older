@@ -13,17 +13,17 @@ export default function Container({ children, upcomingEvent }) {
 
   return (
     <div
-      className={`h-screen bg-no-repeat bg-fixed bg-gray-50 bg-opacity-20 lg:overflow-x-scroll`}
+      className={`h-screen bg-gray-50 bg-opacity-20 bg-fixed bg-no-repeat lg:overflow-x-scroll`}
     >
       {upcomingEvent && (
         <div
           className={`${
             show ? 'opacity-100' : 'opacity-0'
-          } hidden md:inline-flex transition-all duration-700 hover:opacity-100 ease-out p-5 font-light hover:text-opacity-100 tracking-wide text-gray-900  shadow-sm w-full filter backdrop-blur-2xl`}
+          } hidden w-full p-5 font-light tracking-wide text-gray-900 shadow-sm filter backdrop-blur-2xl transition-all duration-700  ease-out hover:text-opacity-100 hover:opacity-100 md:inline-flex`}
         >
           <Link href="/upcoming-events">
-            <a className="text-blue-600 hover:text-blue-700 cursor-pointer text-xl">
-              <span className="pr-1 cursor-default text-gray-900">
+            <a className="cursor-pointer text-xl text-blue-600 hover:text-blue-700">
+              <span className="cursor-default pr-1 text-gray-900">
                 Upcoming Event:{' '}
               </span>
               {upcomingEvent.title}
