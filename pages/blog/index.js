@@ -5,15 +5,11 @@ import { getAllPostsForHome, getUpcomingEvents } from '../../lib/api'
 import PostTitle from '@/components/PostTitle'
 import relevantEvents from 'utils/relevantEvents'
 
-export default function Index({ allPosts, upcomingEvents }) {
-  const events = relevantEvents(upcomingEvents)
-
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+export default function Index({ events, heroPost, morePosts }) {
   return (
-    <Container upcomingEvent={events ? events[0] : null}>
+    <Container upcomingEvent={events}>
       <PostTitle>Writings by Karrie</PostTitle>
-      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+      <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">
         Most Recent
       </h2>
       {heroPost && (
@@ -35,9 +31,15 @@ Index.primarySite = true
 
 export async function getStaticProps({ preview = false }) {
   const upcomingEvents = await getUpcomingEvents(preview)
+  const events = relevantEvents(upcomingEvents)
+
   const allPosts = await getAllPostsForHome(preview)
   return {
-    props: { allPosts, upcomingEvents },
+    props: {
+      events: JSON.parse(JSON.stringify(events))[0],
+      heroPost: allPosts[0],
+      morePosts: allPosts.slice(1),
+    },
     revalidate: 1,
   }
 }

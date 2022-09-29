@@ -5,11 +5,9 @@ import Artwork from '@/components/Artwork'
 import relevantEvents from 'utils/relevantEvents'
 import { v4 as uuidv4 } from 'uuid'
 
-export default function Index({ content, upcomingEvents }) {
-  const events = relevantEvents(upcomingEvents)
-
+export default function Index({ content, events }) {
   return (
-    <Container upcomingEvent={events ? events[0] : null}>
+    <Container upcomingEvent={events}>
       <PostTitle>Charcoals </PostTitle>
       {content.map((p) => (
         <Artwork key={uuidv4()} artwork={p.artWork} title={p.title} />
@@ -21,10 +19,14 @@ Index.primarySite = true
 
 export async function getStaticProps({ preview = false }) {
   const upcomingEvents = await getUpcomingEvents(preview)
+  const events = relevantEvents(upcomingEvents)
 
   const allCharcoals = await getCharcoals(preview)
   return {
-    props: { content: allCharcoals, upcomingEvents },
+    props: {
+      content: allCharcoals,
+      events: JSON.parse(JSON.stringify(events))[0],
+    },
     revalidate: 1,
   }
 }

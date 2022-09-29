@@ -2,25 +2,25 @@ import CoverImage from './CoverImage'
 import PostBody from './PostBody'
 
 export default function BookDisplay({ book }) {
-  const { front_image, back_image, _id, body } = book
+  const { front_image, _id, body } = book
 
   return (
     <section key={_id} className="md:flex">
-      <div className="flex flex-col xl:grid grid-cols-2 items-center justify-center w-full gap-4 col-span-2">
+      <div className="col-span-2 flex w-full grid-cols-2 flex-col items-center justify-center gap-4 xl:grid">
         <div>
           <a
             target="_blank"
             href="https://www.amazon.com/"
-            className="bg-gradient-to-r from-green-400 to-blue-400 hover:from-pink-500 hover:to-yellow-500  opacity-75 cursor-pointer flex items-center justify-center rounded-t-3xl p-5 shadow-lg font-semibold text-xl hover:text-gray-50 text-gray-100 group hover:scale-100 transition-all duration-500 ease-linear px-12 md:m-auto"
+            className="group flex cursor-pointer items-center justify-center  rounded-t-3xl bg-gradient-to-r from-green-400 to-blue-400 p-5 px-12 text-xl font-semibold text-gray-100 opacity-75 shadow-lg transition-all duration-500 ease-linear hover:scale-100 hover:from-pink-500 hover:to-yellow-500 hover:text-gray-50 md:m-auto"
           >
             Available on Amazon 😊 🐝
           </a>
 
-          <div className="bg-white flex items-center rounded-b-3xl shadow-3xl bg-opacity-75 font-semibold px-4 pb-4 lg:px-0">
+          <div className="flex items-center rounded-b-3xl bg-white bg-opacity-75 px-4 pb-4 font-semibold shadow-3xl lg:px-0">
             <PostBody content={body} />
           </div>
         </div>
-        <div className="relative flex justify-center items-center w-full h-full bg-blue-200 lg:bg-opacity-0 rounded-3xl py-5">
+        <div className="relative flex h-full w-full items-center justify-center rounded-3xl bg-blue-200 py-5 lg:bg-opacity-0">
           <CoverImage
             imageObject={front_image}
             title="Dancing with a thousand bees book"

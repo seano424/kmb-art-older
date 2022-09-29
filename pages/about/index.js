@@ -1,21 +1,15 @@
 import { getAboutContent } from '../../lib/api'
 import PostTitle from '@/components/PostTitle'
 import Container from '@/components/Container'
-import PostBody from '@/components/PostBody'
 import { imageBuilder } from '../../lib/sanity'
 import Image from 'next/image'
 import { getUpcomingEvents } from '../../lib/api'
 import relevantEvents from 'utils/relevantEvents'
 import BlockContent from '@sanity/block-content-to-react'
 
-export default function About({ content, upcomingEvents }) {
-  const image = content[0].main_image
-  const body = content[0].body
-  const title = content[0].title
-  const events = relevantEvents(upcomingEvents)
-
+export default function About({ body, image, title, events }) {
   return (
-    <Container upcomingEvent={events ? events[0] : null}>
+    <Container upcomingEvent={events}>
       <PostTitle>{title}</PostTitle>
       <article className="grid grid-cols-2 gap-10 pt-10">
         <Image
@@ -37,10 +31,17 @@ About.primarySite = true
 
 export async function getStaticProps({ preview = false }) {
   const upcomingEvents = await getUpcomingEvents(preview)
+  const events = relevantEvents(upcomingEvents)
 
   const content = await getAboutContent(preview)
   return {
-    props: { content, upcomingEvents },
+    props: {
+      content,
+      events: JSON.parse(JSON.stringify(events))[0],
+      title: content[0].title,
+      body: content[0].body,
+      image: content[0].main_image,
+    },
     revalidate: 1,
   }
 }
