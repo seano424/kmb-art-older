@@ -25,7 +25,7 @@ export async function getStaticProps({ preview = false }) {
   return {
     props: {
       content: allPaintings,
-      events: JSON.parse(JSON.stringify(events))[0],
+      events: JSON.parse(JSON.stringify(events))[0] ?? null,
     },
     revalidate: 1,
   }

@@ -21,7 +21,10 @@ export async function getStaticProps({ preview = false }) {
 
   const allSeries = await getSeries(preview)
   return {
-    props: { series: allSeries, events: JSON.parse(JSON.stringify(events))[0] },
+    props: {
+      series: allSeries,
+      events: JSON.parse(JSON.stringify(events))[0] ?? null,
+    },
     revalidate: 1,
   }
 }

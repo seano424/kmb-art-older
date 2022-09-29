@@ -34,7 +34,7 @@ export async function getStaticProps({ preview = false }) {
     props: {
       image: book[0].front_image,
       body: book[0].body,
-      events: JSON.parse(JSON.stringify(events))[0],
+      events: JSON.parse(JSON.stringify(events))[0] ?? null,
     },
     revalidate: 1,
   }

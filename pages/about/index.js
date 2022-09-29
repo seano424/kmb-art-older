@@ -37,7 +37,7 @@ export async function getStaticProps({ preview = false }) {
   return {
     props: {
       content,
-      events: JSON.parse(JSON.stringify(events))[0],
+      events: JSON.parse(JSON.stringify(events))[0] ?? null,
       title: content[0].title,
       body: content[0].body,
       image: content[0].main_image,

@@ -32,7 +32,7 @@ export async function getStaticProps({ preview = false }) {
   const upcomingEvents = await getUpcomingEvents(preview)
   const events = relevantEvents(upcomingEvents)
   return {
-    props: { preview, events: JSON.parse(JSON.stringify(events))[0] },
+    props: { preview, events: JSON.parse(JSON.stringify(events))[0] ?? null },
     revalidate: 1,
   }
 }

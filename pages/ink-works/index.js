@@ -23,7 +23,10 @@ export async function getStaticProps({ preview = false }) {
 
   const allInks = await getInkWorks(preview)
   return {
-    props: { content: allInks, events: JSON.parse(JSON.stringify(events))[0] },
+    props: {
+      content: allInks,
+      events: JSON.parse(JSON.stringify(events))[0] ?? null,
+    },
     revalidate: 1,
   }
 }
