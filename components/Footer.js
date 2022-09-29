@@ -1,4 +1,4 @@
-import Container from './container'
+import Container from './Container'
 import Image from 'next/image'
 
 export default function Footer() {
