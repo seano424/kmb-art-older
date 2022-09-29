@@ -1,6 +1,6 @@
-import { getBook } from '../../lib/api'
-import BookDisplay from '../../components/BookDisplay'
-import PostTitle from '../../components/post-title'
+import { getBook } from '@/lib/api'
+import BookDisplay from '@/components/BookDisplay'
+import PostTitle from '@/components/PostTitle'
 import Container from '@/components/container'
 
 export default function Index({ book }) {
