@@ -50,6 +50,6 @@ export async function getStaticProps({ preview = false }) {
   const feature = await getFeatureImage(preview)
   return {
     props: { preview, feature: feature[0] },
-    revalidate: 1,
+    revalidate: 600
   }
 }

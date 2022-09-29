@@ -40,6 +40,6 @@ export async function getStaticProps({ preview = false }) {
       heroPost: allPosts[0],
       morePosts: allPosts.slice(1),
     },
-    revalidate: 1,
+    revalidate: 600
   }
 }

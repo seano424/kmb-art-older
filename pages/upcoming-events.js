@@ -63,7 +63,7 @@ export async function getStaticProps({ preview = false }) {
 
   return {
     props: { upcomingEvents },
-    revalidate: 1,
+    revalidate: 600
   }
 }
 

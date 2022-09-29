@@ -25,6 +25,6 @@ export async function getStaticProps({ preview = false }) {
       series: allSeries,
       events: JSON.parse(JSON.stringify(events))[0] ?? null,
     },
-    revalidate: 1,
+    revalidate: 600
   }
 }

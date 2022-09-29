@@ -42,6 +42,6 @@ export async function getStaticProps({ preview = false }) {
       body: content[0].body,
       image: content[0].main_image,
     },
-    revalidate: 1,
+    revalidate: 600
   }
 }

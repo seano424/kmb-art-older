@@ -36,6 +36,6 @@ export async function getStaticProps({ preview = false }) {
       body: book[0].body,
       events: JSON.parse(JSON.stringify(events))[0] ?? null,
     },
-    revalidate: 1,
+    revalidate: 600
   }
 }

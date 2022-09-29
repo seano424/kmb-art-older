@@ -20,7 +20,7 @@ export async function getStaticProps({ params, preview = false }) {
   const allInkWorks = await getSerie(params.slug, preview)
   return {
     props: { inkWorks: allInkWorks },
-    revalidate: 1,
+    revalidate: 600
   }
 }
 

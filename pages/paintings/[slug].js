@@ -21,7 +21,7 @@ export async function getStaticProps({ params, preview = false }) {
   const allPaintings = await getSerie(params.slug, preview)
   return {
     props: { paintings: allPaintings },
-    revalidate: 1,
+    revalidate: 600
   }
 }
 
