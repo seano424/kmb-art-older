@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import clsx from 'clsx'
 
 export default function Container({ children, upcomingEvent }) {
   const [show, setShow] = useState(true)
@@ -17,9 +18,10 @@ export default function Container({ children, upcomingEvent }) {
     >
       {upcomingEvent && (
         <div
-          className={`${
+          className={clsx(
+            'fixed z-50 hidden h-16 items-center border-b-2 border-gray-100 bg-white/90 p-5 font-light tracking-wide text-gray-900 filter backdrop-blur-2xl transition-all  duration-700 ease-out hover:text-opacity-100 hover:opacity-100 md:flex',
             show ? 'opacity-100' : 'opacity-0'
-          } hidden w-full p-5 font-light tracking-wide text-gray-900 shadow-sm filter backdrop-blur-2xl transition-all duration-700  ease-out hover:text-opacity-100 hover:opacity-100 md:inline-flex`}
+          )}
         >
           <Link href="/upcoming-events">
             <a className="cursor-pointer text-xl text-blue-600 hover:text-blue-700">
@@ -32,7 +34,7 @@ export default function Container({ children, upcomingEvent }) {
           </Link>
         </div>
       )}
-      {children}
+      <div className="relative top-20">{children}</div>
     </div>
   )
 }

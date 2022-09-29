@@ -18,20 +18,20 @@ export default function Artwork({ artwork }) {
   }
 
   return (
-    <div className="py-5 filter backdrop-blur-sm">
+    <div className="py-5 filter backdrop-blur-sm pr-10">
       {!open ? (
-        <div className="flex flex-wrap justify-center gap-10">
+        <div className="flex flex-wrap justify-center gap-20">
           {artwork.map((a, idx) => (
             <div
               key={uuidv4()}
               onClick={() => handleLightbox(idx)}
-              className="relative h-[500px] w-[400px] cursor-pointer lg:h-[700px] lg:w-[600px]"
+              className="relative h-[500px] w-[400px] cursor-pointer lg:h-[800px] lg:w-full"
             >
               <Image
+                className='object-contain'
                 src={imageBuilder(a.artworkImage).url() ?? '/'}
                 alt={a.caption}
                 layout="fill"
-                objectFit="contain"
               />
               <p className="m-auto my-4 hidden w-8/12 text-center">
                 {a.caption && a.caption}
