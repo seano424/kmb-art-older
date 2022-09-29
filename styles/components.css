@@ -1,5 +1,5 @@
 @layer components {
   .sidebar-link {
-    @apply ml-1 font-medium mb-1 hover:text-blue-600 hover:scale-105 transform uppercase tracking-widest;
+    @apply ml-1 text-xl mb-2 transform font-medium uppercase  transition-all duration-200 text-gray-800 hover:text-blue-600;
   }
 }

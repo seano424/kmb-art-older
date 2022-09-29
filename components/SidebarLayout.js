@@ -1,26 +1,26 @@
-import { useContext } from 'react'
+import clsx from 'clsx'
 import Link from 'next/link'
+import { useContext } from 'react'
 import { useRouter } from 'next/router'
+import { navigation } from '@/lib/navigation'
 import { NavContext } from '@/context/NavContext'
 import MainMobileNav from './MainMobileNav'
-import clsx from 'clsx'
-import { navigation } from '@/lib/navigation'
 
-export default function SidebarLayout({ children, background = true }) {
+export default function SidebarLayout({ children }) {
   const { open, toggleOpen } = useContext(NavContext)
   const { pathname } = useRouter()
   const bgheight = open ? '100vh' : '0'
   return (
     <>
       <na>
-        <div className="fixed top-24 z-20 hidden min-h-full flex-shrink-0 flex-col bg-gray-50 shadow-md transition-opacity duration-100 ease-in-out md:top-0 md:mt-0 md:flex md:w-80 md:overflow-x-hidden md:pl-12 md:pr-12">
+        <div className="fixed top-24 z-20 hidden min-h-full flex-shrink-0 flex-col bg-gray-50 shadow-md transition-opacity duration-100 ease-in-out md:top-0 md:mt-0 md:flex md:w-96 md:overflow-x-hidden md:pl-12 md:pr-12">
           <div className="mb-6 flex flex-col">
             <Link href="/">
               <a className="my-8" onClick={toggleOpen}>
                 <h2 className="cursor-pointer text-6xl leading-none transition duration-300 hover:text-blue-600">
                   Karrie Marie Baxley
                 </h2>
-                <p className="pl-1 pt-1 text-lg text-gray-400">
+                <p className="pl-1 pt-1 text-lg text-gray-800">
                   artist & creator
                 </p>
               </a>
@@ -32,9 +32,6 @@ export default function SidebarLayout({ children, background = true }) {
                   onClick={toggleOpen}
                   className={clsx(
                     'sidebar-link',
-                    open
-                      ? 'text-2xl transition-all duration-200 md:text-base'
-                      : 'text-base',
                     pathname === `/${link.link}` && 'text-blue-600'
                   )}
                 >
@@ -49,9 +46,6 @@ export default function SidebarLayout({ children, background = true }) {
                 onClick={toggleOpen}
                 className={clsx(
                   'sidebar-link',
-                  open
-                    ? 'text-2xl transition-all duration-200 md:text-base'
-                    : 'text-base',
                   pathname === `/${link.link}` && 'text-blue-600'
                 )}
               >
@@ -60,7 +54,7 @@ export default function SidebarLayout({ children, background = true }) {
             </Link>
           ))}
         </div>
-        <article className="bg-[##EFF0F0] h-screen md:ml-80">
+        <article className="bg-[##EFF0F0] h-screen md:ml-96">
           {children}
         </article>
       </na>
