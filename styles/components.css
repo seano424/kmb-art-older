@@ -1,2 +1,5 @@
 @layer components {
+  .sidebar-link {
+    @apply text-2xl md:text-base transition-all duration-200;
+  }
 }
