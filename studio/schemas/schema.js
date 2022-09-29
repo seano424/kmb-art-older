@@ -17,10 +17,12 @@ import book from './book'
 import about from './about'
 import upcomingEvents from './upcomingEvents'
 import eventDate from './eventDate'
+import featureImage from './featureImage'
 
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
+    featureImage,
     series,
     book,
     about,
@@ -32,6 +34,6 @@ export default createSchema({
     upcomingEvents,
     eventDate,
     blockContent,
-    comment,
+    comment
   ]),
 })
