@@ -1,0 +1,7 @@
+.h2 {
+  @apply text-7xl;
+}
+
+.h4 {
+  @apply text-2xl;
+}

@@ -9,32 +9,34 @@ function UpcomingEvents({ upcomingEvents }) {
   const events = relevantEvents(upcomingEvents)
   return (
     <Container upcomingEvent={events ? events[0] : null}>
-      <PostTitle>Upcoming Events</PostTitle>
-      <div>
-        {events.map((event, idx) => (
-          <div
-            className="py-16 px-8 flex space-x-4 my-8 rounded shadow-lg bg-white max-w-max"
-            key={idx}
-          >
-            <div className="relative w-80 h-40">
+      <div className="p-10">
+        <h2 className="h2 pb-10 font-extrabold ">Upcoming Events</h2>
+        <div className="flex flex-col gap-5">
+          {events.map((event, idx) => (
+            <div
+              key={idx}
+              className="grid grid-cols-2 gap-5 rounded bg-white p-8 shadow-2xl"
+            >
               <Image
-                objectFit="cover"
+                className="object-cover object-top"
                 src={urlFor(event.main_image).url()}
                 alt="event image"
-                layout="fill"
+                width={700}
+                height={300}
               />
+
+              <div className="flex flex-col gap-5">
+                <h4 className="h4">{event.title}</h4>
+                <a
+                  className="text-2xl text-blue-700 underline hover:text-blue-300"
+                  href={event.linkUrl}
+                >
+                  Find out more about the venue
+                </a>
+              </div>
             </div>
-            <div>
-              <h1 className="text-lg w-64 mb-4">{event.title}</h1>
-              <a
-                className="text-sm text-blue-700 hover:text-blue-300"
-                href={event.linkUrl}
-              >
-                Find out more about the venue
-              </a>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </Container>
   )
