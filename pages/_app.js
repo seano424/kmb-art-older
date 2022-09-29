@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
+import Layout from '@/components/Layout'
+import SidebarLayout from '@/components/SidebarLayout'
 import TagManager from 'react-gtm-module'
 import { NavProvider } from '../context/NavContext'
-import { getSeries } from '../lib/api'
 import '../styles/index.css'
 import '../styles/globals.css'
 import 'react-image-lightbox/style.css'
@@ -13,7 +14,15 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <NavProvider>
-      <Component {...pageProps} />
+      {Component.primarySite ? (
+        <Layout>
+          <SidebarLayout>
+            <Component {...pageProps} />
+          </SidebarLayout>
+        </Layout>
+      ) : (
+        <Component {...pageProps} />
+      )}
     </NavProvider>
   )
 }

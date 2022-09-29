@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "../../components/container";
 import PostBody from "../../components/PostBody";
-import MoreStories from "../../components/MoreStories";
+import MoreStories from "../../components/more-stories";
 import Header from "../../components/Header";
 import PostHeader from "../../components/PostHeader";
 import Comments from "../../components/Comments";

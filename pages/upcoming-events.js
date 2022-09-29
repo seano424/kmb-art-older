@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout'
 import SidebarLayout from '@/components/SidebarLayout'
-import PostTitle from '@/components/post-title'
+import PostTitle from '@/components/PostTitle'
 import Container from '@/components/container'
 import { getUpcomingEvents } from 'lib/api'
 import relevantEvents from 'utils/relevantEvents'

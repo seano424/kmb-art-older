@@ -44,6 +44,8 @@ export default function Index({ feature }) {
   )
 }
 
+Index.primarySite = false
+
 export async function getStaticProps({ preview = false }) {
   const feature = await getFeatureImage(preview)
   return {
