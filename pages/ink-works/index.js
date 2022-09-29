@@ -10,7 +10,7 @@ export default function Index({ content, upcomingEvents }) {
   console.log(content)
 
   return (
-    <Container upcomingEvent={events ? events[0] : null} background>
+    <Container upcomingEvent={events ? events[0] : null}>
       <PostTitle>Ink Works </PostTitle>
       {content.map((p) => (
         <Artwork key={uuidv4()} artwork={p.artWork} title={p.title} />

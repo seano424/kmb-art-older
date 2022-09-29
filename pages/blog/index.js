@@ -2,7 +2,7 @@ import Container from '@/components/Container'
 import MoreStories from '@/components/MoreStories'
 import HeroPost from '@/components/HeroPost'
 import { getAllPostsForHome, getUpcomingEvents } from '../../lib/api'
-import PostTitle from '@/components/postTitle'
+import PostTitle from '@/components/PostTitle'
 import relevantEvents from 'utils/relevantEvents'
 
 export default function Index({ allPosts, upcomingEvents }) {

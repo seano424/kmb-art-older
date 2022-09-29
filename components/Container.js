@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
-export default function Container({ children, background, upcomingEvent }) {
+export default function Container({ children, upcomingEvent }) {
   const [show, setShow] = useState(true)
 
   useEffect(() => {
@@ -9,7 +9,7 @@ export default function Container({ children, background, upcomingEvent }) {
       setShow(true)
     }, 7000)
     return () => clearTimeout(timer)
-}, [])
+  }, [])
 
   return (
     <div

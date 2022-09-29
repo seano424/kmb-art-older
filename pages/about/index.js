@@ -14,7 +14,7 @@ export default function About({ content, upcomingEvents }) {
   const events = relevantEvents(upcomingEvents)
 
   return (
-    <Container upcomingEvent={events ? events[0] : null} background>
+    <Container upcomingEvent={events ? events[0] : null}>
       <PostTitle>{title}</PostTitle>
       <article className="flex flex-wrap justify-center">
         <div className="">

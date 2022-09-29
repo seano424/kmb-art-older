@@ -8,7 +8,7 @@ export default function Index({ series, upcomingEvents }) {
   const events = relevantEvents(upcomingEvents)
 
   return (
-    <Container upcomingEvent={events ? events[0] : null} background>
+    <Container upcomingEvent={events ? events[0] : null}>
       <PostTitle>Galleries</PostTitle>
       <Galleries series={series} />
     </Container>

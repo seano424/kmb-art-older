@@ -9,7 +9,7 @@ export default function Index({ content, upcomingEvents }) {
   const events = relevantEvents(upcomingEvents)
 
   return (
-    <Container upcomingEvent={events ? events[0] : null} background>
+    <Container upcomingEvent={events ? events[0] : null}>
       <PostTitle>Paintings </PostTitle>
       {content.map((p) => (
         <Artwork key={uuidv4()} artwork={p.artWork} title={p.title} />

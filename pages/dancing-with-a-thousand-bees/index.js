@@ -5,7 +5,7 @@ import Container from '@/components/Container'
 
 export default function Index({ book }) {
   return (
-    <Container background>
+    <Container>
       <PostTitle>Dancing With A Thousand Bees</PostTitle>
       <BookDisplay book={book[0]} />
     </Container>
