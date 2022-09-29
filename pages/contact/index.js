@@ -10,7 +10,7 @@ export default function Index({ upcomingEvents }) {
   return (
     <Container upcomingEvent={events ? events[0] : null}>
       <PostTitle>Contact Karrie</PostTitle>
-      <div className="flex flex-col items-center gap-5 md:flex-row">
+      <div className="flex flex-col items-center gap-5 pt-10 md:flex-row">
         <Image
           className="aspect-[.64/1] object-cover"
           src={'/images/back.jpg'}

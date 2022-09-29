@@ -6,6 +6,7 @@ import { imageBuilder } from '../../lib/sanity'
 import Image from 'next/image'
 import { getUpcomingEvents } from '../../lib/api'
 import relevantEvents from 'utils/relevantEvents'
+import BlockContent from '@sanity/block-content-to-react'
 
 export default function About({ content, upcomingEvents }) {
   const image = content[0].main_image
@@ -16,20 +17,16 @@ export default function About({ content, upcomingEvents }) {
   return (
     <Container upcomingEvent={events ? events[0] : null}>
       <PostTitle>{title}</PostTitle>
-      <article className="flex flex-wrap justify-center">
-        <div className="">
-          <Image
-            className="rounded"
-            src={imageBuilder(image).url()}
-            title="image of Karrie Marie Baxley"
-            height={600}
-            width={400}
-            objectFit="cover"
-            objectPosition="center"
-          />
-        </div>
-        <div className="md:m-20 mb-10 my-8 md:p-8 xl:m-0 xl:p-0 xl:w-1/2 bg-transparent lg:bg-white flex items-center">
-          <PostBody content={body} />
+      <article className="grid grid-cols-2 gap-10 pt-10">
+        <Image
+          className="aspect-[.75/1] object-cover"
+          src={imageBuilder(image).url()}
+          title="image of Karrie Marie Baxley"
+          width={520}
+          height={700}
+        />
+        <div className="flex flex-col justify-center">
+          <BlockContent blocks={body} className="text-2xl" />
         </div>
       </article>
     </Container>
