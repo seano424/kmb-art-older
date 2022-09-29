@@ -1,6 +1,6 @@
 import { getPaintings, getUpcomingEvents } from '../../lib/api'
 import PostTitle from '@/components/PostTitle'
-import Container from '@/components/container'
+import Container from '@/components/Container'
 import Artwork from '@/components/Artwork'
 import relevantEvents from 'utils/relevantEvents'
 import { v4 as uuidv4 } from 'uuid'

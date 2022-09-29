@@ -1,7 +1,7 @@
 import { getSeries, getUpcomingEvents } from '../../lib/api'
 import relevantEvents from 'utils/relevantEvents'
 import PostTitle from '@/components/PostTitle'
-import Container from '@/components/container'
+import Container from '@/components/Container'
 import Galleries from '@/components/Galleries'
 
 export default function Index({ series, upcomingEvents }) {

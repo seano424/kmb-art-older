@@ -1,4 +1,4 @@
-import Container from '@/components/container'
+import Container from '@/components/Container'
 import MoreStories from '@/components/MoreStories'
 import HeroPost from '@/components/HeroPost'
 import { getAllPostsForHome, getUpcomingEvents } from '../../lib/api'

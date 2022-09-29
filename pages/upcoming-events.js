@@ -1,5 +1,5 @@
 import PostTitle from '@/components/PostTitle'
-import Container from '@/components/container'
+import Container from '@/components/Container'
 import { getUpcomingEvents } from 'lib/api'
 import relevantEvents from 'utils/relevantEvents'
 import Image from 'next/image'

@@ -1,6 +1,6 @@
 import { getAboutContent } from '../../lib/api'
 import PostTitle from '@/components/PostTitle'
-import Container from '@/components/container'
+import Container from '@/components/Container'
 import PostBody from '@/components/PostBody'
 import { imageBuilder } from '../../lib/sanity'
 import Image from 'next/image'
