@@ -161,16 +161,6 @@ export default function SidebarLayout({ children, background = true }) {
           </Link>
         </article>
         <article className="md:ml-72 h-screen bg-[##EFF0F0]">
-          <div className="hidden md:inline-flex fixed h-full w-10/12">
-            <Image
-              className="object-cover"
-              src={
-                'https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
-              }
-              alt="bg image"
-              layout="fill"
-            />
-          </div>
           {children}
         </article>
       </section>
