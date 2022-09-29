@@ -5,7 +5,6 @@ import Lightbox from 'react-image-lightbox'
 import { v4 as uuidv4 } from 'uuid'
 
 export default function Artwork({ artwork }) {
-  console.log('art', artwork);
   const [photoIndex, setPhotoIndex] = useState(0)
   const [open, toggleOpen] = useState(false)
   const images = artwork.map((a) => a.artworkImage)
@@ -19,7 +18,7 @@ export default function Artwork({ artwork }) {
   }
 
   return (
-    <div className='filter backdrop-blur-sm py-20'>
+    <div className="filter backdrop-blur-sm py-20">
       {!open ? (
         <div className="flex flex-wrap justify-center gap-10">
           {artwork.map((a, idx) => (

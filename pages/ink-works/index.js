@@ -7,7 +7,6 @@ import { v4 as uuidv4 } from 'uuid'
 
 export default function Index({ content, upcomingEvents }) {
   const events = relevantEvents(upcomingEvents)
-  console.log(content)
 
   return (
     <Container upcomingEvent={events ? events[0] : null}>
