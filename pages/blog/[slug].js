@@ -1,14 +1,14 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import Container from '../../components/container'
-import PostBody from '../../components/PostBody'
-import MoreStories from '../../components/MoreStories'
-import PostHeader from '../../components/PostHeader'
-import Comments from '../../components/Comments'
-import SectionSeparator from '../../components/SectionSeparator'
-import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
-import PostTitle from '../../components/PostTitle'
-import Form from '../../components/Form'
+import Container from '@/components/container'
+import PostBody from '@/components//PostBody'
+import MoreStories from '@/components//MoreStories'
+import PostHeader from '@/components//PostHeader'
+import Comments from '@/components//Comments'
+import SectionSeparator from '@/components//SectionSeparator'
+import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api'
+import PostTitle from '@/components//PostTitle'
+import Form from '@/components//Form'
 
 export default function Post({ post, morePosts }) {
   const router = useRouter()
