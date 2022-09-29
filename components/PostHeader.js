@@ -1,7 +1,7 @@
 import Avatar from "./Avatar";
 import Date from "./Date";
 import CoverImage from "./CoverImage";
-import PostTitle from "../components/post-title";
+import PostTitle from "../components/PostTitle";
 export default function PostHeader({ title, coverImage, date, author }) {
   return (
     <div className="shadow-small pb-2">
