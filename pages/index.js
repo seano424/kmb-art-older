@@ -3,13 +3,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FiInstagram } from 'react-icons/fi'
 import { FaFacebookF } from 'react-icons/fa'
-// import Meta from '@/components/Meta'
+import Meta from '@/components/Meta'
 import { urlFor } from 'lib/sanity'
 
 export default function Index({ feature }) {
   return (
     <>
-      {/* <Meta /> */}
+      <Meta />
       <div className="absolute flex justify-center items-center w-screen md:grid md:grid-cols-2 h-screen z-50 text-white">
         <div className="flex flex-col col-start-2">
           <h1 className="leading-tight mb-10 text-[5.5rem] uppercase font-bold">
