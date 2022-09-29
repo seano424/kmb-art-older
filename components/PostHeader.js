@@ -1,25 +1,24 @@
-import Avatar from "./Avatar";
-import Date from "./Date";
-import CoverImage from "./CoverImage";
-import PostTitle from "../components/PostTitle";
+import Avatar from './Avatar'
+import Date from './Date'
+import CoverImage from './CoverImage'
+
 export default function PostHeader({ title, coverImage, date, author }) {
   return (
-    <div className="shadow-small pb-2">
-      <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
+    <div className="pb-2 shadow-small">
+      <div className="hidden md:mb-12 md:block">
         <Avatar name={author?.name} picture={author?.picture} />
       </div>
-      <div className="mb-8 md:mb-16 -mx-5 sm:mx-0">
+      <div className="-mx-5 mb-8 sm:mx-0 md:mb-16">
         <CoverImage title={title} imageObject={coverImage} url={coverImage} />
       </div>
-      <div className="lg:mx-20 flex lg:block items-center">
-        <div className="block md:hidden mb-6">
+      <div className="flex items-center lg:mx-20 lg:block">
+        <div className="mb-6 block md:hidden">
           <Avatar name={author?.name} picture={author?.picture} />
         </div>
-        <div className="pl-2 opacity-50 lg:pl-0 mb-6 text-lg">
+        <div className="mb-6 pl-2 text-lg opacity-50 lg:pl-0">
           <Date dateString={date} />
         </div>
       </div>
     </div>
-  );
+  )
 }

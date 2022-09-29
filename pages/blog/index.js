@@ -2,13 +2,11 @@ import Container from '@/components/Container'
 import MoreStories from '@/components/MoreStories'
 import HeroPost from '@/components/HeroPost'
 import { getAllPostsForHome, getUpcomingEvents } from '../../lib/api'
-import PostTitle from '@/components/PostTitle'
 import relevantEvents from 'utils/relevantEvents'
 
 export default function Index({ events, heroPost, morePosts }) {
   return (
     <Container upcomingEvent={events}>
-      <PostTitle>Writings by Karrie</PostTitle>
       <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">
         Most Recent
       </h2>
@@ -40,6 +38,6 @@ export async function getStaticProps({ preview = false }) {
       heroPost: allPosts[0],
       morePosts: allPosts.slice(1),
     },
-    revalidate: 600
+    revalidate: 600,
   }
 }

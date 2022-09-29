@@ -1,5 +1,4 @@
 import { getAboutContent } from '../../lib/api'
-import PostTitle from '@/components/PostTitle'
 import Container from '@/components/Container'
 import { imageBuilder } from '../../lib/sanity'
 import Image from 'next/image'
@@ -10,7 +9,6 @@ import BlockContent from '@sanity/block-content-to-react'
 export default function About({ body, image, title, events }) {
   return (
     <Container upcomingEvent={events}>
-      <PostTitle>{title}</PostTitle>
       <article className="grid grid-cols-2 gap-10 pt-10">
         <Image
           className="aspect-[.75/1] object-cover"
@@ -42,6 +40,6 @@ export async function getStaticProps({ preview = false }) {
       body: content[0].body,
       image: content[0].main_image,
     },
-    revalidate: 600
+    revalidate: 600,
   }
 }
