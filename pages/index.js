@@ -1,4 +1,4 @@
-import { getCarouselImages } from '../lib/api'
+import { getFeatureImage } from '../lib/api'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FiInstagram } from 'react-icons/fi'
@@ -6,33 +6,7 @@ import { FaFacebookF } from 'react-icons/fa'
 import Meta from '@/components/meta'
 import { urlFor } from 'lib/sanity'
 
-export default function Index({ images }) {
-  let homepageImages = []
-  images.map(
-    (i) => (
-      homepageImages.push({
-        image: i.mainImage,
-        caption: i.mainImage?.caption,
-      }),
-      homepageImages.push({
-        image: i.secondImage,
-        caption: i.secondImage?.caption,
-      }),
-      homepageImages.push({
-        image: i.thirdImage,
-        caption: i.thirdImage?.caption,
-      }),
-      homepageImages.push({
-        image: i.fourthImage,
-        caption: i.fourthImage?.caption,
-      }),
-      homepageImages.push({
-        image: i.fifthImage,
-        caption: i.fifthImage?.caption,
-      })
-    )
-  )
-  console.log(homepageImages)
+export default function Index({ feature }) {
   return (
     <>
       <Meta />
@@ -61,7 +35,7 @@ export default function Index({ images }) {
       </div>
       <Image
         className="object-cover object-top"
-        src={urlFor(homepageImages[2].image).url()}
+        src={urlFor(feature.image).url()}
         alt="Homepage Image"
         layout="fill"
         priority
@@ -71,9 +45,9 @@ export default function Index({ images }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const images = await getCarouselImages(preview)
+  const feature = await getFeatureImage(preview)
   return {
-    props: { preview, images },
+    props: { preview, feature: feature[0] },
     revalidate: 1,
   }
 }
