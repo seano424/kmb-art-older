@@ -34,7 +34,7 @@ export default function Container({ children, upcomingEvent }) {
           </Link>
         </div>
       )}
-      <div className="relative top-20">{children}</div>
+      <div className="relative top-20 pr-10">{children}</div>
     </div>
   )
 }

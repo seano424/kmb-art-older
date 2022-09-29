@@ -18,7 +18,7 @@ export default function Artwork({ artwork }) {
   }
 
   return (
-    <div className="py-5 filter backdrop-blur-sm pr-10">
+    <div className="py-5 filter backdrop-blur-sm">
       {!open ? (
         <div className="flex flex-wrap justify-center gap-20">
           {artwork.map((a, idx) => (
