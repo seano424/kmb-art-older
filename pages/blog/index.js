@@ -5,7 +5,7 @@ import { getAllPostsForHome, getUpcomingEvents } from '../../lib/api'
 import PostTitle from '@/components/postTitle'
 import relevantEvents from 'utils/relevantEvents'
 
-export default function Index({ allPosts, preview, upcomingEvents }) {
+export default function Index({ allPosts, upcomingEvents }) {
   const events = relevantEvents(upcomingEvents)
 
   const heroPost = allPosts[0]
@@ -37,7 +37,7 @@ export async function getStaticProps({ preview = false }) {
   const upcomingEvents = await getUpcomingEvents(preview)
   const allPosts = await getAllPostsForHome(preview)
   return {
-    props: { allPosts, preview, upcomingEvents },
+    props: { allPosts, upcomingEvents },
     revalidate: 1,
   }
 }

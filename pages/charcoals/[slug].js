@@ -1,31 +1,26 @@
-import React from 'react'
-import Layout from '@/components/Layout'
-import SidebarLayout from '@/components/SidebarLayout'
 import { getSerie, getAllPaintingsWithSlug } from '../../lib/api'
 import Artwork from '@/components/Artwork'
 
-export default function InkWork({ preview, charcoals }) {
+export default function Charcoal({ charcoals }) {
   const content = charcoals.results
   return (
-    <Layout preview={preview}>
-      <SidebarLayout>
-        <section className="mx-20">
-          {content.map((p) => (
-            <>
-              <h1 className="my-8">{p.title}</h1>
-              <Artwork artwork={p.artWork} />
-            </>
-          ))}
-        </section>
-      </SidebarLayout>
-    </Layout>
+    <section className="mx-20">
+      {content.map((p) => (
+        <>
+          <h1 className="my-8">{p.title}</h1>
+          <Artwork artwork={p.artWork} />
+        </>
+      ))}
+    </section>
   )
 }
+
+Charcoal.primarySite = true
 
 export async function getStaticProps({ params, preview = false }) {
   const allCharcoals = await getSerie(params.slug, preview)
   return {
-    props: { preview, charcoals: allCharcoals },
+    props: { charcoals: allCharcoals },
     revalidate: 1,
   }
 }

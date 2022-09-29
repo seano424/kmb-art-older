@@ -1,31 +1,26 @@
-import React from 'react'
-import Layout from '@/components/Layout'
-import SidebarLayout from '@/components/SidebarLayout'
 import { getSerie, getAllPaintingsWithSlug } from '../../lib/api'
 import Artwork from '@/components/Artwork'
 
-export default function InkWork({ preview, paintings }) {
+export default function Painting({ paintings }) {
   const content = paintings.results
   return (
-    <Layout preview={preview}>
-      <SidebarLayout>
-        <section className="mx-20">
-          {content.map((p) => (
-            <>
-              <h1 className="my-8">{p.title}</h1>
-              <Artwork artwork={p.artWork} />
-            </>
-          ))}
-        </section>
-      </SidebarLayout>
-    </Layout>
+    <section className="mx-20">
+      {content.map((p) => (
+        <>
+          <h1 className="my-8">{p.title}</h1>
+          <Artwork artwork={p.artWork} />
+        </>
+      ))}
+    </section>
   )
 }
+
+Painting.primarySite = true
 
 export async function getStaticProps({ params, preview = false }) {
   const allPaintings = await getSerie(params.slug, preview)
   return {
-    props: { preview, paintings: allPaintings },
+    props: { paintings: allPaintings },
     revalidate: 1,
   }
 }
