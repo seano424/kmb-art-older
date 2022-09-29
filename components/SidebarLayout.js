@@ -14,7 +14,7 @@ export default function SidebarLayout({ children }) {
     <>
       <na>
         <div className="fixed top-24 z-20 hidden min-h-full flex-shrink-0 flex-col transition-opacity duration-100 ease-in-out md:top-0 md:mt-0 md:flex md:w-96 md:overflow-x-hidden md:pl-12 md:pr-12">
-          <div className="mb-6 flex flex-col">
+          <div className="pb-6 flex flex-col">
             <Link href="/">
               <a className="my-8" onClick={toggleOpen}>
                 <h2 className="cursor-pointer text-6xl leading-none transition duration-300 hover:text-blue-600">
@@ -26,7 +26,7 @@ export default function SidebarLayout({ children }) {
               </a>
             </Link>
 
-            {navigation.slice(0, 5).map((link) => (
+            {navigation.slice(0, 4).map((link) => (
               <Link key={link.name} href={`/${link.link}`}>
                 <a
                   onClick={toggleOpen}
@@ -40,7 +40,7 @@ export default function SidebarLayout({ children }) {
               </Link>
             ))}
           </div>
-          {navigation.slice(5, navigation.length).map((link) => (
+          {navigation.slice(4, navigation.length).map((link) => (
             <Link key={link.name} href={`/${link.link}`}>
               <a
                 onClick={toggleOpen}

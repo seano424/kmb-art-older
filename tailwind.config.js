@@ -8,6 +8,9 @@ module.exports = {
       borderRadius: {
         large: '12px',
       },
+      colors: {
+        'gray-light': '#383a47',
+      },
       spacing: {
         28: '7rem',
       },
