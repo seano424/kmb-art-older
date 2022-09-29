@@ -12,15 +12,15 @@ export default function SidebarLayout({ children, background = true }) {
   const bgheight = open ? '100vh' : '0'
   return (
     <>
-      <nav>
-        <div className="transition-opacity duration-100 ease-in-out fixed z-20 bg-gray-50 shadow-md md:pl-12 md:flex min-h-full top-24 md:pr-12 md:mt-0 md:top-0 md:overflow-x-hidden flex-col md:w-80 flex-shrink-0 hidden">
-          <div className="flex flex-col mb-6">
+      <na>
+        <div className="fixed top-24 z-20 hidden min-h-full flex-shrink-0 flex-col bg-gray-50 shadow-md transition-opacity duration-100 ease-in-out md:top-0 md:mt-0 md:flex md:w-80 md:overflow-x-hidden md:pl-12 md:pr-12">
+          <div className="mb-6 flex flex-col">
             <Link href="/">
               <a className="my-8" onClick={toggleOpen}>
-                <h2 className="text-6xl leading-none hover:text-blue-600 transition duration-300 cursor-pointer">
+                <h2 className="cursor-pointer text-6xl leading-none transition duration-300 hover:text-blue-600">
                   Karrie Marie Baxley
                 </h2>
-                <p className="text-lg pl-1 text-gray-400 pt-1">
+                <p className="pl-1 pt-1 text-lg text-gray-400">
                   artist & creator
                 </p>
               </a>
@@ -33,7 +33,7 @@ export default function SidebarLayout({ children, background = true }) {
                   className={clsx(
                     'sidebar-link',
                     open
-                      ? 'text-2xl md:text-base transition-all duration-200'
+                      ? 'text-2xl transition-all duration-200 md:text-base'
                       : 'text-base',
                     pathname === `/${link.link}` && 'text-blue-600'
                   )}
@@ -50,7 +50,7 @@ export default function SidebarLayout({ children, background = true }) {
                 className={clsx(
                   'sidebar-link',
                   open
-                    ? 'text-2xl md:text-base transition-all duration-200'
+                    ? 'text-2xl transition-all duration-200 md:text-base'
                     : 'text-base',
                   pathname === `/${link.link}` && 'text-blue-600'
                 )}
@@ -60,15 +60,15 @@ export default function SidebarLayout({ children, background = true }) {
             </Link>
           ))}
         </div>
-        <article className="md:ml-80 h-screen bg-[##EFF0F0]">
+        <article className="bg-[##EFF0F0] h-screen md:ml-80">
           {children}
         </article>
-      </nav>
+      </na>
 
       <section
         style={{ top: '90px', height: bgheight }}
-        className={`absolute flex md:hidden z-10 bg-white h-0 w-full transition-all duration-300 ${
-          open ? `h-full visible opacity-100 w-full` : `opacity-0`
+        className={`absolute z-10 flex h-0 w-full bg-white transition-all duration-300 md:hidden ${
+          open ? `visible h-full w-full opacity-100` : `opacity-0`
         }`}
       >
         {open && <MainMobileNav />}
