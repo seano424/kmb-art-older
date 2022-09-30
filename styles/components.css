@@ -1,5 +1,9 @@
 @layer components {
   .sidebar-link {
-    @apply ml-1 pb-2 transform font-playfair text-3xl font-medium   tracking-wider text-gray-light transition-all duration-300 hover:text-blue-600;
+    @apply ml-1 transform pb-2 font-playfair text-3xl font-medium   tracking-wider text-gray-light transition-all duration-300 hover:text-blue-600;
+  }
+
+  .mobile-link {
+    @apply mt-4 rounded px-2 text-3xl uppercase hover:bg-green-200;
   }
 }

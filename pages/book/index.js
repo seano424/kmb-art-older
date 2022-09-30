@@ -5,9 +5,10 @@ import { getBook, getUpcomingEvents } from '@/lib/api'
 import Container from '@/components/Container'
 import relevantEvents from 'utils/relevantEvents'
 
-export default function Index({ image, body, events }) {
+export default function Index({ image, body, event }) {
+  console.log(event);
   return (
-    <Container upcomingEvent={events}>
+    <Container upcomingEvent={event}>
       <div className="flex gap-10">
         <Image
           className="aspect-[.65/1] object-contain"
@@ -34,7 +35,7 @@ export async function getStaticProps({ preview = false }) {
     props: {
       image: book[0].front_image,
       body: book[0].body,
-      events: JSON.parse(JSON.stringify(events))[0] ?? null,
+      event: JSON.parse(JSON.stringify(events))[0] ?? null,
     },
     revalidate: 600
   }

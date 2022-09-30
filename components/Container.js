@@ -12,29 +12,31 @@ export default function Container({ children, upcomingEvent }) {
     return () => clearTimeout(timer)
   }, [])
 
+  console.log(upcomingEvent);
+
   return (
-    <div
-      className={`h-screen bg-gray-50 bg-opacity-20 bg-fixed bg-no-repeat lg:overflow-x-scroll`}
-    >
+    <div className="h-screen bg-gray-50 bg-opacity-20 bg-fixed bg-no-repeat lg:overflow-x-scroll">
       {upcomingEvent && (
         <div
           className={clsx(
-            'fixed z-50 hidden h-16 items-center border-b-2 border-gray-100 bg-white/90 p-5 font-light tracking-wide text-gray-900 filter backdrop-blur-2xl transition-all  duration-700 ease-out hover:text-opacity-100 hover:opacity-100 md:flex',
+            'fixed z-50 hidden h-20 w-full items-center border-gray-100 bg-white/90 p-5 font-light tracking-wide text-gray-900 filter backdrop-blur-2xl  transition-all duration-700 ease-out hover:text-opacity-100 hover:opacity-100 lg:flex',
             show ? 'opacity-100' : 'opacity-0'
           )}
         >
           <Link href="/upcoming-events">
-            <a className="cursor-pointer text-xl text-blue-600 hover:text-blue-700">
+            <a className="group cursor-pointer text-2xl text-blue-600 hover:text-blue-700">
               <span className="cursor-default pr-1 text-gray-900">
                 Upcoming Event:{' '}
               </span>
-              {upcomingEvent.title}
-              <span className=" pl-1 underline">See more here!</span>
+              <span className="underline-offset-8 group-hover:underline">
+                {upcomingEvent.title}
+              </span>
+              {'  '}
             </a>
           </Link>
         </div>
       )}
-      <div className="relative top-20 pr-10">{children}</div>
+      <div className="relative top-24 pr-10">{children}</div>
     </div>
   )
 }

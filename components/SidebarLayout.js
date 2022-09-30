@@ -13,8 +13,8 @@ export default function SidebarLayout({ children }) {
   return (
     <>
       <na>
-        <div className="fixed top-24 z-20 hidden min-h-full flex-shrink-0 flex-col transition-opacity duration-100 ease-in-out md:top-0 md:mt-0 md:flex md:w-96 md:overflow-x-hidden md:pl-12 md:pr-12">
-          <div className="pb-6 flex flex-col">
+        <div className="fixed top-24 z-20 hidden min-h-full flex-shrink-0 flex-col transition-opacity duration-100 ease-in-out lg:top-0 lg:mt-0 lg:flex lg:w-96 lg:overflow-x-hidden lg:pl-12 lg:pr-12">
+          <div className="flex flex-col pb-6">
             <Link href="/">
               <a className="my-8" onClick={toggleOpen}>
                 <h2 className="cursor-pointer text-6xl leading-none transition duration-300 hover:text-blue-600">
@@ -54,16 +54,17 @@ export default function SidebarLayout({ children }) {
             </Link>
           ))}
         </div>
-        <article className="bg-[##EFF0F0] h-screen md:ml-96">
+        <article className="bg-[##EFF0F0] h-screen lg:ml-96">
           {children}
         </article>
       </na>
 
       <section
         style={{ top: '90px', height: bgheight }}
-        className={`absolute z-10 flex h-0 w-full bg-white transition-all duration-300 md:hidden ${
-          open ? `visible h-full w-full opacity-100` : `opacity-0`
-        }`}
+        className={clsx(
+          'absolute z-10 flex bg-white transition-all duration-300',
+          open ? 'opacity-100' : 'opacity-0'
+        )}
       >
         {open && <MainMobileNav />}
       </section>

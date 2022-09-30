@@ -6,70 +6,46 @@ export default function MainMobileNav() {
   const { open, toggleOpen } = useContext(NavContext)
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-[30rem] md:h-[40rem] gap-4 bg-white">
-      <div className="flex flex-col text-center text-red-400 border-b pb-8">
+    <div className="fixed top-0 flex h-screen w-full flex-col items-center gap-4 bg-white pt-40 lg:hidden">
+      <div className="flex flex-col border-b-2 pb-8 text-center font-bold text-red-400">
         <Link href="/paintings">
-          <a
-            onClick={() => toggleOpen(!open)}
-            className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
-          >
+          <a onClick={() => toggleOpen(!open)} className="mobile-link">
             Paintings
           </a>
         </Link>
         <Link href="/charcoals">
-          <a
-            onClick={() => toggleOpen(!open)}
-            className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
-          >
+          <a onClick={() => toggleOpen(!open)} className="mobile-link">
             Charcoals
           </a>
         </Link>
         <Link href="/ink-works">
-          <a
-            onClick={() => toggleOpen(!open)}
-            className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
-          >
+          <a onClick={() => toggleOpen(!open)} className="mobile-link">
             Ink Works
           </a>
         </Link>
       </div>
       <Link href="/blog">
-        <a
-          onClick={() => toggleOpen(!open)}
-          className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
-        >
+        <a onClick={() => toggleOpen(!open)} className="mobile-link">
           Writings & Musings
         </a>
       </Link>
       <Link href="/upcoming-events">
-        <a
-          onClick={() => toggleOpen(!open)}
-          className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
-        >
+        <a onClick={() => toggleOpen(!open)} className="mobile-link">
           Upcoming Events
         </a>
       </Link>
       <Link href="/about">
-        <a
-          onClick={() => toggleOpen(!open)}
-          className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
-        >
+        <a onClick={() => toggleOpen(!open)} className="mobile-link">
           About Karrie
         </a>
       </Link>
       <Link href="/dancing-with-a-thousand-bees">
-        <a
-          onClick={() => toggleOpen(!open)}
-          className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2 text-center"
-        >
+        <a onClick={() => toggleOpen(!open)} className="mobile-link">
           Dancing with a Thousand Bees
         </a>
       </Link>
       <Link href="/contact">
-        <a
-          onClick={() => toggleOpen(!open)}
-          className="mt-4 text-xl uppercase hover:bg-green-200 rounded px-2"
-        >
+        <a onClick={() => toggleOpen(!open)} className="mobile-link">
           Contact
         </a>
       </Link>
