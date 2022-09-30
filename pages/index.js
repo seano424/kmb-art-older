@@ -6,6 +6,8 @@ import { FaFacebookF } from 'react-icons/fa'
 import Meta from '@/components/Meta'
 import { urlFor } from 'lib/sanity'
 
+// testing for vercel
+
 export default function Index({ feature }) {
   return (
     <>
