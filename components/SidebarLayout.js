@@ -13,7 +13,7 @@ export default function SidebarLayout({ children }) {
   return (
     <>
       <na>
-        <div className="fixed top-24 z-20 hidden min-h-full flex-shrink-0 flex-col transition-opacity duration-100 ease-in-out lg:top-0 lg:mt-0 lg:flex lg:w-96 lg:overflow-x-hidden lg:pl-12 lg:pr-12">
+        <div className="fixed top-24 z-20 hidden min-h-full flex-shrink-0 flex-col bg-gray-50/50 transition-opacity duration-100 ease-in-out lg:top-0 lg:mt-0 lg:flex lg:w-96 lg:overflow-x-hidden lg:pl-12 lg:pr-12">
           <div className="flex flex-col pb-6">
             <Link href="/">
               <a className="my-8" onClick={toggleOpen}>

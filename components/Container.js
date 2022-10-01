@@ -1,24 +1,13 @@
-import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import clsx from 'clsx'
 
 export default function Container({ children, upcomingEvent }) {
-  const [show, setShow] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShow(true)
-    }, 7000)
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
     <div className="h-screen bg-gray-50 bg-opacity-20 bg-fixed bg-no-repeat lg:overflow-x-scroll">
       {upcomingEvent && (
         <div
           className={clsx(
-            'fixed z-50 hidden h-20 w-full items-center border-gray-100 bg-white/90 p-5 font-light tracking-wide text-gray-900 filter backdrop-blur-2xl  transition-all duration-700 ease-out hover:text-opacity-100 hover:opacity-100 lg:flex',
-            show ? 'opacity-100' : 'opacity-0'
+            'fixed z-50 hidden h-20 w-full items-center border-gray-100 bg-gray-50/50 p-5 font-light tracking-wide text-gray-900 transition-all duration-700 ease-out  hover:text-opacity-100 hover:opacity-100 lg:flex'
           )}
         >
           <Link href="/upcoming-events">
