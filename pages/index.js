@@ -6,20 +6,18 @@ import { FaFacebookF } from 'react-icons/fa'
 import Meta from '@/components/Meta'
 import { urlFor } from 'lib/sanity'
 
-// testing for vercel
-
 export default function Index({ feature }) {
   return (
-    <>
+    <main>
       <Meta />
-      <div className="absolute flex justify-center items-center w-screen md:grid md:grid-cols-2 h-screen z-50 text-white">
-        <div className="flex flex-col col-start-2">
-          <h1 className="leading-tight mb-10 text-[5.5rem] uppercase font-bold">
+      <div className="absolute z-50 flex h-screen w-screen items-center justify-center text-white md:grid md:grid-cols-2">
+        <div className="col-start-2 flex flex-col">
+          <h1 className="mb-10 text-[5.5rem] font-bold uppercase leading-tight">
             Karrie Marie Baxley
           </h1>
-          <div className="ml-2 flex space-x-4 items-center">
+          <div className="ml-2 flex items-center space-x-4">
             <Link href="/paintings">
-              <a className="text-2xl hover:bg-gray-50 bg-gray-100 filter hover:drop-shadow-2xl hover:brightness-125 transition-all duration-300 text-gray-900 px-10 py-3 uppercase">
+              <a className="bg-gray-100 px-10 py-3 text-2xl uppercase text-gray-900 filter transition-all duration-300 hover:bg-gray-50 hover:brightness-125 hover:drop-shadow-2xl">
                 Enter site
               </a>
             </Link>
@@ -42,7 +40,7 @@ export default function Index({ feature }) {
         layout="fill"
         priority
       />
-    </>
+    </main>
   )
 }
 
@@ -52,6 +50,6 @@ export async function getStaticProps({ preview = false }) {
   const feature = await getFeatureImage(preview)
   return {
     props: { preview, feature: feature[0] },
-    revalidate: 600
+    revalidate: 600,
   }
 }

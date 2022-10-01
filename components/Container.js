@@ -12,8 +12,6 @@ export default function Container({ children, upcomingEvent }) {
     return () => clearTimeout(timer)
   }, [])
 
-  console.log(upcomingEvent);
-
   return (
     <div className="h-screen bg-gray-50 bg-opacity-20 bg-fixed bg-no-repeat lg:overflow-x-scroll">
       {upcomingEvent && (
