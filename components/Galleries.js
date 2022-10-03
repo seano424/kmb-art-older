@@ -4,7 +4,7 @@ import { imageBuilder } from '../lib/sanity'
 
 export default function Galleries({ series }) {
   return (
-    <section className="py-base px-base grid grid-cols-2 gap-4 2xl:grid-cols-3">
+    <section className="py-base px-base grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
       {series.map((serie) => (
         <Link key={serie._id} href={`/${serie.category}/${serie.slug.current}`}>
           <a>
