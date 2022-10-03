@@ -2,20 +2,23 @@ import Image from 'next/image'
 
 export default function Index() {
   return (
-    <div className="flex flex-col items-center gap-5 pt-10 md:flex-row">
+    <div className="px-base py-base grid gap-10 lg:grid-cols-2">
       <Image
-        className="aspect-[.64/1] object-cover"
+        className="aspect-[.64/1] object-contain"
         src={'/images/back.jpg'}
         width={400}
         height={600}
         alt="contact Karrie Marie Image"
+        priority
       />
-      <p className="text-3xl">
-        Please email me at{' '}
-        <a className=" text-red-400" href="mailto:bluemoonkmo@yahoo.com">
-          bluemoonkmo@yahoo.com
-        </a>
-      </p>
+      <div className="flex items-center justify-center">
+        <p className="text-3xl">
+          Please email me at{' '}
+          <a className=" text-red-400" href="mailto:bluemoonkmo@yahoo.com">
+            bluemoonkmo@yahoo.com
+          </a>
+        </p>
+      </div>
     </div>
   )
 }
