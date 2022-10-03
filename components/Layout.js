@@ -13,14 +13,13 @@ export default function Layout({ footer, children }) {
       <Meta />
       <div className="absolute top-0 left-0 right-0 z-50 flex h-24 items-center justify-between bg-white px-5 font-black tracking-tighter lg:hidden">
         <Link href="/">
-          <a className="text-3xl text-blue-900">Karrie Marie</a>
+          <a className="text-3xl text-blue-900">KMB</a>
         </Link>
         <div onClick={toggleOpen}>
           <Hamburger
             easing="ease-in"
-            distance="lg"
-            rounded
-            size={24}
+            distance="sm"
+            size={22}
             toggled={open}
             toggle={toggleOpen}
           />

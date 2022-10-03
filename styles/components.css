@@ -4,6 +4,6 @@
   }
 
   .mobile-link {
-    @apply rounded text-4xl uppercase hover:bg-green-200;
+    @apply rounded text-4xl uppercase text-blue-900 hover:bg-green-200;
   }
 }
