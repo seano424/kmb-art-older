@@ -17,7 +17,7 @@ export default function Artwork({ artwork }) {
   return (
     <div className="filter backdrop-blur-sm">
       {!open ? (
-        <div className="flex flex-wrap justify-center gap-1 lg:gap-20 lg:pt-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
           {artwork.map((a, idx) => (
             <div
               key={uuidv4()}
@@ -25,7 +25,7 @@ export default function Artwork({ artwork }) {
               className="relative h-[500px] w-full cursor-pointer lg:h-[750px]"
             >
               <Image
-                className="object-cover"
+                className="object-cover lg:object-contain"
                 src={imageBuilder(a.artworkImage).url() ?? '/'}
                 alt={a.caption}
                 layout="fill"

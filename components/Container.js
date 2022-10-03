@@ -9,29 +9,29 @@ export default function Container({ children, upcomingEvent }) {
       {upcomingEvent && (
         <div
           className={clsx(
-            'z-50 hidden w-full flex-col gap-3  p-5 tracking-wide text-gray-900 transition-all duration-700  ease-out hover:text-opacity-100 hover:opacity-100 lg:flex'
+            'fixed z-50 hidden h-28 w-full flex-col justify-center gap-2 bg-white/90 px-10 filter backdrop-blur lg:flex'
           )}
         >
           <Link href="/upcoming-events">
-            <a className="group cursor-pointer text-2xl  text-blue-600 underline-offset-8 hover:underline">
+            <a className="cursor-pointer text-2xl text-blue-600 hover:text-blue-500">
               View all upcoming events here!
             </a>
           </Link>
           <div className="flex items-center gap-5">
+            <p className="text-xl">
+              Next event is at the {upcomingEvent.title}
+            </p>
             <Image
               className="object-cover object-top"
               src={urlFor(upcomingEvent.main_image).url()}
               alt="event image"
-              width={70}
+              width={60}
               height={30}
             />
-            <p className="text-xl">
-              Next event is at the {upcomingEvent.title}
-            </p>
           </div>
         </div>
       )}
-      <div className="relative lg:px-10">{children}</div>
+      <div className="relative lg:top-28 lg:px-10">{children}</div>
     </>
   )
 }
