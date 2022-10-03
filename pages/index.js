@@ -42,6 +42,9 @@ export default function Index({ feature }) {
           alt="Homepage Image"
           layout="fill"
           priority
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
         />
       </div>
       <div className="flex lg:hidden">
@@ -51,6 +54,9 @@ export default function Index({ feature }) {
           alt="Homepage Image"
           layout="fill"
           priority
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
         />
       </div>
     </main>
