@@ -1,13 +1,12 @@
+import { useContext } from 'react'
+import { Squash as Hamburger } from 'hamburger-react'
+import { NavContext } from '../context/NavContext'
+import Link from 'next/link'
 import Footer from './Footer'
 import Meta from './Meta'
-import Link from 'next/link'
-import { useContext, useState } from 'react'
-import { NavContext } from '../context/NavContext'
-import { Squash as Hamburger } from 'hamburger-react'
 
 export default function Layout({ footer, children }) {
-  const { toggleOpen } = useContext(NavContext)
-  const [isOpen, setOpen] = useState(false)
+  const { open, toggleOpen } = useContext(NavContext)
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -22,8 +21,8 @@ export default function Layout({ footer, children }) {
             distance="lg"
             rounded
             size={24}
-            toggled={isOpen}
-            toggle={setOpen}
+            toggled={open}
+            toggle={toggleOpen}
           />
         </div>
       </div>
