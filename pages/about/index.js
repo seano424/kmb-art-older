@@ -5,7 +5,7 @@ import BlockContent from '@sanity/block-content-to-react'
 
 export default function About({ body, image }) {
   return (
-    <article className="grid grid-cols-2 gap-10 pt-10">
+    <article className="py-base px-base grid grid-cols-2 gap-10">
       <Image
         className="aspect-[.75/1] object-cover"
         src={imageBuilder(image).url()}
