@@ -1,15 +1,14 @@
-import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { imageBuilder } from '../lib/sanity'
 
 export default function Galleries({ series }) {
   return (
-    <section className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+    <section className="py-base px-base grid grid-cols-2 gap-4 2xl:grid-cols-3">
       {series.map((serie) => (
         <Link key={serie._id} href={`/${serie.category}/${serie.slug.current}`}>
           <a>
-            <div className="bg-gray-100 bg-opacity-40 hover:bg-opacity-70 py-5 lg:p-10">
+            <div className="bg-gray-100 bg-opacity-40 py-5 hover:bg-opacity-70 lg:p-10">
               <Image
                 alt={serie.title}
                 src={imageBuilder(serie.featureImage).url()}
@@ -19,7 +18,7 @@ export default function Galleries({ series }) {
                 objectPosition="center"
                 layout="responsive"
               />
-              <p className="text-center my-2 text-base">{serie.title}</p>
+              <p className="my-2 text-center text-base">{serie.title}</p>
             </div>
           </a>
         </Link>

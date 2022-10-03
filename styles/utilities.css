@@ -1,2 +1,8 @@
 @layer utilities {
+  .py-base {
+    @apply py-10;
+  }
+  .px-base {
+    @apply px-10;
+  }
 }
