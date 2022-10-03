@@ -16,7 +16,7 @@ export default function Index({ feature }) {
             Karrie Marie Baxley
           </h1>
           <div className="ml-2 flex flex-col items-end gap-5 space-x-4 md:flex-row md:items-center">
-            <Link href="/paintings">
+            <Link href="/charcoals">
               <a className="w-max bg-gray-100 px-10 py-3 text-2xl uppercase text-gray-900 filter transition-all duration-300 hover:bg-gray-50 hover:brightness-125 hover:drop-shadow-2xl">
                 Enter site
               </a>
