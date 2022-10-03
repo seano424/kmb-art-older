@@ -17,7 +17,7 @@ export default function Layout({ footer, children }) {
         <Link href="/">
           <a className="text-3xl text-blue-900">KMB</a>
         </Link>
-        <button onClick={toggleOpen}>
+        <button onClick={toggleOpen} aria-label="Button to open mobile menu">
           <Hamburger
             easing="ease-in"
             distance="sm"
