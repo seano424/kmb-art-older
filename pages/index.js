@@ -23,12 +23,17 @@ export default function Index({ feature }) {
             </Link>
             <div className="flex gap-3">
               <a
+                rel="noreferrer"
                 target="_blank"
                 href="https://www.facebook.com/profile.php?id=100009833221050"
               >
                 <FaFacebookF className="text-3xl" />
               </a>
-              <a target="_blank" href="https://www.instagram.com/kmariebaxley/">
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.instagram.com/kmariebaxley/"
+              >
                 <FiInstagram className="text-3xl" />
               </a>
             </div>
@@ -42,9 +47,6 @@ export default function Index({ feature }) {
           alt="Homepage Image"
           layout="fill"
           priority
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
         />
       </div>
       <div className="flex lg:hidden">
@@ -54,9 +56,6 @@ export default function Index({ feature }) {
           alt="Homepage Image"
           layout="fill"
           priority
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
         />
       </div>
     </main>
