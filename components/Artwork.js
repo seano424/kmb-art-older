@@ -17,7 +17,7 @@ export default function Artwork({ artwork }) {
   return (
     <div className="p-10 filter backdrop-blur-sm">
       {!open ? (
-        <div className="grid grid-cols-1 sm:gap-16 xl:grid-cols-2">
+        <div className="grid grid-cols-1 gap-10 sm:gap-16 xl:grid-cols-2">
           {artwork.map((a, idx) => (
             <div key={uuidv4()} className="flex flex-col gap-2">
               <div
