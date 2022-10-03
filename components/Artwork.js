@@ -43,7 +43,7 @@ export default function Artwork({ artwork }) {
         </div>
       ) : (
         <Lightbox
-          imagePadding="20"
+          imagePadding={20}
           mainSrc={urlFor(images[photoIndex]).url()}
           nextSrc={urlFor(images[(photoIndex + 1) % images.length]).url()}
           prevSrc={urlFor(
