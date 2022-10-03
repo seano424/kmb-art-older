@@ -4,8 +4,8 @@ import relevantEvents from 'utils/relevantEvents'
 import Image from 'next/image'
 import { urlFor } from 'lib/sanity'
 
-function UpcomingEvents({ upcomingEvents }) {
-  const events = relevantEvents(upcomingEvents)
+function UpcomingEvents({ events }) {
+  console.log('events: ', events)
   const options = {
     weekday: 'long',
     year: 'numeric',
@@ -30,9 +30,11 @@ function UpcomingEvents({ upcomingEvents }) {
 
               <div className="flex flex-col gap-5">
                 <h4 className="h4">{event.title}</h4>
-                <p className="text-xl">
-                  {event.date.toLocaleDateString('en-US', options)}
-                </p>
+                {event.date && (
+                  <p className="text-xl">
+                    {new Date(event.date).toLocaleDateString('en-US', options)}
+                  </p>
+                )}
                 <a
                   className="text-2xl text-blue-700 underline hover:text-blue-300"
                   href={event.linkUrl}
@@ -56,9 +58,13 @@ UpcomingEvents.primarySite = true
 
 export async function getStaticProps({ preview = false }) {
   const upcomingEvents = await getUpcomingEvents(preview)
+  const events = relevantEvents(upcomingEvents)
 
   return {
-    props: { upcomingEvents },
+    props: {
+      upcomingEvents,
+      events: JSON.parse(JSON.stringify(events)) ?? null,
+    },
     revalidate: 600,
   }
 }

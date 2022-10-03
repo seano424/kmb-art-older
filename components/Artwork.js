@@ -15,7 +15,7 @@ export default function Artwork({ artwork }) {
   }
 
   return (
-    <div className="border filter backdrop-blur-sm">
+    <div className="filter backdrop-blur-sm">
       {!open ? (
         <div className="flex flex-wrap justify-center gap-1 lg:gap-20 lg:pt-5">
           {artwork.map((a, idx) => (

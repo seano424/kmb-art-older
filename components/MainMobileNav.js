@@ -8,7 +8,7 @@ export default function MainMobileNav() {
 
   return (
     <div className="fixed inset-0 flex w-screen flex-col items-center justify-center gap-2 bg-white text-center lg:hidden">
-      <div className="flex flex-col gap-1 border-b-2 border-gray-100 pb-5 text-center font-bold text-blue-800">
+      <div className="flex flex-col border-b border-gray-100 pb-5 text-center font-bold text-blue-800">
         {navigation.slice(0, 4).map((link) => (
           <Link key={link.name} href={`/${link.link}`}>
             <a onClick={() => toggleOpen(!open)} className="mobile-link">

@@ -10,8 +10,9 @@ const relevantEvents = (upcomingEvents) => {
     ...ev,
   }))
   const filteredDates = dates.filter((d) => !isBeforeToday(d.date))
-  const sortedDates = filteredDates.sort((a, b) => b.date - a.date)
-
+  console.log('fd: ', filteredDates)
+  const sortedDates = filteredDates.sort((a, b) => a.date - b.date)
+  console.log('sd: ', sortedDates)
   return sortedDates
 }
 
