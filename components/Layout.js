@@ -13,11 +13,11 @@ export default function Layout({ footer, children }) {
   return (
     <div className="flex min-h-screen flex-col">
       <Meta />
-      <div className="absolute top-0 left-0 right-0 z-50 flex h-24 items-center justify-between bg-white px-5 font-black tracking-tighter lg:hidden">
+      <div className="absolute top-0 left-0 right-0 z-50 flex h-24 items-center justify-between px-5 font-black tracking-tighter lg:hidden">
         <Link href="/">
           <a className="text-3xl text-blue-900">KMB</a>
         </Link>
-        <div onClick={toggleOpen}>
+        <button onClick={toggleOpen}>
           <Hamburger
             easing="ease-in"
             distance="sm"
@@ -25,7 +25,7 @@ export default function Layout({ footer, children }) {
             toggled={open}
             toggle={toggleOpen}
           />
-        </div>
+        </button>
       </div>
       <div
         className={clsx(
