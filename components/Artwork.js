@@ -21,12 +21,11 @@ export default function Artwork({ artwork }) {
           {artwork.map((a, idx) => (
             <div key={uuidv4()} className="flex flex-col gap-2">
               <div
-                key={uuidv4()}
                 onClick={() => handleLightbox(idx)}
-                className="relative h-[500px] w-full cursor-pointer lg:h-[750px]"
+                className="relative min-h-[400px] w-full cursor-pointer lg:h-[750px]"
               >
                 <Image
-                  className="object-cover lg:object-contain"
+                  className="object-contain"
                   src={imageBuilder(a.artworkImage).url() ?? '/'}
                   alt={a.caption}
                   layout="fill"
