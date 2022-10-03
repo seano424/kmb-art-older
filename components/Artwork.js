@@ -30,6 +30,9 @@ export default function Artwork({ artwork }) {
                   alt={a.caption}
                   layout="fill"
                   priority={idx === 0 || idx === 1}
+                  sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
                 />
               </div>
               <p className="m-auto w-8/12 text-center">
