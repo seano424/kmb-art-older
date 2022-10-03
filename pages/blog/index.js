@@ -1,12 +1,10 @@
-import Container from '@/components/Container'
 import MoreStories from '@/components/MoreStories'
 import HeroPost from '@/components/HeroPost'
-import { getAllPostsForHome, getUpcomingEvents } from '../../lib/api'
-import relevantEvents from 'utils/relevantEvents'
+import { getAllPostsForHome } from '../../lib/api'
 
-export default function Index({ events, heroPost, morePosts }) {
+export default function Index({ heroPost, morePosts }) {
   return (
-    <Container upcomingEvent={events}>
+    <>
       <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">
         Most Recent
       </h2>
@@ -21,20 +19,16 @@ export default function Index({ events, heroPost, morePosts }) {
         />
       )}
       {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-    </Container>
+    </>
   )
 }
 
 Index.primarySite = true
 
 export async function getStaticProps({ preview = false }) {
-  const upcomingEvents = await getUpcomingEvents(preview)
-  const events = relevantEvents(upcomingEvents)
-
   const allPosts = await getAllPostsForHome(preview)
   return {
     props: {
-      events: JSON.parse(JSON.stringify(events))[0],
       heroPost: allPosts[0],
       morePosts: allPosts.slice(1),
     },

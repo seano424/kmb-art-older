@@ -1,29 +1,23 @@
-import { getCharcoals, getUpcomingEvents } from '../../lib/api'
-import Container from '@/components/Container'
+import { getCharcoals } from '../../lib/api'
 import Artwork from '@/components/Artwork'
-import relevantEvents from 'utils/relevantEvents'
 import { v4 as uuidv4 } from 'uuid'
 
-export default function Index({ content, events }) {
+export default function Index({ content }) {
   return (
-    <Container upcomingEvent={events}>
+    <>
       {content.map((p) => (
         <Artwork key={uuidv4()} artwork={p.artWork} title={p.title} />
       ))}
-    </Container>
+    </>
   )
 }
 Index.primarySite = true
 
 export async function getStaticProps({ preview = false }) {
-  const upcomingEvents = await getUpcomingEvents(preview)
-  const events = relevantEvents(upcomingEvents)
-
   const allCharcoals = await getCharcoals(preview)
   return {
     props: {
       content: allCharcoals,
-      events: JSON.parse(JSON.stringify(events))[0] ?? null,
     },
     revalidate: 600,
   }

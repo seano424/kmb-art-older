@@ -1,14 +1,11 @@
 import Image from 'next/image'
 import BlockContent from '@sanity/block-content-to-react'
 import { urlFor } from '@/lib/sanity'
-import { getBook, getUpcomingEvents } from '@/lib/api'
-import Container from '@/components/Container'
-import relevantEvents from 'utils/relevantEvents'
+import { getBook } from '@/lib/api'
 
-export default function Index({ image, body, event }) {
-  console.log(event);
+export default function Index({ image, body }) {
   return (
-    <Container upcomingEvent={event}>
+    <>
       <div className="flex gap-10">
         <Image
           className="aspect-[.65/1] object-contain"
@@ -22,21 +19,18 @@ export default function Index({ image, body, event }) {
           blocks={body}
         ></BlockContent>
       </div>
-    </Container>
+    </>
   )
 }
 Index.primarySite = true
 
 export async function getStaticProps({ preview = false }) {
-  const upcomingEvents = await getUpcomingEvents(preview)
-  const events = relevantEvents(upcomingEvents)
   const book = await getBook(preview)
   return {
     props: {
       image: book[0].front_image,
       body: book[0].body,
-      event: JSON.parse(JSON.stringify(events))[0] ?? null,
     },
-    revalidate: 600
+    revalidate: 600,
   }
 }

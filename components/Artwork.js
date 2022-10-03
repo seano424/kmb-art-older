@@ -15,22 +15,24 @@ export default function Artwork({ artwork }) {
   }
 
   return (
-    <div className="filter backdrop-blur-sm">
+    <div className="p-10 filter backdrop-blur-sm">
       {!open ? (
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
+        <div className="grid grid-cols-1 sm:gap-16 xl:grid-cols-2">
           {artwork.map((a, idx) => (
-            <div
-              key={uuidv4()}
-              onClick={() => handleLightbox(idx)}
-              className="relative h-[500px] w-full cursor-pointer lg:h-[750px]"
-            >
-              <Image
-                className="object-cover lg:object-contain"
-                src={imageBuilder(a.artworkImage).url() ?? '/'}
-                alt={a.caption}
-                layout="fill"
-              />
-              <p className="m-auto my-4 hidden w-8/12 text-center">
+            <div key={uuidv4()} className="flex flex-col gap-2">
+              <div
+                key={uuidv4()}
+                onClick={() => handleLightbox(idx)}
+                className="relative h-[500px] w-full cursor-pointer lg:h-[750px]"
+              >
+                <Image
+                  className="object-cover lg:object-contain"
+                  src={imageBuilder(a.artworkImage).url() ?? '/'}
+                  alt={a.caption}
+                  layout="fill"
+                />
+              </div>
+              <p className="m-auto w-8/12 text-center">
                 {a.caption && a.caption}
               </p>
             </div>

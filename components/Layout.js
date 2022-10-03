@@ -20,7 +20,7 @@ export default function Layout({ footer, children }) {
           <a className="text-2xl text-blue-900">Karrie Marie Baxley</a>
         </Link>
       </div>
-      <main className="relative top-24 flex-1 lg:top-0">{children}</main>
+      <main className="relative flex-1">{children}</main>
       {footer && <Footer />}
     </div>
   )

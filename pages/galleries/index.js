@@ -1,27 +1,17 @@
-import { getSeries, getUpcomingEvents } from '../../lib/api'
-import relevantEvents from 'utils/relevantEvents'
-import Container from '@/components/Container'
+import { getSeries } from '@/lib/api'
 import Galleries from '@/components/Galleries'
 
-export default function Index({ series, events }) {
-  return (
-    <Container upcomingEvent={events}>
-      <Galleries series={series} />
-    </Container>
-  )
+export default function Index({ series }) {
+  return <Galleries series={series} />
 }
 
 Index.primarySite = true
 
 export async function getStaticProps({ preview = false }) {
-  const upcomingEvents = await getUpcomingEvents(preview)
-  const events = relevantEvents(upcomingEvents)
-
   const allSeries = await getSeries(preview)
   return {
     props: {
       series: allSeries,
-      events: JSON.parse(JSON.stringify(events))[0] ?? null,
     },
     revalidate: 600,
   }

@@ -9,11 +9,11 @@ import MainMobileNav from './MainMobileNav'
 export default function SidebarLayout({ children }) {
   const { open, toggleOpen } = useContext(NavContext)
   const { pathname } = useRouter()
-  const bgheight = open ? '100vh' : '0'
+
   return (
     <>
-      <na>
-        <div className="fixed top-24 z-20 hidden min-h-full flex-shrink-0 flex-col  transition-opacity duration-100 ease-in-out lg:top-0 lg:mt-0 lg:flex lg:w-96 lg:overflow-x-hidden lg:pl-12 lg:pr-12">
+      <nav>
+        <div className="fixed top-24 z-20 hidden min-h-full flex-shrink-0 flex-col  transition-opacity duration-100 ease-in-out lg:top-0 lg:mt-0 lg:flex lg:w-64 lg:overflow-x-hidden lg:px-12 xl:w-96">
           <div className="flex flex-col pb-6">
             <Link href="/">
               <a className="my-8" onClick={toggleOpen}>
@@ -54,13 +54,12 @@ export default function SidebarLayout({ children }) {
             </Link>
           ))}
         </div>
-        <article className="bg-[##EFF0F0] h-screen lg:ml-96">
+        <article className="bg-[##EFF0F0] h-screen lg:ml-64 xl:ml-96">
           {children}
         </article>
-      </na>
+      </nav>
 
       <section
-        style={{ top: '90px', height: bgheight }}
         className={clsx(
           'absolute z-10 flex bg-white transition-all duration-300',
           open ? 'opacity-100' : 'opacity-0'
