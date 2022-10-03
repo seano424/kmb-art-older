@@ -2,13 +2,13 @@ import Image from 'next/image'
 
 export default function Index() {
   return (
-    <div className="px-base py-base grid gap-10 lg:grid-cols-2">
+    <div className="px-base py-base grid h-full gap-10 lg:grid-cols-2">
       <Image
         className="aspect-[.64/1] object-contain"
         src={'/images/back.jpg'}
-        width={400}
-        height={600}
         alt="contact Karrie Marie Image"
+        height={700}
+        width={520}
         priority
       />
       <div className="flex items-center justify-center">

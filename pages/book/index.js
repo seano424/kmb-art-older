@@ -1,22 +1,22 @@
 import Image from 'next/image'
-import BlockContent from '@sanity/block-content-to-react'
+import { PortableText } from '@portabletext/react'
 import { urlFor } from '@/lib/sanity'
 import { getBook } from '@/lib/api'
 
 export default function Index({ image, body }) {
   return (
-    <div className="px-base py-base flex flex-col lg:flex-row lg:gap-10">
+    <div className="px-base py-base grid h-full gap-10 lg:grid-cols-2">
       <Image
         className="aspect-[.65/1] object-contain"
         src={urlFor(image).url()}
         alt="Dancing With A Thousand Bees"
-        height={650}
+        height={700}
         width={400}
+        priority
       />
-      <BlockContent
-        className="flex flex-1 flex-col justify-center text-lg lg:p-10 lg:text-2xl"
-        blocks={body}
-      ></BlockContent>
+      <div className="flex flex-1 flex-col justify-center gap-3 text-xl leading-8">
+        <PortableText value={body} />
+      </div>
     </div>
   )
 }
