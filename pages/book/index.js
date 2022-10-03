@@ -5,21 +5,19 @@ import { getBook } from '@/lib/api'
 
 export default function Index({ image, body }) {
   return (
-    <>
-      <div className="flex gap-10">
-        <Image
-          className="aspect-[.65/1] object-contain"
-          src={urlFor(image).url()}
-          alt="Dancing With A Thousand Bees"
-          height={650}
-          width={400}
-        />
-        <BlockContent
-          className="flex flex-1 flex-col justify-center p-10 text-2xl"
-          blocks={body}
-        ></BlockContent>
-      </div>
-    </>
+    <div className="px-base py-base flex gap-10">
+      <Image
+        className="aspect-[.65/1] object-contain"
+        src={urlFor(image).url()}
+        alt="Dancing With A Thousand Bees"
+        height={650}
+        width={400}
+      />
+      <BlockContent
+        className="flex flex-1 flex-col justify-center p-10 text-2xl"
+        blocks={body}
+      ></BlockContent>
+    </div>
   )
 }
 Index.primarySite = true
