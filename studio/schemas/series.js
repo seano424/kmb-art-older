@@ -1,5 +1,5 @@
 export default {
-  title: "Series",
+  title: "Art Series",
   name: "series",
   type: "document",
   fields: [

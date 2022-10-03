@@ -1,6 +1,6 @@
 export default {
   name: "book",
-  title: "Book",
+  title: "Dancing With A Thousand Bees Page",
   type: "document",
   fields: [
     {

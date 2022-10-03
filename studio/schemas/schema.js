@@ -6,10 +6,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
 import blockContent from './blockContent'
-import category from './category'
-import post from './post'
-import author from './author'
-import comment from './comment'
 import series from './series'
 import artwork from './artwork'
 import book from './book'
@@ -21,17 +17,13 @@ import featureImage from './featureImage'
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
-    featureImage,
     series,
+    featureImage,
     book,
     about,
-    post,
-    author,
-    category,
     artwork,
     upcomingEvents,
     eventDate,
     blockContent,
-    comment,
   ]),
 })
