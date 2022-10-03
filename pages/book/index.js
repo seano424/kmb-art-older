@@ -5,7 +5,7 @@ import { getBook } from '@/lib/api'
 
 export default function Index({ image, body }) {
   return (
-    <div className="px-base py-base flex gap-10">
+    <div className="px-base py-base flex flex-col lg:flex-row lg:gap-10">
       <Image
         className="aspect-[.65/1] object-contain"
         src={urlFor(image).url()}
@@ -14,7 +14,7 @@ export default function Index({ image, body }) {
         width={400}
       />
       <BlockContent
-        className="flex flex-1 flex-col justify-center p-10 text-2xl"
+        className="flex flex-1 flex-col justify-center text-lg lg:p-10 lg:text-2xl"
         blocks={body}
       ></BlockContent>
     </div>
