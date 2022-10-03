@@ -30,6 +30,7 @@ export default function Artwork({ artwork }) {
                   src={imageBuilder(a.artworkImage).url() ?? '/'}
                   alt={a.caption}
                   layout="fill"
+                  priority={idx === 0 || idx === 1}
                 />
               </div>
               <p className="m-auto w-8/12 text-center">
