@@ -14,11 +14,11 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex bg-gray-50 md:px-12 items-center justify-around">
+      <nav className="flex items-center justify-around bg-gray-50 md:px-12">
         <Link href="/paintings" passHref>
           <h1
             style={{ height: '6rem' }}
-            className="relative w-3/5 xl:w-5/5 h-24 cursor-pointer"
+            className="xl:w-5/5 relative h-24 w-3/5 cursor-pointer"
           >
             <Image
               src="/images/full-signature.png"
@@ -30,44 +30,20 @@ export default function Navbar() {
           </h1>
         </Link>
 
-        <article className="relative w-full hidden lg:flex md:pr-28 xl:pr-0 md:h-20 items-center justify-end">
+        <article className="relative hidden w-full items-center justify-end md:h-20 md:pr-28 lg:flex xl:pr-0">
           <Link href="/galleries">
             <a
               style={maxContent}
-              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
+              className="w-max cursor-pointer rounded px-2 py-2 text-xs font-normal uppercase tracking-widest hover:bg-red-300 md:px-4 lg:w-max"
             >
               Artwork
             </a>
           </Link>
-          {/* <Link href="/paintings">
-            <a
-              style={maxContent}
-              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
-            >
-              Paintings
-            </a>
-          </Link>
-          <Link href="/ink-works">
-            <a
-              style={maxContent}
-              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
-            >
-              Ink Works
-            </a>
-          </Link>
-          <Link href="/charcoals">
-            <a
-              style={maxContent}
-              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
-            >
-              Charcoals
-            </a>
-          </Link> */}
 
           <Link href="/dancing-with-a-thousand-bees">
             <a
               style={maxContent}
-              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
+              className="w-max cursor-pointer rounded px-2 py-2 text-xs font-normal uppercase tracking-widest hover:bg-red-300 md:px-4 lg:w-max"
             >
               My Book
             </a>
@@ -75,7 +51,7 @@ export default function Navbar() {
           <Link href="/about">
             <a
               style={maxContent}
-              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
+              className="w-max cursor-pointer rounded px-2 py-2 text-xs font-normal uppercase tracking-widest hover:bg-red-300 md:px-4 lg:w-max"
             >
               About Karrie
             </a>
@@ -83,7 +59,7 @@ export default function Navbar() {
           <Link href="/blog">
             <a
               style={maxContent}
-              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
+              className="w-max cursor-pointer rounded px-2 py-2 text-xs font-normal uppercase tracking-widest hover:bg-red-300 md:px-4 lg:w-max"
             >
               Blog
             </a>
@@ -91,7 +67,7 @@ export default function Navbar() {
           <Link href="/contact">
             <a
               style={maxContent}
-              className="lg:w-max px-2 md:px-4 py-2 rounded text-xs uppercase font-normal tracking-widest hover:bg-red-300 w-max cursor-pointer"
+              className="w-max cursor-pointer rounded px-2 py-2 text-xs font-normal uppercase tracking-widest hover:bg-red-300 md:px-4 lg:w-max"
             >
               Contact
             </a>
@@ -99,31 +75,31 @@ export default function Navbar() {
         </article>
         <article
           onClick={() => setOpen(!open)}
-          className="md:hidden cursor-pointer flex flex-col z-50 justify-center p-3"
+          className="z-50 flex cursor-pointer flex-col justify-center p-3 md:hidden"
         >
           <div
-            className={`w-8 h-1 bg-gray-900 rounded-lg transition-all duration-150 ease-linear relative ${
-              open ? `transform rotate-45` : `transform rotate-0 mt-1`
+            className={`relative h-1 w-8 rounded-lg bg-gray-900 transition-all duration-150 ease-linear ${
+              open ? `rotate-45 transform` : `mt-1 rotate-0 transform`
             }`}
           />
           <div
-            className={`w-8 h-1 bg-gray-900 rounded-lg transition-all duration-150 ease-linear relative ${
+            className={`relative h-1 w-8 rounded-lg bg-gray-900 transition-all duration-150 ease-linear ${
               open
-                ? `transform translate-x-5 opacity-0`
-                : `transform translate-x-0 opacity-100 mt-1 `
+                ? `translate-x-5 transform opacity-0`
+                : `mt-1 translate-x-0 transform opacity-100 `
             }`}
           />
           <div
-            className={`w-8 h-1 bg-gray-900 rounded-lg transition-all duration-150 ease-linear relative ${
-              open ? `transform -rotate-45 -mt-2` : `transform rotate-0 mt-1 `
+            className={`relative h-1 w-8 rounded-lg bg-gray-900 transition-all duration-150 ease-linear ${
+              open ? `-mt-2 -rotate-45 transform` : `mt-1 rotate-0 transform `
             }`}
           />
         </article>
       </nav>
       <section
         style={{ top: '90px', height: bgheight }}
-        className={`absolute z-50 bg-gray-50 h-0 w-full transition-all duration-200 ease-linear ${
-          open ? `h-full visible opacity-100 w-full` : `opacity-0`
+        className={`absolute z-50 h-0 w-full bg-gray-50 transition-all duration-200 ease-linear ${
+          open ? `visible h-full w-full opacity-100` : `opacity-0`
         }`}
       >
         {open && <MainMobileNav />}

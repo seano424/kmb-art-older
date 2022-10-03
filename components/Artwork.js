@@ -8,19 +8,16 @@ export default function Artwork({ artwork }) {
   const [photoIndex, setPhotoIndex] = useState(0)
   const [open, toggleOpen] = useState(false)
   const images = artwork.map((a) => a.artworkImage)
-  const handleContext = (e) => {
-    e.preventDefault()
-    e.stopPropagation()
-  }
+
   const handleLightbox = (idx) => {
     setPhotoIndex(idx)
     toggleOpen(!open)
   }
 
   return (
-    <div className="filter backdrop-blur-sm">
+    <div className="border filter backdrop-blur-sm">
       {!open ? (
-        <div className="flex flex-wrap justify-center gap-20 pt-5">
+        <div className="flex flex-wrap justify-center gap-1 lg:gap-20 lg:pt-5">
           {artwork.map((a, idx) => (
             <div
               key={uuidv4()}
@@ -28,7 +25,7 @@ export default function Artwork({ artwork }) {
               className="relative h-[500px] w-full cursor-pointer lg:h-[750px]"
             >
               <Image
-                className="object-contain"
+                className="object-cover"
                 src={imageBuilder(a.artworkImage).url() ?? '/'}
                 alt={a.caption}
                 layout="fill"
@@ -40,23 +37,21 @@ export default function Artwork({ artwork }) {
           ))}
         </div>
       ) : (
-        <div onContextMenu={handleContext}>
-          <Lightbox
-            imagePadding="100"
-            mainSrc={urlFor(images[photoIndex]).url()}
-            nextSrc={urlFor(images[(photoIndex + 1) % images.length]).url()}
-            prevSrc={urlFor(
-              images[(photoIndex + images.length - 1) % images.length]
-            ).url()}
-            onCloseRequest={() => toggleOpen(!open)}
-            onMovePrevRequest={() =>
-              setPhotoIndex((photoIndex + images.length - 1) % images.length)
-            }
-            onMoveNextRequest={() =>
-              setPhotoIndex((photoIndex + 1) % images.length)
-            }
-          />
-        </div>
+        <Lightbox
+          imagePadding="20"
+          mainSrc={urlFor(images[photoIndex]).url()}
+          nextSrc={urlFor(images[(photoIndex + 1) % images.length]).url()}
+          prevSrc={urlFor(
+            images[(photoIndex + images.length - 1) % images.length]
+          ).url()}
+          onCloseRequest={() => toggleOpen(!open)}
+          onMovePrevRequest={() =>
+            setPhotoIndex((photoIndex + images.length - 1) % images.length)
+          }
+          onMoveNextRequest={() =>
+            setPhotoIndex((photoIndex + 1) % images.length)
+          }
+        />
       )}
     </div>
   )
