@@ -23,6 +23,7 @@ export default function Index({ feature }) {
             </Link>
             <div className="flex gap-3">
               <a
+                aria-label="link to facebook url"
                 rel="noreferrer"
                 target="_blank"
                 href="https://www.facebook.com/profile.php?id=100009833221050"
@@ -30,6 +31,7 @@ export default function Index({ feature }) {
                 <FaFacebookF className="text-3xl" />
               </a>
               <a
+                aria-label="link to instagram url"
                 rel="noreferrer"
                 target="_blank"
                 href="https://www.instagram.com/kmariebaxley/"
