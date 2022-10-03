@@ -10,6 +10,7 @@ module.exports = {
       },
       colors: {
         'gray-light': '#383a47',
+        primary: '#d1c0a4',
       },
       spacing: {
         28: '7rem',
