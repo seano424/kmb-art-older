@@ -12,7 +12,7 @@ export default function Index() {
         priority
       />
       <div className="flex items-center justify-center">
-        <p className="text-3xl">
+        <p className="text-2xl lg:text-3xl">
           Please email me at{' '}
           <a className=" text-red-400" href="mailto:bluemoonkmo@yahoo.com">
             bluemoonkmo@yahoo.com
