@@ -13,7 +13,7 @@ function UpcomingEvents({ events }) {
   }
 
   return (
-    <div className="px-base py-base relative top-16 lg:top-0">
+    <div className="px-base py-base">
       <div className="flex flex-col gap-5 ">
         {events.map((event, idx) => (
           <div
