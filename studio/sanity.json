@@ -1,12 +1,12 @@
 {
   "root": true,
-  "project": {
-    "name": "Karrie's Studio",
-    "basePath": "/studio"
-  },
   "api": {
     "projectId": "2jgopgn4",
     "dataset": "production"
+  },
+  "project": {
+    "name": "Karrie's Studio",
+    "basePath": "/studio"
   },
   "plugins": [
     "@sanity/base",
